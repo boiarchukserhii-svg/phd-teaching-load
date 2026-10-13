@@ -17,3 +17,6 @@ dialog{max-width:480px;width:calc(100% - 32px);border:1px solid #d5ebe3;border-r
 .summary-card:nth-child(4){background:#fff0e6}.summary-card:nth-child(4) .summary-icon{color:#ac774b}.summary-card:nth-child(3){background:#e5f0ff}.summary-card:nth-child(3) .summary-icon{color:#467cba}.summary-card:first-child{background:#f0eafb}.summary-card:first-child .summary-icon{color:#8960b4}
 @media(max-width:790px){.bottom-nav{gap:3px;padding:8px}.bottom-nav button{font-size:10px}}
 
+
+.discipline-tags{display:flex;gap:7px;flex-wrap:wrap;align-items:center}.discipline-tags .discipline-type{background:#e5f0ff;color:#4277a5}
+
