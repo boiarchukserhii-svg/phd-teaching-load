@@ -1293,8 +1293,8 @@ window.TEACHING_DATA = {
     "type": "Обов'язкова"
   },
   {
-    "id": "ONP-021:1:DISC-038",
-    "recordCode": "DISC-038",
+    "id": "ONP-021:1:DISC-045",
+    "recordCode": "DISC-045",
     "programId": "ONP-021",
     "name": "Математичне моделювання та планування експерименту",
     "departmentId": null,
@@ -1853,8 +1853,8 @@ window.TEACHING_DATA = {
     "type": "Обов'язкова"
   },
   {
-    "id": "ONP-031:1:DISC-043",
-    "recordCode": "DISC-043",
+    "id": "ONP-031:1:DISC-046",
+    "recordCode": "DISC-046",
     "programId": "ONP-031",
     "name": "Геопросторові методи дослідження лісових екосистем",
     "departmentId": null,
@@ -2004,6 +2004,7 @@ window.TEACHING_DATA = {
   }
 ]
 };
+
 
 
 
