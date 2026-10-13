@@ -22,6 +22,26 @@
   const icon = key => `<svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${icons[key] || icons.book}</svg>`;
   document.querySelectorAll('[data-icon]').forEach(node => {node.innerHTML = icon(node.dataset.icon);});
   let view = 'overview';
+  let programReturn = null;
+  const backToPrograms = document.createElement('button');
+  backToPrograms.type = 'button';
+  backToPrograms.id = 'back-to-programs';
+  backToPrograms.className = 'reset';
+  backToPrograms.textContent = '← Назад до ОНП';
+  backToPrograms.style.margin = '18px 0 0';
+  $('view-disciplines').prepend(backToPrograms);
+  backToPrograms.onclick = () => {
+    const previous = programReturn;
+    $('program-query').value = previous?.query || '';
+    $('program-faculty').value = previous?.faculty || '';
+    setView('programs', !previous);
+    if (previous) {
+      window.scrollTo({top:previous.scrollTop,behavior:'instant'});
+      [...document.querySelectorAll('#program-list [data-program]')]
+        .find(button=>button.dataset.program === previous.programId)?.focus({preventScroll:true});
+    }
+    programReturn = null;
+  };
   function setView(name, moveFocus = true) {
     if (!['overview','disciplines','departments','programs','faculties'].includes(name)) name = 'overview';
     view = name;
@@ -37,7 +57,10 @@
       heading.scrollIntoView({block:'start',behavior:'instant'});
     }
   }
-  document.querySelectorAll('[data-view]').forEach(button => {button.onclick = () => setView(button.dataset.view);});
+  document.querySelectorAll('[data-view]').forEach(button => {button.onclick = () => {
+    if (button.dataset.view === 'disciplines') programReturn = null;
+    setView(button.dataset.view);
+  };});
   const facultyOptions = '<option value="">Усі підрозділи</option>'+faculties.map(item=>`<option value="${esc(item.id)}">${esc(item.name)}</option>`).join('');
   $('discipline-faculty').innerHTML = facultyOptions;
   $('department-faculty').innerHTML = facultyOptions;
@@ -115,11 +138,14 @@
       $('program-query').value='';$('program-faculty').value=faculty.dataset.faculty;setView('programs');
     }
     if (program) {
+      programReturn = {query:$('program-query').value,faculty:$('program-faculty').value,
+        programId:program.dataset.program,scrollTop:window.scrollY};
       $('discipline-query').value='';$('discipline-faculty').value=programById.get(program.dataset.program)?.facultyId || '';
       $('discipline-program').value='';$('discipline-department').value='';$('discipline-semester').value='';$('discipline-type').value='';
       setView('disciplines');$('discipline-program').value=program.dataset.program;renderDisciplines();
     }
     if (department) {
+      programReturn = null;
       $('discipline-query').value='';$('discipline-program').value='';$('discipline-semester').value='';$('discipline-type').value='';$('discipline-faculty').value=departmentById.get(department.dataset.department)?.facultyId || '';setView('disciplines');$('discipline-department').value=department.dataset.department;renderDisciplines();
     }
   });
@@ -149,6 +175,7 @@
   }
   setView('overview',false);
 })();
+
 
 
 
