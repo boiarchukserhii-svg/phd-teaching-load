@@ -46,7 +46,11 @@
   $('department-total').textContent = departments.length;
   $('faculty-total').textContent = faculties.length;
   $('program-total').textContent = programs.length;
-  if (disciplines.length || departments.length || programs.length) $('data-status').textContent = data.academicYear ? 'Навчальний рік: '+data.academicYear : 'Навчальний рік не зазначено';
+  if (disciplines.length || departments.length) $('data-status').textContent = data.academicYear ? 'Навчальний рік: '+data.academicYear : 'Навчальний рік не зазначено';
+  else if (programs.length) $('data-status').textContent = 'Довідник ОНП заповнено';
+  if (programs.length && !disciplines.length && !departments.length) {
+    document.querySelector('#view-overview .welcome p').textContent = 'Освітньо-наукові програми вже додано. Оберіть факультет або ННІ, щоб переглянути його програми. Кафедри та дисципліни ще не додано.';
+  }
   function empty(title, message, symbol = 'book') {
     return `<div class="empty"><span>${icon(symbol)}</span><h3>${esc(title)}</h3><p>${esc(message)}</p></div>`;
   }
@@ -133,4 +137,5 @@
   }
   setView('overview',false);
 })();
+
 
