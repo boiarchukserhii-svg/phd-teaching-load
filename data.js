@@ -24,5 +24,7 @@ window.TEACHING_DATA = {
     {id:'continuing-education',name:'Навчально-науковий інститут неперервної освіти',type:'institute'}
   ],
   departments: [],
+  programs: [],
   disciplines: []
 };
+

@@ -11,7 +11,7 @@
   <link rel="manifest" href="./manifest.webmanifest">
   <link rel="icon" href="./icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="./icon-192.png">
-  <link rel="stylesheet" href="./styles.css?v=1">
+  <link rel="stylesheet" href="./styles.css?v=2">
 </head>
 <body>
   <a class="skip" href="#content">Перейти до змісту</a>
@@ -27,6 +27,7 @@
       <div class="summary-grid">
         <button type="button" class="summary-card" data-view="faculties"><span class="summary-icon" data-icon="building"></span><strong id="faculty-total">—</strong><span>Факультети та ННІ</span></button>
         <button type="button" class="summary-card" data-view="departments"><span class="summary-icon" data-icon="layers"></span><strong id="department-total">0</strong><span>Кафедри</span></button>
+        <button type="button" class="summary-card" data-view="programs"><span class="summary-icon" data-icon="program"></span><strong id="program-total">0</strong><span>Освітньо-наукові програми</span></button>
         <button type="button" class="summary-card" data-view="disciplines"><span class="summary-icon" data-icon="book"></span><strong id="discipline-total">0</strong><span>Дисципліни</span></button>
       </div>
       <p class="data-status" id="data-status" role="status">Дані ще не додано</p>
@@ -35,16 +36,26 @@
       <div class="panel welcome">
         <span class="welcome-icon" data-icon="book" aria-hidden="true"></span>
         <h2 id="overview-title" tabindex="-1">Навантаження аспірантури</h2>
-        <p>Дисципліни та кафедри ще не додано. Довідник факультетів і навчально-наукових інститутів уже доступний.</p>
+        <p>Кафедри, освітньо-наукові програми та дисципліни ще не додано. Довідник факультетів і навчально-наукових інститутів уже доступний.</p>
         <button type="button" class="primary" data-view="faculties">Переглянути факультети та ННІ <span aria-hidden="true">→</span></button>
       </div>
       <div class="note"><span data-icon="building" aria-hidden="true"></span><p>Назви підрозділів звірено з <a href="https://nubip.edu.ua/university-departments" target="_blank" rel="noopener noreferrer">офіційним сайтом університету</a>.</p></div>
+    </section>
+    <section id="view-programs" class="view" hidden aria-labelledby="programs-title">
+      <div class="section-heading"><h2 id="programs-title" tabindex="-1">Освітньо-наукові програми</h2><span id="program-count" class="muted"></span></div>
+      <form class="panel filters" id="program-filters" role="search">
+        <label class="search-field"><span>Пошук програми</span><input id="program-query" type="search" placeholder="Назва програми або спеціальність…" autocomplete="off"></label>
+        <label><span>Факультет або ННІ</span><select id="program-faculty"><option value="">Усі підрозділи</option></select></label>
+        <button class="reset" type="reset">Скинути</button>
+      </form>
+      <div id="program-list" class="card-list" aria-live="polite"></div>
     </section>
     <section id="view-disciplines" class="view" hidden aria-labelledby="disciplines-title">
       <div class="section-heading"><h2 id="disciplines-title" tabindex="-1">Дисципліни</h2><span id="discipline-count" class="muted"></span></div>
       <form class="panel filters" id="discipline-filters" role="search">
         <label class="search-field"><span>Пошук дисципліни</span><input id="discipline-query" type="search" placeholder="Назва дисципліни або код кафедри…" autocomplete="off"></label>
         <label><span>Факультет або ННІ</span><select id="discipline-faculty"><option value="">Усі підрозділи</option></select></label>
+        <label><span>Освітньо-наукова програма</span><select id="discipline-program"><option value="">Усі програми</option></select></label>
         <label><span>Кафедра</span><select id="discipline-department"><option value="">Усі кафедри</option></select></label>
         <button class="reset" type="reset">Скинути</button>
       </form>
@@ -78,6 +89,7 @@
     <button type="button" data-view="overview" class="current" aria-current="page"><span data-icon="home" aria-hidden="true"></span><span>Огляд</span></button>
     <button type="button" data-view="faculties" aria-current="false"><span data-icon="building" aria-hidden="true"></span><span>Факультети</span></button>
     <button type="button" data-view="departments" aria-current="false"><span data-icon="layers" aria-hidden="true"></span><span>Кафедри</span></button>
+    <button type="button" data-view="programs" aria-current="false" aria-label="Освітньо-наукові програми"><span data-icon="program" aria-hidden="true"></span><span>ОНП</span></button>
     <button type="button" data-view="disciplines" aria-current="false"><span data-icon="book" aria-hidden="true"></span><span>Дисципліни</span></button>
   </nav>
   <dialog id="install-help"><h2>Встановлення застосунку</h2>
@@ -86,9 +98,10 @@
     <p><strong>Windows:</strong> у Chrome або Edge скористайтеся кнопкою встановлення в адресному рядку чи меню браузера.</p>
     <form method="dialog"><button type="submit" class="primary">Зрозуміло</button></form>
   </dialog>
-  <script src="./data.js?v=1"></script>
-  <script src="./app.js?v=1"></script>
+  <script src="./data.js?v=2"></script>
+  <script src="./app.js?v=2"></script>
 </body>
 </html>
+
 
 
