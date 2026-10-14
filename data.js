@@ -3774,6 +3774,26 @@ window.TEACHING_DATA = {
     "programId": "ONP-014"
   },
   {
+    "groupCode": "GR-028",
+    "academicYear": "2026–2027",
+    "course": 1,
+    "semester": 1,
+    "disciplineId": "ONP-026:1:DISC-004:07.04",
+    "departmentId": "07.04",
+    "lessonType": "lectures",
+    "programId": "ONP-026"
+  },
+  {
+    "groupCode": "GR-028",
+    "academicYear": "2026–2027",
+    "course": 1,
+    "semester": 1,
+    "disciplineId": "ONP-026:1:DISC-004:07.04",
+    "departmentId": "07.04",
+    "lessonType": "practical",
+    "programId": "ONP-026"
+  },
+  {
     "groupCode": "GR-025",
     "academicYear": "2026–2027",
     "course": 1,
@@ -3788,10 +3808,10 @@ window.TEACHING_DATA = {
     "academicYear": "2026–2027",
     "course": 1,
     "semester": 1,
-    "disciplineId": "ONP-003:1:DISC-004:07.04",
+    "disciplineId": "ONP-002:1:DISC-004:07.04",
     "departmentId": "07.04",
-    "lessonType": "lectures",
-    "programId": "ONP-003"
+    "lessonType": "practical",
+    "programId": "ONP-002"
   },
   {
     "groupCode": "GR-025",
@@ -3808,10 +3828,10 @@ window.TEACHING_DATA = {
     "academicYear": "2026–2027",
     "course": 1,
     "semester": 1,
-    "disciplineId": "ONP-015:1:DISC-004:07.04",
+    "disciplineId": "ONP-004:1:DISC-004:07.04",
     "departmentId": "07.04",
-    "lessonType": "lectures",
-    "programId": "ONP-015"
+    "lessonType": "practical",
+    "programId": "ONP-004"
   },
   {
     "groupCode": "GR-025",
@@ -3822,56 +3842,6 @@ window.TEACHING_DATA = {
     "departmentId": "07.04",
     "lessonType": "lectures",
     "programId": "ONP-019"
-  },
-  {
-    "groupCode": "GR-025",
-    "academicYear": "2026–2027",
-    "course": 1,
-    "semester": 1,
-    "disciplineId": "ONP-020:1:DISC-004:07.04",
-    "departmentId": "07.04",
-    "lessonType": "lectures",
-    "programId": "ONP-020"
-  },
-  {
-    "groupCode": "GR-025",
-    "academicYear": "2026–2027",
-    "course": 1,
-    "semester": 1,
-    "disciplineId": "ONP-002:1:DISC-004:07.04",
-    "departmentId": "07.04",
-    "lessonType": "practical",
-    "programId": "ONP-002"
-  },
-  {
-    "groupCode": "GR-025",
-    "academicYear": "2026–2027",
-    "course": 1,
-    "semester": 1,
-    "disciplineId": "ONP-003:1:DISC-004:07.04",
-    "departmentId": "07.04",
-    "lessonType": "practical",
-    "programId": "ONP-003"
-  },
-  {
-    "groupCode": "GR-025",
-    "academicYear": "2026–2027",
-    "course": 1,
-    "semester": 1,
-    "disciplineId": "ONP-004:1:DISC-004:07.04",
-    "departmentId": "07.04",
-    "lessonType": "practical",
-    "programId": "ONP-004"
-  },
-  {
-    "groupCode": "GR-025",
-    "academicYear": "2026–2027",
-    "course": 1,
-    "semester": 1,
-    "disciplineId": "ONP-015:1:DISC-004:07.04",
-    "departmentId": "07.04",
-    "lessonType": "practical",
-    "programId": "ONP-015"
   },
   {
     "groupCode": "GR-025",
@@ -3890,7 +3860,7 @@ window.TEACHING_DATA = {
     "semester": 1,
     "disciplineId": "ONP-020:1:DISC-004:07.04",
     "departmentId": "07.04",
-    "lessonType": "practical",
+    "lessonType": "lectures",
     "programId": "ONP-020"
   },
   {
@@ -3898,40 +3868,10 @@ window.TEACHING_DATA = {
     "academicYear": "2026–2027",
     "course": 1,
     "semester": 1,
-    "disciplineId": "ONP-031:1:DISC-004:07.04",
-    "departmentId": "07.04",
-    "lessonType": "lectures",
-    "programId": "ONP-031"
-  },
-  {
-    "groupCode": "GR-025",
-    "academicYear": "2026–2027",
-    "course": 1,
-    "semester": 1,
-    "disciplineId": "ONP-032:1:DISC-004:07.04",
-    "departmentId": "07.04",
-    "lessonType": "lectures",
-    "programId": "ONP-032"
-  },
-  {
-    "groupCode": "GR-025",
-    "academicYear": "2026–2027",
-    "course": 1,
-    "semester": 1,
-    "disciplineId": "ONP-031:1:DISC-004:07.04",
+    "disciplineId": "ONP-020:1:DISC-004:07.04",
     "departmentId": "07.04",
     "lessonType": "practical",
-    "programId": "ONP-031"
-  },
-  {
-    "groupCode": "GR-025",
-    "academicYear": "2026–2027",
-    "course": 1,
-    "semester": 1,
-    "disciplineId": "ONP-032:1:DISC-004:07.04",
-    "departmentId": "07.04",
-    "lessonType": "practical",
-    "programId": "ONP-032"
+    "programId": "ONP-020"
   },
   {
     "groupCode": "GR-026",
@@ -3941,6 +3881,16 @@ window.TEACHING_DATA = {
     "disciplineId": "ONP-021:1:DISC-004:07.04",
     "departmentId": "07.04",
     "lessonType": "lectures",
+    "programId": "ONP-021"
+  },
+  {
+    "groupCode": "GR-026",
+    "academicYear": "2026–2027",
+    "course": 1,
+    "semester": 1,
+    "disciplineId": "ONP-021:1:DISC-004:07.04",
+    "departmentId": "07.04",
+    "lessonType": "practical",
     "programId": "ONP-021"
   },
   {
@@ -3952,16 +3902,6 @@ window.TEACHING_DATA = {
     "departmentId": "07.04",
     "lessonType": "lectures",
     "programId": "ONP-022"
-  },
-  {
-    "groupCode": "GR-026",
-    "academicYear": "2026–2027",
-    "course": 1,
-    "semester": 1,
-    "disciplineId": "ONP-021:1:DISC-004:07.04",
-    "departmentId": "07.04",
-    "lessonType": "practical",
-    "programId": "ONP-021"
   },
   {
     "groupCode": "GR-026",
@@ -3988,16 +3928,6 @@ window.TEACHING_DATA = {
     "academicYear": "2026–2027",
     "course": 1,
     "semester": 1,
-    "disciplineId": "ONP-025:1:DISC-004:07.04",
-    "departmentId": "07.04",
-    "lessonType": "lectures",
-    "programId": "ONP-025"
-  },
-  {
-    "groupCode": "GR-026",
-    "academicYear": "2026–2027",
-    "course": 1,
-    "semester": 1,
     "disciplineId": "ONP-024:1:DISC-004:07.04",
     "departmentId": "07.04",
     "lessonType": "practical",
@@ -4010,6 +3940,16 @@ window.TEACHING_DATA = {
     "semester": 1,
     "disciplineId": "ONP-025:1:DISC-004:07.04",
     "departmentId": "07.04",
+    "lessonType": "lectures",
+    "programId": "ONP-025"
+  },
+  {
+    "groupCode": "GR-026",
+    "academicYear": "2026–2027",
+    "course": 1,
+    "semester": 1,
+    "disciplineId": "ONP-025:1:DISC-004:07.04",
+    "departmentId": "07.04",
     "lessonType": "practical",
     "programId": "ONP-025"
   },
@@ -4018,50 +3958,40 @@ window.TEACHING_DATA = {
     "academicYear": "2026–2027",
     "course": 1,
     "semester": 1,
-    "disciplineId": "ONP-029:1:DISC-004:07.04",
+    "disciplineId": "ONP-003:1:DISC-004:07.04",
     "departmentId": "07.04",
     "lessonType": "lectures",
-    "programId": "ONP-029"
+    "programId": "ONP-003"
   },
   {
     "groupCode": "GR-026",
     "academicYear": "2026–2027",
     "course": 1,
     "semester": 1,
-    "disciplineId": "ONP-030:1:DISC-004:07.04",
-    "departmentId": "07.04",
-    "lessonType": "lectures",
-    "programId": "ONP-030"
-  },
-  {
-    "groupCode": "GR-026",
-    "academicYear": "2026–2027",
-    "course": 1,
-    "semester": 1,
-    "disciplineId": "ONP-029:1:DISC-004:07.04",
+    "disciplineId": "ONP-003:1:DISC-004:07.04",
     "departmentId": "07.04",
     "lessonType": "practical",
-    "programId": "ONP-029"
+    "programId": "ONP-003"
   },
   {
     "groupCode": "GR-026",
     "academicYear": "2026–2027",
     "course": 1,
     "semester": 1,
-    "disciplineId": "ONP-030:1:DISC-004:07.04",
+    "disciplineId": "ONP-015:1:DISC-004:07.04",
     "departmentId": "07.04",
-    "lessonType": "practical",
-    "programId": "ONP-030"
+    "lessonType": "lectures",
+    "programId": "ONP-015"
   },
   {
-    "groupCode": "GR-027",
+    "groupCode": "GR-026",
     "academicYear": "2026–2027",
     "course": 1,
     "semester": 1,
-    "disciplineId": "ONP-026:1:DISC-004:07.04",
+    "disciplineId": "ONP-015:1:DISC-004:07.04",
     "departmentId": "07.04",
-    "lessonType": "lectures",
-    "programId": "ONP-026"
+    "lessonType": "practical",
+    "programId": "ONP-015"
   },
   {
     "groupCode": "GR-027",
@@ -4072,26 +4002,6 @@ window.TEACHING_DATA = {
     "departmentId": "07.04",
     "lessonType": "lectures",
     "programId": "ONP-027"
-  },
-  {
-    "groupCode": "GR-027",
-    "academicYear": "2026–2027",
-    "course": 1,
-    "semester": 1,
-    "disciplineId": "ONP-028:1:DISC-004:07.04",
-    "departmentId": "07.04",
-    "lessonType": "lectures",
-    "programId": "ONP-028"
-  },
-  {
-    "groupCode": "GR-027",
-    "academicYear": "2026–2027",
-    "course": 1,
-    "semester": 1,
-    "disciplineId": "ONP-026:1:DISC-004:07.04",
-    "departmentId": "07.04",
-    "lessonType": "practical",
-    "programId": "ONP-026"
   },
   {
     "groupCode": "GR-027",
@@ -4110,8 +4020,98 @@ window.TEACHING_DATA = {
     "semester": 1,
     "disciplineId": "ONP-028:1:DISC-004:07.04",
     "departmentId": "07.04",
+    "lessonType": "lectures",
+    "programId": "ONP-028"
+  },
+  {
+    "groupCode": "GR-027",
+    "academicYear": "2026–2027",
+    "course": 1,
+    "semester": 1,
+    "disciplineId": "ONP-028:1:DISC-004:07.04",
+    "departmentId": "07.04",
     "lessonType": "practical",
     "programId": "ONP-028"
+  },
+  {
+    "groupCode": "GR-027",
+    "academicYear": "2026–2027",
+    "course": 1,
+    "semester": 1,
+    "disciplineId": "ONP-029:1:DISC-004:07.04",
+    "departmentId": "07.04",
+    "lessonType": "lectures",
+    "programId": "ONP-029"
+  },
+  {
+    "groupCode": "GR-027",
+    "academicYear": "2026–2027",
+    "course": 1,
+    "semester": 1,
+    "disciplineId": "ONP-029:1:DISC-004:07.04",
+    "departmentId": "07.04",
+    "lessonType": "practical",
+    "programId": "ONP-029"
+  },
+  {
+    "groupCode": "GR-027",
+    "academicYear": "2026–2027",
+    "course": 1,
+    "semester": 1,
+    "disciplineId": "ONP-030:1:DISC-004:07.04",
+    "departmentId": "07.04",
+    "lessonType": "lectures",
+    "programId": "ONP-030"
+  },
+  {
+    "groupCode": "GR-027",
+    "academicYear": "2026–2027",
+    "course": 1,
+    "semester": 1,
+    "disciplineId": "ONP-030:1:DISC-004:07.04",
+    "departmentId": "07.04",
+    "lessonType": "practical",
+    "programId": "ONP-030"
+  },
+  {
+    "groupCode": "GR-027",
+    "academicYear": "2026–2027",
+    "course": 1,
+    "semester": 1,
+    "disciplineId": "ONP-031:1:DISC-004:07.04",
+    "departmentId": "07.04",
+    "lessonType": "lectures",
+    "programId": "ONP-031"
+  },
+  {
+    "groupCode": "GR-027",
+    "academicYear": "2026–2027",
+    "course": 1,
+    "semester": 1,
+    "disciplineId": "ONP-032:1:DISC-004:07.04",
+    "departmentId": "07.04",
+    "lessonType": "lectures",
+    "programId": "ONP-032"
+  },
+  {
+    "groupCode": "GR-027",
+    "academicYear": "2026–2027",
+    "course": 1,
+    "semester": 1,
+    "disciplineId": "ONP-031:1:DISC-004:07.04",
+    "departmentId": "07.04",
+    "lessonType": "practical",
+    "programId": "ONP-031"
+  },
+  {
+    "groupCode": "GR-027",
+    "academicYear": "2026–2027",
+    "course": 1,
+    "semester": 1,
+    "disciplineId": "ONP-032:1:DISC-004:07.04",
+    "departmentId": "07.04",
+    "lessonType": "practical",
+    "programId": "ONP-032"
   },
   {
     "groupCode": "GR-030",
@@ -9386,6 +9386,7 @@ window.TEACHING_DATA = {
   }
 ]
 };
+
 
 
 
