@@ -3,7 +3,7 @@
   const data = window.TEACHING_DATA || {faculties:[],departments:[],programs:[],disciplines:[]};
   const faculties = data.faculties || [], departments = data.departments || [], programs = data.programs || [], disciplines = data.disciplines || [];
   const $ = id => document.getElementById(id);
-  $('overview-academic-year').textContent = (data.academicYear || '2026-2027').replace(/[\u2013\u2014]/g,'-')+' навчальний рік';
+  $('academic-year').textContent = (data.academicYear || '2026-2027').replace(/[\u2013\u2014]/g,'-')+' навчальний рік';
   const esc = value => String(value ?? '').replace(/[\u2013\u2014]/g,'-').replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
   const normalize = value => String(value || '').normalize('NFC').toLocaleLowerCase('uk-UA').replace(/[’ʼ']/g,'').trim();
   const includes = (value, query) => normalize(query).split(/\s+/).filter(Boolean).every(word => normalize(value).includes(word));
@@ -32,9 +32,9 @@
   };
   const icon = key => `<svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${icons[key] || icons.book}</svg>`;
   document.querySelectorAll('[data-icon]').forEach(node => {node.innerHTML = icon(node.dataset.icon);});
-  let view = 'overview';
+  let view = 'faculties';
   const returnStack = [];
-  const backLabels = {overview:'до огляду',faculties:'до факультетів та ННІ',departments:'до кафедр',programs:'до ОНП',disciplines:'до дисциплін'};
+  const backLabels = {faculties:'до факультетів та ННІ',departments:'до кафедр',programs:'до ОНП',disciplines:'до дисциплін'};
   const backButtons = new Map();
   for (const name of ['faculties','departments','programs','disciplines']) {
     const button = document.createElement('button');
@@ -63,7 +63,7 @@
     }
   }
   function setView(name, moveFocus = true) {
-    if (!['overview','disciplines','departments','programs','faculties'].includes(name)) name = 'overview';
+    if (!['disciplines','departments','programs','faculties'].includes(name)) name = 'faculties';
     view = name;
     document.querySelectorAll('.view').forEach(section => {section.hidden = section.id !== 'view-'+view;});
     document.querySelectorAll('.bottom-nav [data-view]').forEach(button => {
@@ -180,8 +180,8 @@
   }
   const facultyWorkload = facultyId => scopeWorkload(disciplines.filter(item=>departmentById.get(item.departmentId)?.facultyId===facultyId),facultyId);
   const universityPanel=document.createElement('section');universityPanel.className='panel';universityPanel.id='university-workload-summary';
-  universityPanel.innerHTML='<h2>Загальне навантаження Університету</h2>'+scopeWorkload(disciplines,'university');
-  $('view-overview').prepend(universityPanel);
+  universityPanel.innerHTML=compactScopeSummary(disciplines,'Загальне навантаження Університету','Аудиторне навантаження','university');
+  $('view-faculties').prepend(universityPanel);
   const facultyPanel=document.createElement('section');facultyPanel.className='panel';facultyPanel.id='faculty-workload-summary';facultyPanel.hidden=true;
   $('program-filters').before(facultyPanel);
   function compactScopeSummary(items,title,label,scope) {
@@ -404,8 +404,9 @@
     });
     window.addEventListener('load',()=>navigator.serviceWorker.register('./service-worker.js',{updateViaCache:'none'}).then(registration=>registration.update()).catch(()=>{}));
   }
-  setView('overview',false);
+  setView('faculties',false);
 })();
+
 
 
 
