@@ -43,3 +43,6 @@ dialog{max-width:480px;width:calc(100% - 32px);border:1px solid #d5ebe3;border-r
 
 
 .classroom-accent strong{font-size:18px;font-weight:600}
+
+
+.context-search{margin:0 0 18px}.context-search>summary,.context-load>summary{cursor:pointer;padding:13px 16px;min-height:46px;background:#e8f5ee;color:#147d6b;border:1px solid #d9ebe2;border-radius:14px;font-size:14px;font-weight:650;line-height:1.4}.context-search[open]>summary{margin-bottom:12px}.context-search .filters{margin-bottom:0}.context-load[open]>summary{margin-bottom:14px}.section-heading h2{overflow-wrap:anywhere}

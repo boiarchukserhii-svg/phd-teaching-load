@@ -36,6 +36,13 @@
   const returnStack = [];
   const backLabels = {faculties:'до факультетів та ННІ',departments:'до кафедр',programs:'до ОНП',disciplines:'до дисциплін'};
   const backButtons = new Map();
+  const searchPanels = new Map();
+  for (const name of ['program','discipline']) {
+    const form=$(name+'-filters'),details=document.createElement('details');
+    details.className='context-search';details.id=name+'-search-panel';details.open=true;
+    const summary=document.createElement('summary');summary.textContent='Пошук і фільтри';
+    form.before(details);details.append(summary,form);searchPanels.set(name,details);
+  }
   for (const name of ['faculties','departments','programs','disciplines']) {
     const button = document.createElement('button');
     button.type = 'button';button.id = 'back-from-'+name;button.className = 'reset';
@@ -72,6 +79,7 @@
       const active = button.dataset.view === view;
       button.classList.toggle('current',active);button.setAttribute('aria-current',active?'page':'false');
     });
+    for (const [name,panel] of searchPanels) panel.open = !returnStack.length;
     render();
     updateBackButtons();
     if (moveFocus) {
@@ -257,12 +265,16 @@
       workloadPanel.innerHTML=compactScopeSummary(items,facultyName(facultyId),'Навантаження кафедр підрозділу','faculty:'+facultyId)+
         `<details class="faculty-department-details"><summary>Кафедри та їхнє навантаження</summary>${rows?`<ul>${rows}</ul>`:'<p>Кафедри ще не додано.</p>'}</details>`;
     } else workloadPanel.innerHTML='';
-    scopeCaption.hidden=!departmentId && !facultyId && !programId;
+    if (programId && !workloadPanel.hidden) {
+      workloadPanel.innerHTML='<details class="context-load"><summary>Навантаження кафедр факультету</summary>'+workloadPanel.innerHTML+'</details>';
+      $('discipline-list').after(workloadPanel);
+    } else searchPanels.get('discipline').after(workloadPanel);
+    scopeCaption.hidden=!!programId || (!departmentId && !facultyId);
     scopeCaption.textContent=programId ? 'Дисципліни ОНП «'+(programById.get(programId)?.name || '')+'»' :
       departmentId ? 'Дисципліни кафедри' : facultyById.get(facultyId)?.type==='institute' ? 'Дисципліни ОНП інституту' : 'Дисципліни ОНП факультету';
   }
   const workloadPanel=document.createElement('section');workloadPanel.className='panel';workloadPanel.id='department-workload-summary';workloadPanel.hidden=true;
-  $('discipline-filters').after(workloadPanel);
+  searchPanels.get('discipline').after(workloadPanel);
   const scopeCaption=document.createElement('h3');scopeCaption.id='discipline-scope-caption';scopeCaption.hidden=true;workloadPanel.after(scopeCaption);
 
   const groupWord = count => {
@@ -369,6 +381,7 @@
       (!$('discipline-semester').value || String(item.semester) === $('discipline-semester').value) &&
       (!$('discipline-type').value || item.type === $('discipline-type').value)).sort(compareDisciplines);
     const grouped = !!$('discipline-department').value && !$('discipline-program').value;
+    $('disciplines-title').textContent=$('discipline-program').value ? 'Дисципліни ОНП «'+(programById.get($('discipline-program').value)?.name || '')+'»' : 'Дисципліни';
     renderFilterSummary();
 
     const buckets = new Map();
@@ -397,9 +410,15 @@
   }
   function renderPrograms() {
     const selectedFaculty=$('program-faculty').value;
+    const fromFaculty=returnStack.at(-1)?.view==='faculties';
+    $('programs-title').textContent=selectedFaculty ? 'ОНП - '+facultyName(selectedFaculty) : 'Освітньо-наукові програми';
     facultyPanel.hidden=!selectedFaculty;
     facultyPanel.innerHTML=selectedFaculty ? `<h3>${esc(facultyName(selectedFaculty))}</h3><p>За кафедрами підрозділу</p>`+facultyWorkload(selectedFaculty) : '';
 
+    if (selectedFaculty && fromFaculty) {
+      facultyPanel.innerHTML='<details class="context-load"><summary>Навантаження кафедр факультету</summary>'+facultyPanel.innerHTML+'</details>';
+      $('program-list').after(facultyPanel);
+    } else searchPanels.get('program').before(facultyPanel);
     const entries = programs.filter(item=>includes([item.name,item.specialty,item.code].join(' '),$('program-query').value) &&
       (!$('program-faculty').value || item.facultyId === $('program-faculty').value));
     $('program-count').textContent = 'Програм: '+entries.length;
@@ -455,6 +474,7 @@
   }
   setView('faculties',false);
 })();
+
 
 
 
