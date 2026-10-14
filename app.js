@@ -65,6 +65,8 @@
   function setView(name, moveFocus = true) {
     if (!['disciplines','departments','programs','faculties'].includes(name)) name = 'faculties';
     view = name;
+    $('home-button').classList.remove('current');
+    $('home-button').setAttribute('aria-current','false');
     document.querySelectorAll('.view').forEach(section => {section.hidden = section.id !== 'view-'+view;});
     document.querySelectorAll('.bottom-nav [data-view]').forEach(button => {
       const active = button.dataset.view === view;
@@ -83,6 +85,17 @@
     returnStack.length = 0;
     setView(button.dataset.view);
   };});
+  $('home-button').onclick = () => {
+    returnStack.length = 0;
+    setView('faculties',false);
+    document.querySelectorAll('.bottom-nav [data-view]').forEach(button => {
+      button.classList.remove('current');button.setAttribute('aria-current','false');
+    });
+    $('home-button').classList.add('current');
+    $('home-button').setAttribute('aria-current','page');
+    document.querySelector('.app-header h1').focus({preventScroll:true});
+    window.scrollTo({top:0,behavior:'instant'});
+  };
   const facultyOptions = '<option value="">Усі підрозділи</option>'+faculties.map(item=>`<option value="${esc(item.id)}">${esc(item.name)}</option>`).join('');
   $('discipline-faculty').innerHTML = facultyOptions;
   $('department-faculty').innerHTML = facultyOptions;
@@ -406,6 +419,7 @@
   }
   setView('faculties',false);
 })();
+
 
 
 
