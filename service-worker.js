@@ -1,4 +1,4 @@
-const CACHE='phd-teaching-load-shell-v9-hours-20261014';
+const CACHE='phd-teaching-load-shell-v10-codes-sync-20261014';
 const SHELL=['./','./index.html','./styles.css?v=9','./data.js?v=9','./app.js?v=9','./manifest.webmanifest','./nubip-logo.png','./icon.svg','./icon-192.png','./icon-512.png'];
 self.addEventListener('install',event=>event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(SHELL)).then(()=>self.skipWaiting())));
 self.addEventListener('activate',event=>event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(key=>key.startsWith('phd-teaching-load-shell-')&&key!==CACHE).map(key=>caches.delete(key)))).then(()=>self.clients.claim())));
@@ -15,6 +15,7 @@ self.addEventListener('fetch',event=>{
   }catch{return (await cache.match(key))||Response.error();}
  })());
 });
+
 
 
 

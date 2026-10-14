@@ -1855,21 +1855,21 @@ window.TEACHING_DATA = {
     }
   },
   {
-    "id": "ONP-005:2:DISC-061:11.06",
+    "id": "ONP-005:2:DISC-061:11.04",
     "recordCode": "DISC-061",
     "programId": "ONP-005",
     "name": "Бізнес-проєкти та грантова діяльність",
-    "departmentId": "11.06",
-    "departmentCode": "11.06",
+    "departmentId": "11.04",
+    "departmentCode": "11.04",
     "semester": 2,
     "type": "Фахова",
     "hours": {
-      "total": 150,
+      "total": 120,
       "classroom": 60,
       "lectures": 30,
       "practical": 30,
       "laboratory": null,
-      "independent": 90,
+      "independent": 60,
       "assessment": "Екзамен"
     }
   },
@@ -2311,13 +2311,13 @@ window.TEACHING_DATA = {
     }
   },
   {
-    "id": "ONP-008:1:DISC-071:11.04",
+    "id": "ONP-008:2:DISC-071:11.04",
     "recordCode": "DISC-071",
     "programId": "ONP-008",
     "name": "Бізнес-проекти та грантова діяльність",
     "departmentId": "11.04",
     "departmentCode": "11.04",
-    "semester": 1,
+    "semester": 2,
     "type": "Фахова",
     "hours": {
       "total": 120,
@@ -2349,8 +2349,8 @@ window.TEACHING_DATA = {
     }
   },
   {
-    "id": "ONP-008:1:DISC-073:11.03",
-    "recordCode": "DISC-073",
+    "id": "ONP-008:1:DISC-022:11.03",
+    "recordCode": "DISC-022",
     "programId": "ONP-008",
     "name": "Методологія наукового дослідження та інтелектуальна власність",
     "departmentId": "11.03",
@@ -2463,8 +2463,8 @@ window.TEACHING_DATA = {
     }
   },
   {
-    "id": "ONP-008:1:DISC-068:10.05",
-    "recordCode": "DISC-068",
+    "id": "ONP-008:1:DISC-001:10.05",
+    "recordCode": "DISC-001",
     "programId": "ONP-008",
     "name": "Філософія науки",
     "departmentId": "10.05",
@@ -2805,12 +2805,12 @@ window.TEACHING_DATA = {
     }
   },
   {
-    "id": "ONP-011:1:DISC-002:04.01",
+    "id": "ONP-011:1:DISC-002:10.09",
     "recordCode": "DISC-002",
     "programId": "ONP-011",
     "name": "Іноземна мова за професійним спрямуванням",
-    "departmentId": "04.01",
-    "departmentCode": "04.01",
+    "departmentId": "10.09",
+    "departmentCode": "10.09",
     "semester": 1,
     "type": "Обов'язкова",
     "hours": {
@@ -3242,8 +3242,8 @@ window.TEACHING_DATA = {
     }
   },
   {
-    "id": "ONP-013:1:DISC-035:11.03",
-    "recordCode": "DISC-035",
+    "id": "ONP-013:1:DISC-022:11.03",
+    "recordCode": "DISC-022",
     "programId": "ONP-013",
     "name": "Методологія наукового дослідження та інтелектуальна власність",
     "departmentId": "11.03",
@@ -4268,8 +4268,8 @@ window.TEACHING_DATA = {
     }
   },
   {
-    "id": "ONP-021:1:DISC-045:15.01",
-    "recordCode": "DISC-045",
+    "id": "ONP-021:1:DISC-005:15.01",
+    "recordCode": "DISC-005",
     "programId": "ONP-021",
     "name": "Математичне моделювання та планування експерименту",
     "departmentId": "15.01",
@@ -4724,8 +4724,8 @@ window.TEACHING_DATA = {
     }
   },
   {
-    "id": "ONP-024:1:DISC-039:15.01",
-    "recordCode": "DISC-039",
+    "id": "ONP-024:1:DISC-005:15.01",
+    "recordCode": "DISC-005",
     "programId": "ONP-024",
     "name": "Математичне моделювання та планування експерименту",
     "departmentId": "15.01",
@@ -4895,8 +4895,8 @@ window.TEACHING_DATA = {
     }
   },
   {
-    "id": "ONP-025:1:DISC-005:01.11",
-    "recordCode": "DISC-005",
+    "id": "ONP-025:1:DISC-039:01.11",
+    "recordCode": "DISC-039",
     "programId": "ONP-025",
     "name": "Математичне моделювання та планування експерименту",
     "departmentId": "01.11",
@@ -6054,6 +6054,25 @@ window.TEACHING_DATA = {
     }
   },
   {
+    "id": "ONP-033:2:DISC-136:08.08",
+    "recordCode": "DISC-136",
+    "programId": "ONP-033",
+    "name": "Загальна ветеринарна патологія",
+    "departmentId": "08.08",
+    "departmentCode": "08.08",
+    "semester": 2,
+    "type": "Фахова",
+    "hours": {
+      "total": 90,
+      "classroom": 40,
+      "lectures": 20,
+      "practical": null,
+      "laboratory": 20,
+      "independent": 50,
+      "assessment": "Екзамен"
+    }
+  },
+  {
     "id": "ONP-033:1:DISC-002:10.12",
     "recordCode": "DISC-002",
     "programId": "ONP-033",
@@ -6187,6 +6206,25 @@ window.TEACHING_DATA = {
     }
   },
   {
+    "id": "ONP-034:2:DISC-136:08.08",
+    "recordCode": "DISC-136",
+    "programId": "ONP-034",
+    "name": "Загальна ветеринарна патологія",
+    "departmentId": "08.08",
+    "departmentCode": "08.08",
+    "semester": 2,
+    "type": "Фахова",
+    "hours": {
+      "total": 90,
+      "classroom": 40,
+      "lectures": 20,
+      "practical": null,
+      "laboratory": 20,
+      "independent": 50,
+      "assessment": "Екзамен"
+    }
+  },
+  {
     "id": "ONP-034:1:DISC-002:10.12",
     "recordCode": "DISC-002",
     "programId": "ONP-034",
@@ -6299,47 +6337,10 @@ window.TEACHING_DATA = {
       "independent": 75,
       "assessment": "Екзамен"
     }
-  },
-  {
-    "id": "ONP-033:2:DISC-136:08.08",
-    "recordCode": "DISC-136",
-    "programId": "ONP-033",
-    "name": "Загальна ветеринарна патологія",
-    "departmentId": "08.08",
-    "departmentCode": "08.08",
-    "semester": 2,
-    "type": "Фахова",
-    "hours": {
-      "total": 90,
-      "classroom": 40,
-      "lectures": 20,
-      "practical": null,
-      "laboratory": 20,
-      "independent": 50,
-      "assessment": "Екзамен"
-    }
-  },
-  {
-    "id": "ONP-034:2:DISC-136:08.08",
-    "recordCode": "DISC-136",
-    "programId": "ONP-034",
-    "name": "Загальна ветеринарна патологія",
-    "departmentId": "08.08",
-    "departmentCode": "08.08",
-    "semester": 2,
-    "type": "Фахова",
-    "hours": {
-      "total": 90,
-      "classroom": 40,
-      "lectures": 20,
-      "practical": null,
-      "laboratory": 20,
-      "independent": 50,
-      "assessment": "Екзамен"
-    }
   }
 ]
 };
+
 
 
 
