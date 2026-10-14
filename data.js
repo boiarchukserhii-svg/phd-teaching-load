@@ -1121,7 +1121,16 @@ window.TEACHING_DATA = {
     "departmentId": "10.03",
     "departmentCode": "10.03",
     "semester": 2,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 120,
+      "classroom": 60,
+      "lectures": 30,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 60,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-001:1:DISC-002:10.09",
@@ -1131,7 +1140,16 @@ window.TEACHING_DATA = {
     "departmentId": "10.09",
     "departmentCode": "10.09",
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Обов'язкова",
+    "hours": {
+      "total": 180,
+      "classroom": 60,
+      "lectures": 15,
+      "practical": 45,
+      "laboratory": null,
+      "independent": 120,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-001:2:DISC-047:10.02",
@@ -1141,7 +1159,16 @@ window.TEACHING_DATA = {
     "departmentId": "10.02",
     "departmentCode": "10.02",
     "semester": 2,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 90,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 45,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-001:2:DISC-048:10.04",
@@ -1151,7 +1178,16 @@ window.TEACHING_DATA = {
     "departmentId": "10.04",
     "departmentCode": "10.04",
     "semester": 2,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 120,
+      "classroom": 60,
+      "lectures": 30,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 60,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-001:1:DISC-007:10.03",
@@ -1161,7 +1197,16 @@ window.TEACHING_DATA = {
     "departmentId": "10.03",
     "departmentCode": "10.03",
     "semester": 1,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 120,
+      "classroom": 60,
+      "lectures": 30,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 60,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-001:1:DISC-009:10.03",
@@ -1171,7 +1216,16 @@ window.TEACHING_DATA = {
     "departmentId": "10.03",
     "departmentCode": "10.03",
     "semester": 1,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 120,
+      "classroom": 60,
+      "lectures": 30,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 60,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-001:1:DISC-010:10.08",
@@ -1181,7 +1235,16 @@ window.TEACHING_DATA = {
     "departmentId": "10.08",
     "departmentCode": "10.08",
     "semester": 1,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 120,
+      "classroom": 75,
+      "lectures": 30,
+      "practical": 45,
+      "laboratory": null,
+      "independent": 45,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-001:1:DISC-003:10.03",
@@ -1191,7 +1254,16 @@ window.TEACHING_DATA = {
     "departmentId": "10.03",
     "departmentCode": "10.03",
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Обов'язкова",
+    "hours": {
+      "total": 120,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-001:1:DISC-001:10.05",
@@ -1201,7 +1273,16 @@ window.TEACHING_DATA = {
     "departmentId": "10.05",
     "departmentCode": "10.05",
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Обов'язкова",
+    "hours": {
+      "total": 120,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-001:1:DISC-008:10.03",
@@ -1211,7 +1292,16 @@ window.TEACHING_DATA = {
     "departmentId": "10.03",
     "departmentCode": "10.03",
     "semester": 1,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 120,
+      "classroom": 60,
+      "lectures": 30,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 60,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-002:2:DISC-052:10.12",
@@ -1221,7 +1311,16 @@ window.TEACHING_DATA = {
     "departmentId": "10.12",
     "departmentCode": "10.12",
     "semester": 2,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 120,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-002:2:DISC-050:10.12",
@@ -1231,7 +1330,16 @@ window.TEACHING_DATA = {
     "departmentId": "10.12",
     "departmentCode": "10.12",
     "semester": 2,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 120,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-002:1:DISC-012:10.03",
@@ -1241,7 +1349,16 @@ window.TEACHING_DATA = {
     "departmentId": "10.03",
     "departmentCode": "10.03",
     "semester": 1,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 120,
+      "classroom": 60,
+      "lectures": 15,
+      "practical": 45,
+      "laboratory": null,
+      "independent": 60,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-002:1:DISC-002:10.09",
@@ -1251,7 +1368,16 @@ window.TEACHING_DATA = {
     "departmentId": "10.09",
     "departmentCode": "10.09",
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Обов'язкова",
+    "hours": {
+      "total": 180,
+      "classroom": 60,
+      "lectures": 15,
+      "practical": 45,
+      "laboratory": null,
+      "independent": 120,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-002:1:DISC-004:07.04",
@@ -1261,7 +1387,16 @@ window.TEACHING_DATA = {
     "departmentId": "07.04",
     "departmentCode": "07.04",
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Обов'язкова",
+    "hours": {
+      "total": 120,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-002:1:DISC-003:10.03",
@@ -1271,7 +1406,16 @@ window.TEACHING_DATA = {
     "departmentId": "10.03",
     "departmentCode": "10.03",
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Обов'язкова",
+    "hours": {
+      "total": 120,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-002:2:DISC-051:10.03",
@@ -1281,7 +1425,16 @@ window.TEACHING_DATA = {
     "departmentId": "10.03",
     "departmentCode": "10.03",
     "semester": 2,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 90,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 45,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-002:1:DISC-011:10.02",
@@ -1291,7 +1444,16 @@ window.TEACHING_DATA = {
     "departmentId": "10.02",
     "departmentCode": "10.02",
     "semester": 1,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 120,
+      "classroom": 60,
+      "lectures": 15,
+      "practical": 45,
+      "laboratory": null,
+      "independent": 60,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-002:1:DISC-013:10.12",
@@ -1301,7 +1463,16 @@ window.TEACHING_DATA = {
     "departmentId": "10.12",
     "departmentCode": "10.12",
     "semester": 1,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 120,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-002:1:DISC-001:10.05",
@@ -1311,7 +1482,16 @@ window.TEACHING_DATA = {
     "departmentId": "10.05",
     "departmentCode": "10.05",
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Обов'язкова",
+    "hours": {
+      "total": 120,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-003:1:DISC-014:10.06",
@@ -1321,7 +1501,16 @@ window.TEACHING_DATA = {
     "departmentId": "10.06",
     "departmentCode": "10.06",
     "semester": 1,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 180,
+      "classroom": 60,
+      "lectures": 30,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 120,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-003:2:DISC-054:10.06",
@@ -1331,7 +1520,16 @@ window.TEACHING_DATA = {
     "departmentId": "10.06",
     "departmentCode": "10.06",
     "semester": 2,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 180,
+      "classroom": 60,
+      "lectures": 30,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 120,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-003:2:DISC-053:10.06",
@@ -1341,7 +1539,16 @@ window.TEACHING_DATA = {
     "departmentId": "10.06",
     "departmentCode": "10.06",
     "semester": 2,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 180,
+      "classroom": 60,
+      "lectures": 30,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 120,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-003:1:DISC-002:10.09",
@@ -1351,7 +1558,16 @@ window.TEACHING_DATA = {
     "departmentId": "10.09",
     "departmentCode": "10.09",
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Обов'язкова",
+    "hours": {
+      "total": 180,
+      "classroom": 60,
+      "lectures": 15,
+      "practical": 45,
+      "laboratory": null,
+      "independent": 120,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-003:2:DISC-055:10.06",
@@ -1361,7 +1577,16 @@ window.TEACHING_DATA = {
     "departmentId": "10.06",
     "departmentCode": "10.06",
     "semester": 2,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 150,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 105,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-003:1:DISC-004:07.04",
@@ -1371,7 +1596,16 @@ window.TEACHING_DATA = {
     "departmentId": "07.04",
     "departmentCode": "07.04",
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Обов'язкова",
+    "hours": {
+      "total": 120,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-003:1:DISC-003:10.03",
@@ -1381,7 +1615,16 @@ window.TEACHING_DATA = {
     "departmentId": "10.03",
     "departmentCode": "10.03",
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Обов'язкова",
+    "hours": {
+      "total": 120,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-003:1:DISC-001:10.05",
@@ -1391,7 +1634,16 @@ window.TEACHING_DATA = {
     "departmentId": "10.05",
     "departmentCode": "10.05",
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Обов'язкова",
+    "hours": {
+      "total": 120,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-004:2:DISC-059:10.05",
@@ -1401,7 +1653,16 @@ window.TEACHING_DATA = {
     "departmentId": "10.05",
     "departmentCode": "10.05",
     "semester": 2,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 120,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-004:1:DISC-002:10.09",
@@ -1411,7 +1672,16 @@ window.TEACHING_DATA = {
     "departmentId": "10.09",
     "departmentCode": "10.09",
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Обов'язкова",
+    "hours": {
+      "total": 180,
+      "classroom": 60,
+      "lectures": 15,
+      "practical": 45,
+      "laboratory": null,
+      "independent": 120,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-004:1:DISC-006:15.01",
@@ -1421,7 +1691,16 @@ window.TEACHING_DATA = {
     "departmentId": "15.01",
     "departmentCode": "15.01",
     "semester": 1,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 120,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-004:2:DISC-057:10.05",
@@ -1431,7 +1710,16 @@ window.TEACHING_DATA = {
     "departmentId": "10.05",
     "departmentCode": "10.05",
     "semester": 2,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 120,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-004:2:DISC-056:10.05",
@@ -1441,7 +1729,16 @@ window.TEACHING_DATA = {
     "departmentId": "10.05",
     "departmentCode": "10.05",
     "semester": 2,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 120,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-004:1:DISC-004:07.04",
@@ -1451,7 +1748,16 @@ window.TEACHING_DATA = {
     "departmentId": "07.04",
     "departmentCode": "07.04",
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Обов'язкова",
+    "hours": {
+      "total": 120,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-004:1:DISC-003:10.03",
@@ -1461,7 +1767,16 @@ window.TEACHING_DATA = {
     "departmentId": "10.03",
     "departmentCode": "10.03",
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Обов'язкова",
+    "hours": {
+      "total": 120,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-004:2:DISC-058:10.05",
@@ -1471,7 +1786,16 @@ window.TEACHING_DATA = {
     "departmentId": "10.05",
     "departmentCode": "10.05",
     "semester": 2,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 120,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-004:1:DISC-001:10.05",
@@ -1481,7 +1805,16 @@ window.TEACHING_DATA = {
     "departmentId": "10.05",
     "departmentCode": "10.05",
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Обов'язкова",
+    "hours": {
+      "total": 120,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-004:2:DISC-060:10.05",
@@ -1491,7 +1824,16 @@ window.TEACHING_DATA = {
     "departmentId": "10.05",
     "departmentCode": "10.05",
     "semester": 2,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 90,
+      "classroom": 30,
+      "lectures": 15,
+      "practical": 15,
+      "laboratory": null,
+      "independent": 60,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-005:2:DISC-062:11.04",
@@ -1501,7 +1843,16 @@ window.TEACHING_DATA = {
     "departmentId": "11.04",
     "departmentCode": "11.04",
     "semester": 2,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 150,
+      "classroom": 75,
+      "lectures": 30,
+      "practical": 45,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-005:2:DISC-061:11.06",
@@ -1511,7 +1862,16 @@ window.TEACHING_DATA = {
     "departmentId": "11.06",
     "departmentCode": "11.06",
     "semester": 2,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 150,
+      "classroom": 60,
+      "lectures": 30,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 90,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-005:1:DISC-002:10.09",
@@ -1521,7 +1881,16 @@ window.TEACHING_DATA = {
     "departmentId": "10.09",
     "departmentCode": "10.09",
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Обов'язкова",
+    "hours": {
+      "total": 180,
+      "classroom": 60,
+      "lectures": 15,
+      "practical": 45,
+      "laboratory": null,
+      "independent": 120,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-005:1:DISC-015:11.03",
@@ -1531,7 +1900,16 @@ window.TEACHING_DATA = {
     "departmentId": "11.03",
     "departmentCode": "11.03",
     "semester": 1,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 150,
+      "classroom": 60,
+      "lectures": 30,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 90,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-005:1:DISC-016:11.03",
@@ -1541,7 +1919,16 @@ window.TEACHING_DATA = {
     "departmentId": "11.03",
     "departmentCode": "11.03",
     "semester": 1,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 180,
+      "classroom": 60,
+      "lectures": 30,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 120,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-005:1:DISC-003:10.03",
@@ -1551,7 +1938,16 @@ window.TEACHING_DATA = {
     "departmentId": "10.03",
     "departmentCode": "10.03",
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Обов'язкова",
+    "hours": {
+      "total": 120,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-005:1:DISC-001:10.05",
@@ -1561,7 +1957,16 @@ window.TEACHING_DATA = {
     "departmentId": "10.05",
     "departmentCode": "10.05",
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Обов'язкова",
+    "hours": {
+      "total": 120,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-006:1:DISC-019:13.05",
@@ -1571,7 +1976,16 @@ window.TEACHING_DATA = {
     "departmentId": "13.05",
     "departmentCode": "13.05",
     "semester": 1,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 120,
+      "classroom": 40,
+      "lectures": 20,
+      "practical": 20,
+      "laboratory": null,
+      "independent": 80,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-006:1:DISC-002:10.09",
@@ -1581,7 +1995,16 @@ window.TEACHING_DATA = {
     "departmentId": "10.09",
     "departmentCode": "10.09",
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Обов'язкова",
+    "hours": {
+      "total": 180,
+      "classroom": 60,
+      "lectures": 15,
+      "practical": 45,
+      "laboratory": null,
+      "independent": 120,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-006:2:DISC-064:13.01",
@@ -1591,7 +2014,16 @@ window.TEACHING_DATA = {
     "departmentId": "13.01",
     "departmentCode": "13.01",
     "semester": 2,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 120,
+      "classroom": 40,
+      "lectures": 20,
+      "practical": 20,
+      "laboratory": null,
+      "independent": 80,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-006:1:DISC-017:13.04",
@@ -1601,7 +2033,16 @@ window.TEACHING_DATA = {
     "departmentId": "13.04",
     "departmentCode": "13.04",
     "semester": 1,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 120,
+      "classroom": 50,
+      "lectures": 30,
+      "practical": 20,
+      "laboratory": null,
+      "independent": 70,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-006:1:DISC-018:13.05",
@@ -1611,7 +2052,16 @@ window.TEACHING_DATA = {
     "departmentId": "13.05",
     "departmentCode": "13.05",
     "semester": 1,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 120,
+      "classroom": 40,
+      "lectures": 20,
+      "practical": 20,
+      "laboratory": null,
+      "independent": 80,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-006:1:DISC-003:10.03",
@@ -1621,7 +2071,16 @@ window.TEACHING_DATA = {
     "departmentId": "10.03",
     "departmentCode": "10.03",
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Обов'язкова",
+    "hours": {
+      "total": 120,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-006:2:DISC-063:13.05",
@@ -1631,7 +2090,16 @@ window.TEACHING_DATA = {
     "departmentId": "13.05",
     "departmentCode": "13.05",
     "semester": 2,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 150,
+      "classroom": 60,
+      "lectures": 30,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 90,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-006:1:DISC-001:10.05",
@@ -1641,7 +2109,16 @@ window.TEACHING_DATA = {
     "departmentId": "10.05",
     "departmentCode": "10.05",
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Обов'язкова",
+    "hours": {
+      "total": 120,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-007:2:DISC-066:10.01",
@@ -1651,7 +2128,16 @@ window.TEACHING_DATA = {
     "departmentId": "10.01",
     "departmentCode": "10.01",
     "semester": 2,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 120,
+      "classroom": 45,
+      "lectures": 20,
+      "practical": 25,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-007:1:DISC-002:10.09",
@@ -1661,7 +2147,16 @@ window.TEACHING_DATA = {
     "departmentId": "10.09",
     "departmentCode": "10.09",
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Обов'язкова",
+    "hours": {
+      "total": 180,
+      "classroom": 60,
+      "lectures": 15,
+      "practical": 45,
+      "laboratory": null,
+      "independent": 120,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-007:1:DISC-006:15.01",
@@ -1671,7 +2166,16 @@ window.TEACHING_DATA = {
     "departmentId": "15.01",
     "departmentCode": "15.01",
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Обов'язкова",
+    "hours": {
+      "total": 120,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-007:1:DISC-005:15.01",
@@ -1681,7 +2185,16 @@ window.TEACHING_DATA = {
     "departmentId": "15.01",
     "departmentCode": "15.01",
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Обов'язкова",
+    "hours": {
+      "total": 120,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-007:1:DISC-020:10.01",
@@ -1691,7 +2204,16 @@ window.TEACHING_DATA = {
     "departmentId": "10.01",
     "departmentCode": "10.01",
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Обов'язкова",
+    "hours": {
+      "total": 120,
+      "classroom": 45,
+      "lectures": 20,
+      "practical": 25,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-007:2:DISC-065:10.01",
@@ -1701,7 +2223,16 @@ window.TEACHING_DATA = {
     "departmentId": "10.01",
     "departmentCode": "10.01",
     "semester": 2,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 120,
+      "classroom": 45,
+      "lectures": 20,
+      "practical": 25,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-007:1:DISC-003:10.03",
@@ -1711,7 +2242,16 @@ window.TEACHING_DATA = {
     "departmentId": "10.03",
     "departmentCode": "10.03",
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Обов'язкова",
+    "hours": {
+      "total": 120,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-007:2:DISC-067:10.01",
@@ -1721,7 +2261,16 @@ window.TEACHING_DATA = {
     "departmentId": "10.01",
     "departmentCode": "10.01",
     "semester": 2,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 120,
+      "classroom": 45,
+      "lectures": 20,
+      "practical": 25,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-007:1:DISC-001:10.05",
@@ -1731,7 +2280,16 @@ window.TEACHING_DATA = {
     "departmentId": "10.05",
     "departmentCode": "10.05",
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Обов'язкова",
+    "hours": {
+      "total": 120,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-008:1:DISC-074:11.05",
@@ -1741,7 +2299,16 @@ window.TEACHING_DATA = {
     "departmentId": "11.05",
     "departmentCode": "11.05",
     "semester": 1,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 120,
+      "classroom": 75,
+      "lectures": 30,
+      "practical": 45,
+      "laboratory": null,
+      "independent": 45,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-008:1:DISC-071:11.04",
@@ -1751,7 +2318,16 @@ window.TEACHING_DATA = {
     "departmentId": "11.04",
     "departmentCode": "11.04",
     "semester": 1,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 120,
+      "classroom": 60,
+      "lectures": 30,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 60,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-008:1:DISC-069:10.09",
@@ -1761,7 +2337,16 @@ window.TEACHING_DATA = {
     "departmentId": "10.09",
     "departmentCode": "10.09",
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Обов'язкова",
+    "hours": {
+      "total": 180,
+      "classroom": 60,
+      "lectures": 15,
+      "practical": 45,
+      "laboratory": null,
+      "independent": 120,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-008:1:DISC-073:11.03",
@@ -1771,7 +2356,16 @@ window.TEACHING_DATA = {
     "departmentId": "11.03",
     "departmentCode": "11.03",
     "semester": 1,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 150,
+      "classroom": 60,
+      "lectures": 30,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 90,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-008:2:DISC-076:11.05",
@@ -1781,7 +2375,16 @@ window.TEACHING_DATA = {
     "departmentId": "11.05",
     "departmentCode": "11.05",
     "semester": 2,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 120,
+      "classroom": 60,
+      "lectures": 30,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 60,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-008:1:DISC-070:10.03",
@@ -1791,7 +2394,16 @@ window.TEACHING_DATA = {
     "departmentId": "10.03",
     "departmentCode": "10.03",
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Обов'язкова",
+    "hours": {
+      "total": 120,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-008:1:DISC-072:11.05",
@@ -1801,7 +2413,16 @@ window.TEACHING_DATA = {
     "departmentId": "11.05",
     "departmentCode": "11.05",
     "semester": 1,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 120,
+      "classroom": 60,
+      "lectures": 30,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 60,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-008:2:DISC-077:11.06",
@@ -1811,7 +2432,16 @@ window.TEACHING_DATA = {
     "departmentId": "11.06",
     "departmentCode": "11.06",
     "semester": 2,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 90,
+      "classroom": 60,
+      "lectures": 30,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 30,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-008:2:DISC-075:11.07",
@@ -1821,7 +2451,16 @@ window.TEACHING_DATA = {
     "departmentId": "11.07",
     "departmentCode": "11.07",
     "semester": 2,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 90,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 45,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-008:1:DISC-068:10.05",
@@ -1831,7 +2470,16 @@ window.TEACHING_DATA = {
     "departmentId": "10.05",
     "departmentCode": "10.05",
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Обов'язкова",
+    "hours": {
+      "total": 120,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-009:2:DISC-080:11.04",
@@ -1841,7 +2489,16 @@ window.TEACHING_DATA = {
     "departmentId": "11.04",
     "departmentCode": "11.04",
     "semester": 2,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 120,
+      "classroom": 60,
+      "lectures": 30,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 60,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-009:2:DISC-078:11.07",
@@ -1851,7 +2508,16 @@ window.TEACHING_DATA = {
     "departmentId": "11.07",
     "departmentCode": "11.07",
     "semester": 2,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 150,
+      "classroom": 60,
+      "lectures": 30,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 90,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-009:1:DISC-002:10.09",
@@ -1861,7 +2527,16 @@ window.TEACHING_DATA = {
     "departmentId": "10.09",
     "departmentCode": "10.09",
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Обов'язкова",
+    "hours": {
+      "total": 180,
+      "classroom": 60,
+      "lectures": 15,
+      "practical": 45,
+      "laboratory": null,
+      "independent": 120,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-009:1:DISC-022:11.03",
@@ -1871,7 +2546,16 @@ window.TEACHING_DATA = {
     "departmentId": "11.03",
     "departmentCode": "11.03",
     "semester": 1,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 150,
+      "classroom": 60,
+      "lectures": 30,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 90,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-009:1:DISC-003:10.03",
@@ -1881,7 +2565,16 @@ window.TEACHING_DATA = {
     "departmentId": "10.03",
     "departmentCode": "10.03",
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Обов'язкова",
+    "hours": {
+      "total": 120,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-009:1:DISC-021:11.07",
@@ -1891,7 +2584,16 @@ window.TEACHING_DATA = {
     "departmentId": "11.07",
     "departmentCode": "11.07",
     "semester": 1,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 150,
+      "classroom": 60,
+      "lectures": 30,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 90,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-009:2:DISC-079:11.07",
@@ -1901,7 +2603,16 @@ window.TEACHING_DATA = {
     "departmentId": "11.07",
     "departmentCode": "11.07",
     "semester": 2,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 150,
+      "classroom": 60,
+      "lectures": 30,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 90,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-009:1:DISC-001:10.05",
@@ -1911,7 +2622,16 @@ window.TEACHING_DATA = {
     "departmentId": "10.05",
     "departmentCode": "10.05",
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Обов'язкова",
+    "hours": {
+      "total": 120,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-010:2:DISC-081:12.02",
@@ -1921,7 +2641,16 @@ window.TEACHING_DATA = {
     "departmentId": "12.02",
     "departmentCode": "12.02",
     "semester": 2,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 120,
+      "classroom": 60,
+      "lectures": 30,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 60,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-010:1:DISC-002:10.09",
@@ -1931,7 +2660,16 @@ window.TEACHING_DATA = {
     "departmentId": "10.09",
     "departmentCode": "10.09",
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Обов'язкова",
+    "hours": {
+      "total": 180,
+      "classroom": 60,
+      "lectures": 15,
+      "practical": 45,
+      "laboratory": null,
+      "independent": 120,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-010:1:DISC-025:12.02",
@@ -1941,7 +2679,16 @@ window.TEACHING_DATA = {
     "departmentId": "12.02",
     "departmentCode": "12.02",
     "semester": 1,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 120,
+      "classroom": 60,
+      "lectures": 30,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 60,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-010:1:DISC-023:12.04",
@@ -1951,7 +2698,16 @@ window.TEACHING_DATA = {
     "departmentId": "12.04",
     "departmentCode": "12.04",
     "semester": 1,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 150,
+      "classroom": 75,
+      "lectures": 30,
+      "practical": 45,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-010:1:DISC-003:10.03",
@@ -1961,7 +2717,16 @@ window.TEACHING_DATA = {
     "departmentId": "10.03",
     "departmentCode": "10.03",
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Обов'язкова",
+    "hours": {
+      "total": 120,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-010:2:DISC-082:12.05",
@@ -1971,7 +2736,16 @@ window.TEACHING_DATA = {
     "departmentId": "12.05",
     "departmentCode": "12.05",
     "semester": 2,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 120,
+      "classroom": 60,
+      "lectures": 30,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 60,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-010:1:DISC-024:12.04",
@@ -1981,7 +2755,16 @@ window.TEACHING_DATA = {
     "departmentId": "12.04",
     "departmentCode": "12.04",
     "semester": 1,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 120,
+      "classroom": 60,
+      "lectures": 30,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 60,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-010:1:DISC-001:10.05",
@@ -1991,7 +2774,16 @@ window.TEACHING_DATA = {
     "departmentId": "10.05",
     "departmentCode": "10.05",
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Обов'язкова",
+    "hours": {
+      "total": 120,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-011:1:DISC-028:04.01",
@@ -2001,7 +2793,16 @@ window.TEACHING_DATA = {
     "departmentId": "04.01",
     "departmentCode": "04.01",
     "semester": 1,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 150,
+      "classroom": 60,
+      "lectures": 15,
+      "practical": 45,
+      "laboratory": null,
+      "independent": 90,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-011:1:DISC-002:04.01",
@@ -2011,7 +2812,16 @@ window.TEACHING_DATA = {
     "departmentId": "04.01",
     "departmentCode": "04.01",
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Обов'язкова",
+    "hours": {
+      "total": 180,
+      "classroom": 60,
+      "lectures": 15,
+      "practical": 45,
+      "laboratory": null,
+      "independent": 120,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-011:1:DISC-026:04.01",
@@ -2021,7 +2831,16 @@ window.TEACHING_DATA = {
     "departmentId": "04.01",
     "departmentCode": "04.01",
     "semester": 1,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 120,
+      "classroom": 45,
+      "lectures": 30,
+      "practical": 15,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-011:1:DISC-003:10.03",
@@ -2031,7 +2850,16 @@ window.TEACHING_DATA = {
     "departmentId": "10.03",
     "departmentCode": "10.03",
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Обов'язкова",
+    "hours": {
+      "total": 120,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-011:2:DISC-085:04.01",
@@ -2041,7 +2869,16 @@ window.TEACHING_DATA = {
     "departmentId": "04.01",
     "departmentCode": "04.01",
     "semester": 2,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 120,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-011:1:DISC-027:04.01",
@@ -2051,7 +2888,16 @@ window.TEACHING_DATA = {
     "departmentId": "04.01",
     "departmentCode": "04.01",
     "semester": 1,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 180,
+      "classroom": 60,
+      "lectures": 15,
+      "practical": 45,
+      "laboratory": null,
+      "independent": 120,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-011:2:DISC-083:04.01",
@@ -2061,7 +2907,16 @@ window.TEACHING_DATA = {
     "departmentId": "04.01",
     "departmentCode": "04.01",
     "semester": 2,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 120,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-011:1:DISC-001:10.05",
@@ -2071,7 +2926,16 @@ window.TEACHING_DATA = {
     "departmentId": "10.05",
     "departmentCode": "10.05",
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Обов'язкова",
+    "hours": {
+      "total": 120,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-011:2:DISC-084:04.01",
@@ -2081,7 +2945,16 @@ window.TEACHING_DATA = {
     "departmentId": "04.01",
     "departmentCode": "04.01",
     "semester": 2,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 120,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-012:2:DISC-088:12.03",
@@ -2091,7 +2964,16 @@ window.TEACHING_DATA = {
     "departmentId": "12.03",
     "departmentCode": "12.03",
     "semester": 2,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 120,
+      "classroom": 60,
+      "lectures": 30,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 60,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-012:1:DISC-032:12.03",
@@ -2101,7 +2983,16 @@ window.TEACHING_DATA = {
     "departmentId": "12.03",
     "departmentCode": "12.03",
     "semester": 1,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 120,
+      "classroom": 60,
+      "lectures": 30,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 60,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-012:1:DISC-002:10.09",
@@ -2111,7 +3002,16 @@ window.TEACHING_DATA = {
     "departmentId": "10.09",
     "departmentCode": "10.09",
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Обов'язкова",
+    "hours": {
+      "total": 180,
+      "classroom": 60,
+      "lectures": 15,
+      "practical": 45,
+      "laboratory": null,
+      "independent": 120,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-012:1:DISC-030:12.03",
@@ -2121,7 +3021,16 @@ window.TEACHING_DATA = {
     "departmentId": "12.03",
     "departmentCode": "12.03",
     "semester": 1,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 120,
+      "classroom": 60,
+      "lectures": 30,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 60,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-012:2:DISC-087:12.03",
@@ -2131,7 +3040,16 @@ window.TEACHING_DATA = {
     "departmentId": "12.03",
     "departmentCode": "12.03",
     "semester": 2,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 120,
+      "classroom": 60,
+      "lectures": 30,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 60,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-012:1:DISC-029:12.04",
@@ -2141,7 +3059,16 @@ window.TEACHING_DATA = {
     "departmentId": "12.04",
     "departmentCode": "12.04",
     "semester": 1,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 90,
+      "classroom": 60,
+      "lectures": 30,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 30,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-012:1:DISC-031:12.03",
@@ -2151,7 +3078,16 @@ window.TEACHING_DATA = {
     "departmentId": "12.03",
     "departmentCode": "12.03",
     "semester": 1,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 120,
+      "classroom": 60,
+      "lectures": 30,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 60,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-012:1:DISC-003:10.03",
@@ -2161,7 +3097,16 @@ window.TEACHING_DATA = {
     "departmentId": "10.03",
     "departmentCode": "10.03",
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Обов'язкова",
+    "hours": {
+      "total": 120,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-012:2:DISC-086:12.03",
@@ -2171,7 +3116,16 @@ window.TEACHING_DATA = {
     "departmentId": "12.03",
     "departmentCode": "12.03",
     "semester": 2,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 120,
+      "classroom": 60,
+      "lectures": 30,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 60,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-012:1:DISC-001:10.05",
@@ -2181,7 +3135,16 @@ window.TEACHING_DATA = {
     "departmentId": "10.05",
     "departmentCode": "10.05",
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Обов'язкова",
+    "hours": {
+      "total": 120,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-013:2:DISC-080:11.04",
@@ -2191,7 +3154,16 @@ window.TEACHING_DATA = {
     "departmentId": "11.04",
     "departmentCode": "11.04",
     "semester": 2,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 120,
+      "classroom": 60,
+      "lectures": 30,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 60,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-013:1:DISC-034:11.02",
@@ -2201,7 +3173,16 @@ window.TEACHING_DATA = {
     "departmentId": "11.02",
     "departmentCode": "11.02",
     "semester": 1,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 120,
+      "classroom": 60,
+      "lectures": 30,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 60,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-013:2:DISC-090:11.02",
@@ -2211,7 +3192,16 @@ window.TEACHING_DATA = {
     "departmentId": "11.02",
     "departmentCode": "11.02",
     "semester": 2,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 120,
+      "classroom": 60,
+      "lectures": 30,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 60,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-013:1:DISC-002:10.09",
@@ -2221,7 +3211,16 @@ window.TEACHING_DATA = {
     "departmentId": "10.09",
     "departmentCode": "10.09",
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Обов'язкова",
+    "hours": {
+      "total": 180,
+      "classroom": 60,
+      "lectures": 15,
+      "practical": 45,
+      "laboratory": null,
+      "independent": 120,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-013:1:DISC-033:09.03",
@@ -2231,7 +3230,16 @@ window.TEACHING_DATA = {
     "departmentId": "09.03",
     "departmentCode": "09.03",
     "semester": 1,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 120,
+      "classroom": 60,
+      "lectures": 30,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 60,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-013:1:DISC-035:11.03",
@@ -2241,7 +3249,16 @@ window.TEACHING_DATA = {
     "departmentId": "11.03",
     "departmentCode": "11.03",
     "semester": 1,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 150,
+      "classroom": 60,
+      "lectures": 30,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 90,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-013:1:DISC-003:10.03",
@@ -2251,7 +3268,16 @@ window.TEACHING_DATA = {
     "departmentId": "10.03",
     "departmentCode": "10.03",
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Обов'язкова",
+    "hours": {
+      "total": 120,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-013:2:DISC-089:11.02",
@@ -2261,7 +3287,16 @@ window.TEACHING_DATA = {
     "departmentId": "11.02",
     "departmentCode": "11.02",
     "semester": 2,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 150,
+      "classroom": 60,
+      "lectures": 30,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 90,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-013:1:DISC-001:10.05",
@@ -2271,7 +3306,16 @@ window.TEACHING_DATA = {
     "departmentId": "10.05",
     "departmentCode": "10.05",
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Обов'язкова",
+    "hours": {
+      "total": 120,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-014:1:DISC-002:10.09",
@@ -2281,7 +3325,16 @@ window.TEACHING_DATA = {
     "departmentId": "10.09",
     "departmentCode": "10.09",
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Обов'язкова",
+    "hours": {
+      "total": 180,
+      "classroom": 60,
+      "lectures": 15,
+      "practical": 45,
+      "laboratory": null,
+      "independent": 120,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-014:2:DISC-091:14.05",
@@ -2291,7 +3344,16 @@ window.TEACHING_DATA = {
     "departmentId": "14.05",
     "departmentCode": "14.05",
     "semester": 2,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 90,
+      "classroom": 30,
+      "lectures": 15,
+      "practical": 15,
+      "laboratory": null,
+      "independent": 60,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-014:2:DISC-092:14.05",
@@ -2301,7 +3363,16 @@ window.TEACHING_DATA = {
     "departmentId": "14.05",
     "departmentCode": "14.05",
     "semester": 2,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 90,
+      "classroom": 30,
+      "lectures": 15,
+      "practical": 15,
+      "laboratory": null,
+      "independent": 60,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-014:1:DISC-003:10.03",
@@ -2311,7 +3382,16 @@ window.TEACHING_DATA = {
     "departmentId": "10.03",
     "departmentCode": "10.03",
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Обов'язкова",
+    "hours": {
+      "total": 120,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-014:2:DISC-093:14.05",
@@ -2321,7 +3401,16 @@ window.TEACHING_DATA = {
     "departmentId": "14.05",
     "departmentCode": "14.05",
     "semester": 2,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 90,
+      "classroom": 30,
+      "lectures": 15,
+      "practical": 15,
+      "laboratory": null,
+      "independent": 60,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-014:1:DISC-036:14.04",
@@ -2331,7 +3420,16 @@ window.TEACHING_DATA = {
     "departmentId": "14.04",
     "departmentCode": "14.04",
     "semester": 1,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 90,
+      "classroom": 30,
+      "lectures": 15,
+      "practical": 15,
+      "laboratory": null,
+      "independent": 60,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-014:1:DISC-037:14.04",
@@ -2341,7 +3439,16 @@ window.TEACHING_DATA = {
     "departmentId": "14.04",
     "departmentCode": "14.04",
     "semester": 1,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 90,
+      "classroom": 30,
+      "lectures": 15,
+      "practical": 15,
+      "laboratory": null,
+      "independent": 60,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-014:1:DISC-001:10.05",
@@ -2351,7 +3458,16 @@ window.TEACHING_DATA = {
     "departmentId": "10.05",
     "departmentCode": "10.05",
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Обов'язкова",
+    "hours": {
+      "total": 120,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-015:1:DISC-002:10.12",
@@ -2361,7 +3477,16 @@ window.TEACHING_DATA = {
     "departmentId": "10.12",
     "departmentCode": "10.12",
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Обов'язкова",
+    "hours": {
+      "total": 180,
+      "classroom": 60,
+      "lectures": 15,
+      "practical": 45,
+      "laboratory": null,
+      "independent": 120,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-015:2:DISC-094:08.14",
@@ -2371,7 +3496,16 @@ window.TEACHING_DATA = {
     "departmentId": "08.14",
     "departmentCode": "08.14",
     "semester": 2,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 150,
+      "classroom": 45,
+      "lectures": 25,
+      "practical": 20,
+      "laboratory": null,
+      "independent": 105,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-015:2:DISC-095:08.14",
@@ -2381,7 +3515,16 @@ window.TEACHING_DATA = {
     "departmentId": "08.14",
     "departmentCode": "08.14",
     "semester": 2,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 150,
+      "classroom": 45,
+      "lectures": 20,
+      "practical": 25,
+      "laboratory": null,
+      "independent": 105,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-015:1:DISC-004:07.04",
@@ -2391,7 +3534,16 @@ window.TEACHING_DATA = {
     "departmentId": "07.04",
     "departmentCode": "07.04",
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Обов'язкова",
+    "hours": {
+      "total": 120,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-015:1:DISC-003:10.03",
@@ -2401,7 +3553,16 @@ window.TEACHING_DATA = {
     "departmentId": "10.03",
     "departmentCode": "10.03",
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Обов'язкова",
+    "hours": {
+      "total": 120,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-015:1:DISC-001:10.05",
@@ -2411,7 +3572,16 @@ window.TEACHING_DATA = {
     "departmentId": "10.05",
     "departmentCode": "10.05",
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Обов'язкова",
+    "hours": {
+      "total": 120,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-016:1:DISC-002:10.12",
@@ -2421,7 +3591,16 @@ window.TEACHING_DATA = {
     "departmentId": "10.12",
     "departmentCode": "10.12",
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Обов'язкова",
+    "hours": {
+      "total": 180,
+      "classroom": 60,
+      "lectures": 15,
+      "practical": 45,
+      "laboratory": null,
+      "independent": 120,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-016:1:DISC-005:15.01",
@@ -2431,7 +3610,16 @@ window.TEACHING_DATA = {
     "departmentId": "15.01",
     "departmentCode": "15.01",
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Обов'язкова",
+    "hours": {
+      "total": 120,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-016:2:DISC-096:08.14",
@@ -2441,7 +3629,16 @@ window.TEACHING_DATA = {
     "departmentId": "08.14",
     "departmentCode": "08.14",
     "semester": 2,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 90,
+      "classroom": 45,
+      "lectures": 30,
+      "practical": 15,
+      "laboratory": null,
+      "independent": 45,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-016:1:DISC-038:06.10",
@@ -2451,7 +3648,16 @@ window.TEACHING_DATA = {
     "departmentId": "06.10",
     "departmentCode": "06.10",
     "semester": 1,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 90,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 45,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-016:1:DISC-003:10.03",
@@ -2461,7 +3667,16 @@ window.TEACHING_DATA = {
     "departmentId": "10.03",
     "departmentCode": "10.03",
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Обов'язкова",
+    "hours": {
+      "total": 120,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-016:2:DISC-097:06.07",
@@ -2471,7 +3686,16 @@ window.TEACHING_DATA = {
     "departmentId": "06.07",
     "departmentCode": "06.07",
     "semester": 2,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 150,
+      "classroom": 60,
+      "lectures": 30,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 90,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-016:1:DISC-001:10.05",
@@ -2481,7 +3705,16 @@ window.TEACHING_DATA = {
     "departmentId": "10.05",
     "departmentCode": "10.05",
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Обов'язкова",
+    "hours": {
+      "total": 120,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-017:1:DISC-099:06.05",
@@ -2491,7 +3724,16 @@ window.TEACHING_DATA = {
     "departmentId": "06.05",
     "departmentCode": "06.05",
     "semester": 1,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 180,
+      "classroom": 60,
+      "lectures": 15,
+      "practical": 45,
+      "laboratory": null,
+      "independent": 120,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-017:2:DISC-102:06.04",
@@ -2501,7 +3743,16 @@ window.TEACHING_DATA = {
     "departmentId": "06.04",
     "departmentCode": "06.04",
     "semester": 2,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 150,
+      "classroom": 60,
+      "lectures": 30,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 90,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-017:2:DISC-100:06.05",
@@ -2511,7 +3762,16 @@ window.TEACHING_DATA = {
     "departmentId": "06.05",
     "departmentCode": "06.05",
     "semester": 2,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 150,
+      "classroom": 60,
+      "lectures": 30,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 90,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-017:1:DISC-002:10.12",
@@ -2521,7 +3781,16 @@ window.TEACHING_DATA = {
     "departmentId": "10.12",
     "departmentCode": "10.12",
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Обов'язкова",
+    "hours": {
+      "total": 180,
+      "classroom": 60,
+      "lectures": 15,
+      "practical": 45,
+      "laboratory": null,
+      "independent": 120,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-017:1:DISC-098:06.04",
@@ -2531,7 +3800,16 @@ window.TEACHING_DATA = {
     "departmentId": "06.04",
     "departmentCode": "06.04",
     "semester": 1,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 180,
+      "classroom": 60,
+      "lectures": 15,
+      "practical": 45,
+      "laboratory": null,
+      "independent": 120,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-017:1:DISC-003:10.03",
@@ -2541,7 +3819,16 @@ window.TEACHING_DATA = {
     "departmentId": "10.03",
     "departmentCode": "10.03",
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Обов'язкова",
+    "hours": {
+      "total": 120,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-017:2:DISC-101:06.05",
@@ -2551,7 +3838,16 @@ window.TEACHING_DATA = {
     "departmentId": "06.05",
     "departmentCode": "06.05",
     "semester": 2,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 150,
+      "classroom": 60,
+      "lectures": 30,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 90,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-017:1:DISC-001:10.05",
@@ -2561,7 +3857,16 @@ window.TEACHING_DATA = {
     "departmentId": "10.05",
     "departmentCode": "10.05",
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Обов'язкова",
+    "hours": {
+      "total": 120,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-018:2:DISC-104:05.11",
@@ -2571,7 +3876,16 @@ window.TEACHING_DATA = {
     "departmentId": "05.11",
     "departmentCode": "05.11",
     "semester": 2,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 180,
+      "classroom": 60,
+      "lectures": 30,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 120,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-018:1:DISC-002:10.12",
@@ -2581,7 +3895,16 @@ window.TEACHING_DATA = {
     "departmentId": "10.12",
     "departmentCode": "10.12",
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Обов'язкова",
+    "hours": {
+      "total": 180,
+      "classroom": 60,
+      "lectures": 15,
+      "practical": 45,
+      "laboratory": null,
+      "independent": 120,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-018:1:DISC-006:15.01",
@@ -2591,7 +3914,16 @@ window.TEACHING_DATA = {
     "departmentId": "15.01",
     "departmentCode": "15.01",
     "semester": 1,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 120,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-018:2:DISC-103:05.11",
@@ -2601,7 +3933,16 @@ window.TEACHING_DATA = {
     "departmentId": "05.11",
     "departmentCode": "05.11",
     "semester": 2,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 150,
+      "classroom": 45,
+      "lectures": 25,
+      "practical": 20,
+      "laboratory": null,
+      "independent": 105,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-018:1:DISC-003:10.03",
@@ -2611,7 +3952,16 @@ window.TEACHING_DATA = {
     "departmentId": "10.03",
     "departmentCode": "10.03",
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Обов'язкова",
+    "hours": {
+      "total": 120,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-018:1:DISC-001:10.05",
@@ -2621,7 +3971,16 @@ window.TEACHING_DATA = {
     "departmentId": "10.05",
     "departmentCode": "10.05",
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Обов'язкова",
+    "hours": {
+      "total": 120,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-019:1:DISC-002:10.12",
@@ -2631,7 +3990,16 @@ window.TEACHING_DATA = {
     "departmentId": "10.12",
     "departmentCode": "10.12",
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Обов'язкова",
+    "hours": {
+      "total": 180,
+      "classroom": 60,
+      "lectures": 15,
+      "practical": 45,
+      "laboratory": null,
+      "independent": 120,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-019:2:DISC-105:15.01",
@@ -2641,7 +4009,16 @@ window.TEACHING_DATA = {
     "departmentId": "15.01",
     "departmentCode": "15.01",
     "semester": 2,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 120,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-019:2:DISC-106:15.03",
@@ -2651,7 +4028,16 @@ window.TEACHING_DATA = {
     "departmentId": "15.03",
     "departmentCode": "15.03",
     "semester": 2,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 120,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-019:1:DISC-004:07.04",
@@ -2661,7 +4047,16 @@ window.TEACHING_DATA = {
     "departmentId": "07.04",
     "departmentCode": "07.04",
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Обов'язкова",
+    "hours": {
+      "total": 120,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-019:1:DISC-003:10.03",
@@ -2671,7 +4066,16 @@ window.TEACHING_DATA = {
     "departmentId": "10.03",
     "departmentCode": "10.03",
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Обов'язкова",
+    "hours": {
+      "total": 120,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-019:1:DISC-001:10.05",
@@ -2681,7 +4085,16 @@ window.TEACHING_DATA = {
     "departmentId": "10.05",
     "departmentCode": "10.05",
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Обов'язкова",
+    "hours": {
+      "total": 120,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-020:2:DISC-108:02.02",
@@ -2691,7 +4104,16 @@ window.TEACHING_DATA = {
     "departmentId": "02.02",
     "departmentCode": "02.02",
     "semester": 2,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 120,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-020:1:DISC-002:10.10",
@@ -2701,7 +4123,16 @@ window.TEACHING_DATA = {
     "departmentId": "10.10",
     "departmentCode": "10.10",
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Обов'язкова",
+    "hours": {
+      "total": 180,
+      "classroom": 60,
+      "lectures": 15,
+      "practical": 45,
+      "laboratory": null,
+      "independent": 120,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-020:1:DISC-006:15.01",
@@ -2711,7 +4142,16 @@ window.TEACHING_DATA = {
     "departmentId": "15.01",
     "departmentCode": "15.01",
     "semester": 1,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 120,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-020:1:DISC-005:15.01",
@@ -2721,7 +4161,16 @@ window.TEACHING_DATA = {
     "departmentId": "15.01",
     "departmentCode": "15.01",
     "semester": 1,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 120,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-020:2:DISC-107:02.02",
@@ -2731,7 +4180,16 @@ window.TEACHING_DATA = {
     "departmentId": "02.02",
     "departmentCode": "02.02",
     "semester": 2,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 120,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-020:1:DISC-004:07.04",
@@ -2741,7 +4199,16 @@ window.TEACHING_DATA = {
     "departmentId": "07.04",
     "departmentCode": "07.04",
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Обов'язкова",
+    "hours": {
+      "total": 120,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-020:1:DISC-003:10.03",
@@ -2751,7 +4218,16 @@ window.TEACHING_DATA = {
     "departmentId": "10.03",
     "departmentCode": "10.03",
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Обов'язкова",
+    "hours": {
+      "total": 120,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-020:1:DISC-001:10.05",
@@ -2761,7 +4237,16 @@ window.TEACHING_DATA = {
     "departmentId": "10.05",
     "departmentCode": "10.05",
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Обов'язкова",
+    "hours": {
+      "total": 120,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-021:1:DISC-002:10.10",
@@ -2771,7 +4256,16 @@ window.TEACHING_DATA = {
     "departmentId": "10.10",
     "departmentCode": "10.10",
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Обов'язкова",
+    "hours": {
+      "total": 180,
+      "classroom": 60,
+      "lectures": 15,
+      "practical": 45,
+      "laboratory": null,
+      "independent": 120,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-021:1:DISC-045:15.01",
@@ -2781,7 +4275,16 @@ window.TEACHING_DATA = {
     "departmentId": "15.01",
     "departmentCode": "15.01",
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Обов'язкова",
+    "hours": {
+      "total": 120,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-021:2:DISC-111:02.06",
@@ -2791,7 +4294,16 @@ window.TEACHING_DATA = {
     "departmentId": "02.06",
     "departmentCode": "02.06",
     "semester": 2,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 90,
+      "classroom": 40,
+      "lectures": 10,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 50,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-021:2:DISC-109:02.06",
@@ -2801,7 +4313,16 @@ window.TEACHING_DATA = {
     "departmentId": "02.06",
     "departmentCode": "02.06",
     "semester": 2,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 240,
+      "classroom": 90,
+      "lectures": 30,
+      "practical": 60,
+      "laboratory": null,
+      "independent": 150,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-021:1:DISC-004:07.04",
@@ -2811,7 +4332,16 @@ window.TEACHING_DATA = {
     "departmentId": "07.04",
     "departmentCode": "07.04",
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Обов'язкова",
+    "hours": {
+      "total": 120,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-021:1:DISC-003:10.03",
@@ -2821,7 +4351,16 @@ window.TEACHING_DATA = {
     "departmentId": "10.03",
     "departmentCode": "10.03",
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Обов'язкова",
+    "hours": {
+      "total": 120,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-021:2:DISC-110:02.06",
@@ -2831,7 +4370,16 @@ window.TEACHING_DATA = {
     "departmentId": "02.06",
     "departmentCode": "02.06",
     "semester": 2,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 240,
+      "classroom": 90,
+      "lectures": 30,
+      "practical": 60,
+      "laboratory": null,
+      "independent": 150,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-021:1:DISC-001:10.05",
@@ -2841,7 +4389,16 @@ window.TEACHING_DATA = {
     "departmentId": "10.05",
     "departmentCode": "10.05",
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Обов'язкова",
+    "hours": {
+      "total": 120,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-022:2:DISC-112:01.11",
@@ -2851,7 +4408,16 @@ window.TEACHING_DATA = {
     "departmentId": "01.11",
     "departmentCode": "01.11",
     "semester": 2,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 180,
+      "classroom": 40,
+      "lectures": 20,
+      "practical": 20,
+      "laboratory": null,
+      "independent": 140,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-022:2:DISC-114:01.11",
@@ -2861,7 +4427,16 @@ window.TEACHING_DATA = {
     "departmentId": "01.11",
     "departmentCode": "01.11",
     "semester": 2,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 120,
+      "classroom": 40,
+      "lectures": 20,
+      "practical": 20,
+      "laboratory": null,
+      "independent": 80,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-022:1:DISC-002:10.10",
@@ -2871,7 +4446,16 @@ window.TEACHING_DATA = {
     "departmentId": "10.10",
     "departmentCode": "10.10",
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Обов'язкова",
+    "hours": {
+      "total": 180,
+      "classroom": 60,
+      "lectures": 15,
+      "practical": 45,
+      "laboratory": null,
+      "independent": 120,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-022:1:DISC-040:01.11",
@@ -2881,7 +4465,16 @@ window.TEACHING_DATA = {
     "departmentId": "01.11",
     "departmentCode": "01.11",
     "semester": 1,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 120,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-022:1:DISC-039:01.11",
@@ -2891,7 +4484,16 @@ window.TEACHING_DATA = {
     "departmentId": "01.11",
     "departmentCode": "01.11",
     "semester": 1,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 120,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-022:2:DISC-113:01.11",
@@ -2901,7 +4503,16 @@ window.TEACHING_DATA = {
     "departmentId": "01.11",
     "departmentCode": "01.11",
     "semester": 2,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 150,
+      "classroom": 50,
+      "lectures": 10,
+      "practical": 40,
+      "laboratory": null,
+      "independent": 100,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-022:1:DISC-004:07.04",
@@ -2911,7 +4522,16 @@ window.TEACHING_DATA = {
     "departmentId": "07.04",
     "departmentCode": "07.04",
     "semester": 1,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 120,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-022:1:DISC-003:10.03",
@@ -2921,7 +4541,16 @@ window.TEACHING_DATA = {
     "departmentId": "10.03",
     "departmentCode": "10.03",
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Обов'язкова",
+    "hours": {
+      "total": 120,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-022:1:DISC-001:10.05",
@@ -2931,7 +4560,16 @@ window.TEACHING_DATA = {
     "departmentId": "10.05",
     "departmentCode": "10.05",
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Обов'язкова",
+    "hours": {
+      "total": 120,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-023:2:DISC-115:09.01",
@@ -2941,7 +4579,16 @@ window.TEACHING_DATA = {
     "departmentId": "09.01",
     "departmentCode": "09.01",
     "semester": 2,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 120,
+      "classroom": 60,
+      "lectures": 30,
+      "practical": null,
+      "laboratory": 30,
+      "independent": 60,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-023:1:DISC-002:10.12",
@@ -2951,7 +4598,16 @@ window.TEACHING_DATA = {
     "departmentId": "10.12",
     "departmentCode": "10.12",
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Обов'язкова",
+    "hours": {
+      "total": 180,
+      "classroom": 60,
+      "lectures": 15,
+      "practical": 45,
+      "laboratory": null,
+      "independent": 120,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-023:1:DISC-042:09.02",
@@ -2961,7 +4617,16 @@ window.TEACHING_DATA = {
     "departmentId": "09.02",
     "departmentCode": "09.02",
     "semester": 1,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 120,
+      "classroom": 60,
+      "lectures": 30,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 60,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-023:1:DISC-041:07.04",
@@ -2971,7 +4636,16 @@ window.TEACHING_DATA = {
     "departmentId": "07.04",
     "departmentCode": "07.04",
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Обов'язкова",
+    "hours": {
+      "total": 90,
+      "classroom": 45,
+      "lectures": 30,
+      "practical": 15,
+      "laboratory": null,
+      "independent": 45,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-023:1:DISC-003:10.03",
@@ -2981,7 +4655,16 @@ window.TEACHING_DATA = {
     "departmentId": "10.03",
     "departmentCode": "10.03",
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Обов'язкова",
+    "hours": {
+      "total": 120,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-023:1:DISC-001:10.05",
@@ -2991,7 +4674,16 @@ window.TEACHING_DATA = {
     "departmentId": "10.05",
     "departmentCode": "10.05",
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Обов'язкова",
+    "hours": {
+      "total": 120,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-024:1:DISC-002:10.12",
@@ -3001,7 +4693,16 @@ window.TEACHING_DATA = {
     "departmentId": "10.12",
     "departmentCode": "10.12",
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Обов'язкова",
+    "hours": {
+      "total": 180,
+      "classroom": 60,
+      "lectures": 15,
+      "practical": 45,
+      "laboratory": null,
+      "independent": 120,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-024:1:DISC-006:15.01",
@@ -3011,7 +4712,16 @@ window.TEACHING_DATA = {
     "departmentId": "15.01",
     "departmentCode": "15.01",
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Обов'язкова",
+    "hours": {
+      "total": 120,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-024:1:DISC-039:15.01",
@@ -3021,7 +4731,16 @@ window.TEACHING_DATA = {
     "departmentId": "15.01",
     "departmentCode": "15.01",
     "semester": 1,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 120,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-024:2:DISC-116:03.02",
@@ -3031,7 +4750,16 @@ window.TEACHING_DATA = {
     "departmentId": "03.02",
     "departmentCode": "03.02",
     "semester": 2,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 150,
+      "classroom": 50,
+      "lectures": 20,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 100,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-024:1:DISC-004:07.04",
@@ -3041,7 +4769,16 @@ window.TEACHING_DATA = {
     "departmentId": "07.04",
     "departmentCode": "07.04",
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Обов'язкова",
+    "hours": {
+      "total": 120,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-024:1:DISC-003:10.03",
@@ -3051,7 +4788,16 @@ window.TEACHING_DATA = {
     "departmentId": "10.03",
     "departmentCode": "10.03",
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Обов'язкова",
+    "hours": {
+      "total": 120,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-024:2:DISC-117:03.02",
@@ -3061,7 +4807,16 @@ window.TEACHING_DATA = {
     "departmentId": "03.02",
     "departmentCode": "03.02",
     "semester": 2,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 150,
+      "classroom": 50,
+      "lectures": 20,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 100,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-024:2:DISC-118:03.02",
@@ -3071,7 +4826,16 @@ window.TEACHING_DATA = {
     "departmentId": "03.02",
     "departmentCode": "03.02",
     "semester": 2,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 150,
+      "classroom": 50,
+      "lectures": 20,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 100,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-024:1:DISC-001:10.05",
@@ -3081,7 +4845,16 @@ window.TEACHING_DATA = {
     "departmentId": "10.05",
     "departmentCode": "10.05",
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Обов'язкова",
+    "hours": {
+      "total": 120,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-025:2:DISC-120:01.06",
@@ -3091,7 +4864,16 @@ window.TEACHING_DATA = {
     "departmentId": "01.06",
     "departmentCode": "01.06",
     "semester": 2,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 90,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 45,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-025:1:DISC-002:10.10",
@@ -3101,7 +4883,16 @@ window.TEACHING_DATA = {
     "departmentId": "10.10",
     "departmentCode": "10.10",
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Обов'язкова",
+    "hours": {
+      "total": 180,
+      "classroom": 60,
+      "lectures": 15,
+      "practical": 45,
+      "laboratory": null,
+      "independent": 120,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-025:1:DISC-005:01.11",
@@ -3111,7 +4902,16 @@ window.TEACHING_DATA = {
     "departmentId": "01.11",
     "departmentCode": "01.11",
     "semester": 1,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 120,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-025:2:DISC-119:01.11",
@@ -3121,7 +4921,16 @@ window.TEACHING_DATA = {
     "departmentId": "01.11",
     "departmentCode": "01.11",
     "semester": 2,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 90,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 45,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-025:1:DISC-004:07.04",
@@ -3131,7 +4940,16 @@ window.TEACHING_DATA = {
     "departmentId": "07.04",
     "departmentCode": "07.04",
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Обов'язкова",
+    "hours": {
+      "total": 120,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-025:1:DISC-003:10.03",
@@ -3141,7 +4959,16 @@ window.TEACHING_DATA = {
     "departmentId": "10.03",
     "departmentCode": "10.03",
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Обов'язкова",
+    "hours": {
+      "total": 120,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-025:1:DISC-001:10.05",
@@ -3151,7 +4978,16 @@ window.TEACHING_DATA = {
     "departmentId": "10.05",
     "departmentCode": "10.05",
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Обов'язкова",
+    "hours": {
+      "total": 120,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-026:2:DISC-121:05.01",
@@ -3161,7 +4997,16 @@ window.TEACHING_DATA = {
     "departmentId": "05.01",
     "departmentCode": "05.01",
     "semester": 2,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 150,
+      "classroom": 60,
+      "lectures": 30,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 90,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-026:1:DISC-002:10.10",
@@ -3171,7 +5016,16 @@ window.TEACHING_DATA = {
     "departmentId": "10.10",
     "departmentCode": "10.10",
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Обов'язкова",
+    "hours": {
+      "total": 180,
+      "classroom": 60,
+      "lectures": 15,
+      "practical": 45,
+      "laboratory": null,
+      "independent": 120,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-026:1:DISC-006:15.01",
@@ -3181,7 +5035,16 @@ window.TEACHING_DATA = {
     "departmentId": "15.01",
     "departmentCode": "15.01",
     "semester": 1,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 120,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-026:1:DISC-005:15.01",
@@ -3191,7 +5054,16 @@ window.TEACHING_DATA = {
     "departmentId": "15.01",
     "departmentCode": "15.01",
     "semester": 1,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 120,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-026:1:DISC-004:07.04",
@@ -3201,7 +5073,16 @@ window.TEACHING_DATA = {
     "departmentId": "07.04",
     "departmentCode": "07.04",
     "semester": 1,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 120,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-026:1:DISC-003:10.03",
@@ -3211,7 +5092,16 @@ window.TEACHING_DATA = {
     "departmentId": "10.03",
     "departmentCode": "10.03",
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Обов'язкова",
+    "hours": {
+      "total": 120,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-026:2:DISC-122:05.10",
@@ -3221,7 +5111,16 @@ window.TEACHING_DATA = {
     "departmentId": "05.10",
     "departmentCode": "05.10",
     "semester": 2,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 150,
+      "classroom": 60,
+      "lectures": 30,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 90,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-026:1:DISC-001:10.05",
@@ -3231,7 +5130,16 @@ window.TEACHING_DATA = {
     "departmentId": "10.05",
     "departmentCode": "10.05",
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Обов'язкова",
+    "hours": {
+      "total": 120,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-026:2:DISC-123:05.02",
@@ -3241,7 +5149,16 @@ window.TEACHING_DATA = {
     "departmentId": "05.02",
     "departmentCode": "05.02",
     "semester": 2,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 150,
+      "classroom": 60,
+      "lectures": 30,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 90,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-027:2:DISC-124:06.02",
@@ -3251,7 +5168,16 @@ window.TEACHING_DATA = {
     "departmentId": "06.02",
     "departmentCode": "06.02",
     "semester": 2,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 210,
+      "classroom": 60,
+      "lectures": 30,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 150,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-027:1:DISC-002:10.10",
@@ -3261,7 +5187,16 @@ window.TEACHING_DATA = {
     "departmentId": "10.10",
     "departmentCode": "10.10",
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Обов'язкова",
+    "hours": {
+      "total": 180,
+      "classroom": 60,
+      "lectures": 15,
+      "practical": 45,
+      "laboratory": null,
+      "independent": 120,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-027:1:DISC-005:15.01",
@@ -3271,7 +5206,16 @@ window.TEACHING_DATA = {
     "departmentId": "15.01",
     "departmentCode": "15.01",
     "semester": 1,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 120,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-027:1:DISC-043:06.01",
@@ -3281,7 +5225,16 @@ window.TEACHING_DATA = {
     "departmentId": "06.01",
     "departmentCode": "06.01",
     "semester": 1,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 120,
+      "classroom": 60,
+      "lectures": 30,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 60,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-027:1:DISC-004:07.04",
@@ -3291,7 +5244,16 @@ window.TEACHING_DATA = {
     "departmentId": "07.04",
     "departmentCode": "07.04",
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Обов'язкова",
+    "hours": {
+      "total": 120,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-027:1:DISC-003:10.03",
@@ -3301,7 +5263,16 @@ window.TEACHING_DATA = {
     "departmentId": "10.03",
     "departmentCode": "10.03",
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Обов'язкова",
+    "hours": {
+      "total": 120,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-027:2:DISC-125:06.02",
@@ -3311,7 +5282,16 @@ window.TEACHING_DATA = {
     "departmentId": "06.02",
     "departmentCode": "06.02",
     "semester": 2,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 210,
+      "classroom": 60,
+      "lectures": 30,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 150,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-027:1:DISC-001:10.05",
@@ -3321,7 +5301,16 @@ window.TEACHING_DATA = {
     "departmentId": "10.05",
     "departmentCode": "10.05",
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Обов'язкова",
+    "hours": {
+      "total": 120,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-028:1:DISC-002:10.10",
@@ -3331,7 +5320,16 @@ window.TEACHING_DATA = {
     "departmentId": "10.10",
     "departmentCode": "10.10",
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Обов'язкова",
+    "hours": {
+      "total": 180,
+      "classroom": 60,
+      "lectures": 15,
+      "practical": 45,
+      "laboratory": null,
+      "independent": 120,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-028:1:DISC-005:15.01",
@@ -3341,7 +5339,16 @@ window.TEACHING_DATA = {
     "departmentId": "15.01",
     "departmentCode": "15.01",
     "semester": 1,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 120,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-028:1:DISC-004:07.04",
@@ -3351,7 +5358,16 @@ window.TEACHING_DATA = {
     "departmentId": "07.04",
     "departmentCode": "07.04",
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Обов'язкова",
+    "hours": {
+      "total": 120,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-028:1:DISC-003:10.03",
@@ -3361,7 +5377,16 @@ window.TEACHING_DATA = {
     "departmentId": "10.03",
     "departmentCode": "10.03",
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Обов'язкова",
+    "hours": {
+      "total": 120,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-028:2:DISC-126:05.07",
@@ -3371,7 +5396,16 @@ window.TEACHING_DATA = {
     "departmentId": "05.07",
     "departmentCode": "05.07",
     "semester": 2,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 120,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-028:2:DISC-127:05.07",
@@ -3381,7 +5415,16 @@ window.TEACHING_DATA = {
     "departmentId": "05.07",
     "departmentCode": "05.07",
     "semester": 2,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 90,
+      "classroom": 30,
+      "lectures": 15,
+      "practical": 15,
+      "laboratory": null,
+      "independent": 60,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-028:1:DISC-001:10.05",
@@ -3391,7 +5434,16 @@ window.TEACHING_DATA = {
     "departmentId": "10.05",
     "departmentCode": "10.05",
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Обов'язкова",
+    "hours": {
+      "total": 120,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-029:1:DISC-002:10.12",
@@ -3401,7 +5453,16 @@ window.TEACHING_DATA = {
     "departmentId": "10.12",
     "departmentCode": "10.12",
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Обов'язкова",
+    "hours": {
+      "total": 180,
+      "classroom": 60,
+      "lectures": 15,
+      "practical": 45,
+      "laboratory": null,
+      "independent": 120,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-029:1:DISC-006:15.01",
@@ -3411,7 +5472,16 @@ window.TEACHING_DATA = {
     "departmentId": "15.01",
     "departmentCode": "15.01",
     "semester": 1,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 120,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-029:1:DISC-005:15.01",
@@ -3421,7 +5491,16 @@ window.TEACHING_DATA = {
     "departmentId": "15.01",
     "departmentCode": "15.01",
     "semester": 1,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 120,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-029:2:DISC-128:07.04",
@@ -3431,7 +5510,16 @@ window.TEACHING_DATA = {
     "departmentId": "07.04",
     "departmentCode": "07.04",
     "semester": 2,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 210,
+      "classroom": 60,
+      "lectures": 30,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 150,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-029:1:DISC-004:07.04",
@@ -3441,7 +5529,16 @@ window.TEACHING_DATA = {
     "departmentId": "07.04",
     "departmentCode": "07.04",
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Обов'язкова",
+    "hours": {
+      "total": 120,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-029:1:DISC-003:10.03",
@@ -3451,7 +5548,16 @@ window.TEACHING_DATA = {
     "departmentId": "10.03",
     "departmentCode": "10.03",
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Обов'язкова",
+    "hours": {
+      "total": 120,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-029:2:DISC-129:07.03",
@@ -3461,7 +5567,16 @@ window.TEACHING_DATA = {
     "departmentId": "07.03",
     "departmentCode": "07.03",
     "semester": 2,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 240,
+      "classroom": 75,
+      "lectures": 30,
+      "practical": 45,
+      "laboratory": null,
+      "independent": 165,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-029:1:DISC-001:10.05",
@@ -3471,7 +5586,16 @@ window.TEACHING_DATA = {
     "departmentId": "10.05",
     "departmentCode": "10.05",
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Обов'язкова",
+    "hours": {
+      "total": 120,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-030:2:DISC-130:03.09",
@@ -3481,7 +5605,16 @@ window.TEACHING_DATA = {
     "departmentId": "03.09",
     "departmentCode": "03.09",
     "semester": 2,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 120,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-030:1:DISC-002:10.12",
@@ -3491,7 +5624,16 @@ window.TEACHING_DATA = {
     "departmentId": "10.12",
     "departmentCode": "10.12",
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Обов'язкова",
+    "hours": {
+      "total": 180,
+      "classroom": 60,
+      "lectures": 15,
+      "practical": 45,
+      "laboratory": null,
+      "independent": 120,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-030:1:DISC-006:15.01",
@@ -3501,7 +5643,16 @@ window.TEACHING_DATA = {
     "departmentId": "15.01",
     "departmentCode": "15.01",
     "semester": 1,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 120,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-030:1:DISC-005:15.01",
@@ -3511,7 +5662,16 @@ window.TEACHING_DATA = {
     "departmentId": "15.01",
     "departmentCode": "15.01",
     "semester": 1,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 120,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-030:2:DISC-131:03.09",
@@ -3521,7 +5681,16 @@ window.TEACHING_DATA = {
     "departmentId": "03.09",
     "departmentCode": "03.09",
     "semester": 2,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 120,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-030:1:DISC-004:07.04",
@@ -3531,7 +5700,16 @@ window.TEACHING_DATA = {
     "departmentId": "07.04",
     "departmentCode": "07.04",
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Обов'язкова",
+    "hours": {
+      "total": 120,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-030:1:DISC-003:10.03",
@@ -3541,7 +5719,16 @@ window.TEACHING_DATA = {
     "departmentId": "10.03",
     "departmentCode": "10.03",
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Обов'язкова",
+    "hours": {
+      "total": 120,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-030:1:DISC-001:10.05",
@@ -3551,7 +5738,16 @@ window.TEACHING_DATA = {
     "departmentId": "10.05",
     "departmentCode": "10.05",
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Обов'язкова",
+    "hours": {
+      "total": 120,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-031:1:DISC-046:03.03",
@@ -3561,7 +5757,16 @@ window.TEACHING_DATA = {
     "departmentId": "03.03",
     "departmentCode": "03.03",
     "semester": 1,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 120,
+      "classroom": 30,
+      "lectures": 10,
+      "practical": 20,
+      "laboratory": null,
+      "independent": 90,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-031:2:DISC-132:03.03",
@@ -3571,7 +5776,16 @@ window.TEACHING_DATA = {
     "departmentId": "03.03",
     "departmentCode": "03.03",
     "semester": 2,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 90,
+      "classroom": 45,
+      "lectures": 30,
+      "practical": 15,
+      "laboratory": null,
+      "independent": 45,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-031:1:DISC-044:03.03",
@@ -3581,7 +5795,16 @@ window.TEACHING_DATA = {
     "departmentId": "03.03",
     "departmentCode": "03.03",
     "semester": 1,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 120,
+      "classroom": 30,
+      "lectures": 10,
+      "practical": 20,
+      "laboratory": null,
+      "independent": 90,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-031:1:DISC-002:10.12",
@@ -3591,7 +5814,16 @@ window.TEACHING_DATA = {
     "departmentId": "10.12",
     "departmentCode": "10.12",
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Обов'язкова",
+    "hours": {
+      "total": 180,
+      "classroom": 60,
+      "lectures": 15,
+      "practical": 45,
+      "laboratory": null,
+      "independent": 120,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-031:1:DISC-004:07.04",
@@ -3601,7 +5833,16 @@ window.TEACHING_DATA = {
     "departmentId": "07.04",
     "departmentCode": "07.04",
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Обов'язкова",
+    "hours": {
+      "total": 120,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-031:1:DISC-003:10.03",
@@ -3611,7 +5852,16 @@ window.TEACHING_DATA = {
     "departmentId": "10.03",
     "departmentCode": "10.03",
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Обов'язкова",
+    "hours": {
+      "total": 120,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-031:1:DISC-001:10.05",
@@ -3621,7 +5871,16 @@ window.TEACHING_DATA = {
     "departmentId": "10.05",
     "departmentCode": "10.05",
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Обов'язкова",
+    "hours": {
+      "total": 120,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-032:1:DISC-002:10.12",
@@ -3631,7 +5890,16 @@ window.TEACHING_DATA = {
     "departmentId": "10.12",
     "departmentCode": "10.12",
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Обов'язкова",
+    "hours": {
+      "total": 180,
+      "classroom": 60,
+      "lectures": 15,
+      "practical": 45,
+      "laboratory": null,
+      "independent": 120,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-032:1:DISC-006:15.01",
@@ -3641,7 +5909,16 @@ window.TEACHING_DATA = {
     "departmentId": "15.01",
     "departmentCode": "15.01",
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Обов'язкова",
+    "hours": {
+      "total": 120,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-032:1:DISC-005:15.01",
@@ -3651,7 +5928,16 @@ window.TEACHING_DATA = {
     "departmentId": "15.01",
     "departmentCode": "15.01",
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Обов'язкова",
+    "hours": {
+      "total": 120,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-032:2:DISC-133:07.07",
@@ -3661,7 +5947,16 @@ window.TEACHING_DATA = {
     "departmentId": "07.07",
     "departmentCode": "07.07",
     "semester": 2,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 150,
+      "classroom": 60,
+      "lectures": 30,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 90,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-032:1:DISC-004:07.04",
@@ -3671,7 +5966,16 @@ window.TEACHING_DATA = {
     "departmentId": "07.04",
     "departmentCode": "07.04",
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Обов'язкова",
+    "hours": {
+      "total": 120,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-032:1:DISC-003:10.03",
@@ -3681,7 +5985,16 @@ window.TEACHING_DATA = {
     "departmentId": "10.03",
     "departmentCode": "10.03",
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Обов'язкова",
+    "hours": {
+      "total": 120,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-032:2:DISC-134:07.07",
@@ -3691,7 +6004,16 @@ window.TEACHING_DATA = {
     "departmentId": "07.07",
     "departmentCode": "07.07",
     "semester": 2,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 180,
+      "classroom": 75,
+      "lectures": 30,
+      "practical": 45,
+      "laboratory": null,
+      "independent": 105,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-032:1:DISC-001:10.05",
@@ -3701,7 +6023,16 @@ window.TEACHING_DATA = {
     "departmentId": "10.05",
     "departmentCode": "10.05",
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Обов'язкова",
+    "hours": {
+      "total": 120,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-033:2:DISC-136:08.01",
@@ -3711,7 +6042,16 @@ window.TEACHING_DATA = {
     "departmentId": "08.01",
     "departmentCode": "08.01",
     "semester": 2,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 90,
+      "classroom": 40,
+      "lectures": 20,
+      "practical": null,
+      "laboratory": 20,
+      "independent": 50,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-033:1:DISC-002:10.12",
@@ -3721,7 +6061,16 @@ window.TEACHING_DATA = {
     "departmentId": "10.12",
     "departmentCode": "10.12",
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Обов'язкова",
+    "hours": {
+      "total": 180,
+      "classroom": 60,
+      "lectures": 15,
+      "practical": 45,
+      "laboratory": null,
+      "independent": 120,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-033:2:DISC-138:08.09",
@@ -3731,7 +6080,16 @@ window.TEACHING_DATA = {
     "departmentId": "08.09",
     "departmentCode": "08.09",
     "semester": 2,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 120,
+      "classroom": 60,
+      "lectures": 15,
+      "practical": null,
+      "laboratory": 45,
+      "independent": 60,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-033:2:DISC-135:08.03",
@@ -3741,7 +6099,16 @@ window.TEACHING_DATA = {
     "departmentId": "08.03",
     "departmentCode": "08.03",
     "semester": 2,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 150,
+      "classroom": 60,
+      "lectures": 15,
+      "practical": 45,
+      "laboratory": null,
+      "independent": 90,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-033:1:DISC-003:10.03",
@@ -3751,7 +6118,16 @@ window.TEACHING_DATA = {
     "departmentId": "10.03",
     "departmentCode": "10.03",
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Обов'язкова",
+    "hours": {
+      "total": 120,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-033:2:DISC-137:08.06",
@@ -3761,7 +6137,16 @@ window.TEACHING_DATA = {
     "departmentId": "08.06",
     "departmentCode": "08.06",
     "semester": 2,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 120,
+      "classroom": 40,
+      "lectures": 20,
+      "practical": null,
+      "laboratory": 20,
+      "independent": 80,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-033:1:DISC-001:10.05",
@@ -3771,7 +6156,16 @@ window.TEACHING_DATA = {
     "departmentId": "10.05",
     "departmentCode": "10.05",
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Обов'язкова",
+    "hours": {
+      "total": 120,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-034:2:DISC-136:08.01",
@@ -3781,7 +6175,16 @@ window.TEACHING_DATA = {
     "departmentId": "08.01",
     "departmentCode": "08.01",
     "semester": 2,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 90,
+      "classroom": 40,
+      "lectures": 20,
+      "practical": null,
+      "laboratory": 20,
+      "independent": 50,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-034:1:DISC-002:10.12",
@@ -3791,7 +6194,16 @@ window.TEACHING_DATA = {
     "departmentId": "10.12",
     "departmentCode": "10.12",
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Обов'язкова",
+    "hours": {
+      "total": 180,
+      "classroom": 60,
+      "lectures": 15,
+      "practical": 45,
+      "laboratory": null,
+      "independent": 120,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-034:1:DISC-006:15.01",
@@ -3801,7 +6213,16 @@ window.TEACHING_DATA = {
     "departmentId": "15.01",
     "departmentCode": "15.01",
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Обов'язкова",
+    "hours": {
+      "total": 120,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-034:2:DISC-135:08.03",
@@ -3811,7 +6232,16 @@ window.TEACHING_DATA = {
     "departmentId": "08.03",
     "departmentCode": "08.03",
     "semester": 2,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 150,
+      "classroom": 60,
+      "lectures": 15,
+      "practical": 45,
+      "laboratory": null,
+      "independent": 90,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-034:1:DISC-003:10.03",
@@ -3821,7 +6251,16 @@ window.TEACHING_DATA = {
     "departmentId": "10.03",
     "departmentCode": "10.03",
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Обов'язкова",
+    "hours": {
+      "total": 120,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-034:2:DISC-137:08.06",
@@ -3831,7 +6270,16 @@ window.TEACHING_DATA = {
     "departmentId": "08.06",
     "departmentCode": "08.06",
     "semester": 2,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 120,
+      "classroom": 40,
+      "lectures": 20,
+      "practical": null,
+      "laboratory": 20,
+      "independent": 80,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-034:1:DISC-001:10.05",
@@ -3841,7 +6289,16 @@ window.TEACHING_DATA = {
     "departmentId": "10.05",
     "departmentCode": "10.05",
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Обов'язкова",
+    "hours": {
+      "total": 120,
+      "classroom": 45,
+      "lectures": 15,
+      "practical": 30,
+      "laboratory": null,
+      "independent": 75,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-033:2:DISC-136:08.08",
@@ -3851,7 +6308,16 @@ window.TEACHING_DATA = {
     "departmentId": "08.08",
     "departmentCode": "08.08",
     "semester": 2,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 90,
+      "classroom": 40,
+      "lectures": 20,
+      "practical": null,
+      "laboratory": 20,
+      "independent": 50,
+      "assessment": "Екзамен"
+    }
   },
   {
     "id": "ONP-034:2:DISC-136:08.08",
@@ -3861,10 +6327,20 @@ window.TEACHING_DATA = {
     "departmentId": "08.08",
     "departmentCode": "08.08",
     "semester": 2,
-    "type": "Фахова"
+    "type": "Фахова",
+    "hours": {
+      "total": 90,
+      "classroom": 40,
+      "lectures": 20,
+      "practical": null,
+      "laboratory": 20,
+      "independent": 50,
+      "assessment": "Екзамен"
+    }
   }
 ]
 };
+
 
 
 

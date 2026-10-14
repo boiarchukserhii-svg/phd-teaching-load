@@ -110,6 +110,16 @@
     paragraph.textContent = `Аспірантів: ${total} · 1 курс · Однакова кількість у 1 та 2 семестрах`;
     $('data-status').after(paragraph);
   }
+  const formatHours = value => value == null ? '—' : esc(new Intl.NumberFormat('uk-UA').format(value));
+  const hoursDetails = item => {
+    const hours = item.hours;
+    if (!hours) return '';
+    return `<div class="discipline-hours"><p><strong>Години за навчальним планом</strong></p>
+      <p>Усього: <strong>${formatHours(hours.total)}</strong> · Аудиторні: <strong>${formatHours(hours.classroom)}</strong></p>
+      <p>Лекції: ${formatHours(hours.lectures)} · Практичні: ${formatHours(hours.practical)} · Лабораторні: ${formatHours(hours.laboratory)}</p>
+      <p>Самостійна робота: ${formatHours(hours.independent)}</p>
+      ${hours.assessment ? `<p>Форма контролю: ${esc(hours.assessment)}</p>` : ''}</div>`;
+  };
   const departmentLabel = item => departmentById.get(item.departmentId)?.name ||
     (item.departmentCode ? 'Код кафедри: '+item.departmentCode : 'Кафедру не зазначено');
   const semesters = [...new Set(disciplines.map(item=>item.semester).filter(value=>value != null))].sort((a,b)=>a-b);
@@ -163,7 +173,7 @@
       const newType = newSemester || previous.type !== item.type;
       const heading = (newSemester ? `<h3 class="semester-heading">${item.semester?esc(item.semester)+' семестр':'Семестр не зазначено'}</h3>` : '') +
         (newType ? `<h4 class="type-heading">${esc(typeHeading(item.type))}</h4>` : '');
-      return heading+`<article class="card"><div class="discipline-tags"><span class="pill">${item.semester?esc(item.semester)+' семестр':'Семестр не зазначено'}</span>${item.type?`<span class="pill discipline-type">${esc(item.type)}</span>`:''}</div><h3>${esc(item.name)}</h3><p>${esc(facultyName(disciplineFaculty(item)))}</p><p>ОНП: ${esc(programById.get(item.programId)?.name || 'Не зазначено')}</p><p>${esc(departmentLabel(item))}</p></article>`;}).join('') :
+      return heading+`<article class="card"><div class="discipline-tags"><span class="pill">${item.semester?esc(item.semester)+' семестр':'Семестр не зазначено'}</span>${item.type?`<span class="pill discipline-type">${esc(item.type)}</span>`:''}</div><h3>${esc(item.name)}</h3><p>${esc(facultyName(disciplineFaculty(item)))}</p><p>ОНП: ${esc(programById.get(item.programId)?.name || 'Не зазначено')}</p><p>${esc(departmentLabel(item))}</p>${hoursDetails(item)}</article>`;}).join('') :
       disciplines.length ? empty('Нічого не знайдено','Спробуйте змінити пошук або скинути фільтри.') :
         empty('Дисципліни ще не додано',$('discipline-faculty').value?facultyName($('discipline-faculty').value):'Тут відображатимуться дисципліни освітньо-наукових програм.');
   }
@@ -229,6 +239,7 @@
   }
   setView('overview',false);
 })();
+
 
 
 
