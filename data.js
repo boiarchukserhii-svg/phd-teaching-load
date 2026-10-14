@@ -7671,12 +7671,12 @@ window.TEACHING_DATA = {
     }
   },
   {
-    "id": "ONP-023:1:DISC-041:09.01",
+    "id": "ONP-023:1:DISC-041:07.04",
     "recordCode": "DISC-041",
     "programId": "ONP-023",
     "name": "Організація проведення наукових досліджень",
-    "departmentId": "09.01",
-    "departmentCode": "09.01",
+    "departmentId": "07.04",
+    "departmentCode": "07.04",
     "semester": 1,
     "type": "Обов'язкова",
     "hours": {
@@ -9386,6 +9386,7 @@ window.TEACHING_DATA = {
   }
 ]
 };
+
 
 
 
