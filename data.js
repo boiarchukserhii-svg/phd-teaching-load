@@ -7682,8 +7682,8 @@ window.TEACHING_DATA = {
     "hours": {
       "total": 90,
       "classroom": 45,
-      "lectures": 30,
-      "practical": 15,
+      "lectures": 15,
+      "practical": 30,
       "laboratory": null,
       "independent": 45,
       "assessment": "Екзамен"
@@ -9386,6 +9386,7 @@ window.TEACHING_DATA = {
   }
 ]
 };
+
 
 
 
