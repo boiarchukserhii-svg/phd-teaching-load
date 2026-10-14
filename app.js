@@ -186,6 +186,21 @@
       <p><strong>1 семестр</strong></p>${workloadLine(first)}<p><strong>2 семестр</strong></p>${workloadLine(second)}
       <p><strong>За рік: ${year.incomplete?'потребує уточнення':formatHours(year.total)+' год'}</strong></p></div>`;
   };
+  function scopeWorkload(items,scope) {
+    const first=workloadFor(items,1),second=workloadFor(items,2),year=workloadFor(items);
+    return `<div class="scope-workload" data-workload-scope="${esc(scope)}" data-year-total="${year.incomplete?'':year.total}" data-first-total="${first.incomplete?'':first.total}" data-second-total="${second.incomplete?'':second.total}">
+      <p><strong>Аудиторне навантаження · ${esc(data.academicYear || '')}</strong></p>
+      <p><strong>1 семестр</strong></p>${workloadLine(first)}
+      <p><strong>2 семестр</strong></p>${workloadLine(second)}
+      <p><strong>За рік: ${year.incomplete?'потребує уточнення':formatHours(year.total)+' год'}</strong></p>
+      <p>За рік — ${year.incomplete?'потребує уточнення':`лекції: ${formatHours(year.lectures)} · практичні: ${formatHours(year.practical)} · лабораторні: ${formatHours(year.laboratory)}`}.</p></div>`;
+  }
+  const facultyWorkload = facultyId => scopeWorkload(disciplines.filter(item=>departmentById.get(item.departmentId)?.facultyId===facultyId),facultyId);
+  const universityPanel=document.createElement('section');universityPanel.className='panel';universityPanel.id='university-workload-summary';
+  universityPanel.innerHTML='<h2>Загальне навантаження університету</h2>'+scopeWorkload(disciplines,'university');
+  $('view-overview').prepend(universityPanel);
+  const facultyPanel=document.createElement('section');facultyPanel.className='panel';facultyPanel.id='faculty-workload-summary';facultyPanel.hidden=true;
+  $('program-filters').before(facultyPanel);
   const workloadPanel=document.createElement('section');workloadPanel.className='panel';workloadPanel.id='department-workload-summary';workloadPanel.hidden=true;
   $('discipline-filters').before(workloadPanel);
 
@@ -314,6 +329,10 @@
       departments.length ? empty('Нічого не знайдено','Спробуйте змінити пошук або скинути фільтри.','layers') : empty('Кафедри ще не додано','Тут відображатиметься перелік кафедр та їхніх дисциплін.','layers');
   }
   function renderPrograms() {
+    const selectedFaculty=$('program-faculty').value;
+    facultyPanel.hidden=!selectedFaculty;
+    facultyPanel.innerHTML=selectedFaculty ? `<h3>${esc(facultyName(selectedFaculty))}</h3><p>За кафедрами підрозділу</p>`+facultyWorkload(selectedFaculty) : '';
+
     const entries = programs.filter(item=>includes([item.name,item.specialty,item.code].join(' '),$('program-query').value) &&
       (!$('program-faculty').value || item.facultyId === $('program-faculty').value));
     $('program-count').textContent = 'Програм: '+entries.length;
@@ -324,7 +343,7 @@
   function renderFaculties() {
     const entries = faculties.filter(item=>includes(item.name,$('faculty-query').value) && (!$('faculty-type').value || item.type === $('faculty-type').value));
     $('faculty-count').textContent = 'Підрозділів: '+entries.length;
-    $('faculty-list').innerHTML = entries.length ? entries.map(item=>`<article class="card"><span class="pill ${item.type==='institute'?'institute':''}">${item.type==='institute'?'Навчально-науковий інститут':'Факультет'}</span><h3>${esc(item.name)}</h3><button type="button" class="open-records" data-faculty="${esc(item.id)}">Переглянути ОНП →</button></article>`).join('') : empty('Нічого не знайдено','Спробуйте іншу назву або скиньте фільтри.','building');
+    $('faculty-list').innerHTML = entries.length ? entries.map(item=>`<article class="card"><span class="pill ${item.type==='institute'?'institute':''}">${item.type==='institute'?'Навчально-науковий інститут':'Факультет'}</span><h3>${esc(item.name)}</h3><p>За кафедрами підрозділу</p>${facultyWorkload(item.id)}<button type="button" class="open-records" data-faculty="${esc(item.id)}">Переглянути ОНП →</button></article>`).join('') : empty('Нічого не знайдено','Спробуйте іншу назву або скиньте фільтри.','building');
   }
   document.addEventListener('click', event => {
     const faculty = event.target.closest('[data-faculty]'),department = event.target.closest('[data-department]'),program = event.target.closest('[data-program]');
@@ -369,6 +388,7 @@
   }
   setView('overview',false);
 })();
+
 
 
 
