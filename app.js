@@ -122,6 +122,73 @@
   };
   const sharedMemberships = data.sharedGroups || [];
   const lessonLabels = {lectures:'Лекції',practical:'Практичні',laboratory:'Лабораторні'};
+  // A session represents one taught lesson type, shared or separate, for one department.
+  const teachingSessions = new Map();
+  const recordSessions = new Map();
+  const currentGroups = sharedMemberships.filter(entry=>entry.academicYear === data.academicYear);
+  const studentCount = (programId,course,semester) => {
+    const row = students.find(item=>item.programId===programId && item.course===course && item.semester===semester);
+    return row ? row.count : null;
+  };
+  function addTeachingSession(key,item,lesson,course,members) {
+    if (!teachingSessions.has(key)) teachingSessions.set(key,{departmentId:item.departmentId,semester:item.semester,lesson,course,members:new Set(),rates:new Set(),amounts:new Set()});
+    const session=teachingSessions.get(key);
+    for (const programId of members) session.members.add(programId);
+    session.rates.add(item.departmentWorkloadShare ?? 1);
+    session.amounts.add(Number(item.hours[lesson]));
+    if (!recordSessions.has(item.id)) recordSessions.set(item.id,new Set());
+    recordSessions.get(item.id).add(key);
+  }
+  for (const item of disciplines) {
+    for (const lesson of ['lectures','practical','laboratory']) {
+      if (!(Number(item.hours?.[lesson])>0)) continue;
+      const memberships=currentGroups.filter(entry=>entry.disciplineId===item.id && entry.lessonType===lesson);
+      const groupedCourses=new Set(memberships.map(entry=>entry.course));
+      for (const entry of memberships) {
+        const members=currentGroups.filter(other=>other.groupCode===entry.groupCode && other.course===entry.course &&
+          other.semester===entry.semester && other.departmentId===entry.departmentId && other.lessonType===lesson);
+        const key=JSON.stringify(['shared',entry.groupCode,entry.course,item.semester,item.departmentId,lesson]);
+        addTeachingSession(key,item,lesson,entry.course,members.map(member=>member.programId));
+      }
+      const courses=[...new Set(students.filter(student=>student.programId===item.programId && student.semester===item.semester).map(student=>student.course))];
+      if (!courses.length && !memberships.length) addTeachingSession(JSON.stringify(['separate',item.id,lesson,null]),item,lesson,null,[item.programId]);
+      for (const course of courses) {
+        if (groupedCourses.has(course)) continue;
+        addTeachingSession(JSON.stringify(['separate',item.id,lesson,course]),item,lesson,course,[item.programId]);
+      }
+    }
+  }
+  function workloadFor(items,semester=null) {
+    const keys=new Set(items.flatMap(item=>[...(recordSessions.get(item.id)||[])]));
+    const totals={lectures:0,practical:0,laboratory:0,total:0,incomplete:false};
+    for (const key of keys) {
+      const session=teachingSessions.get(key);
+      if (semester!=null && session.semester!==semester) continue;
+      const counts=[...session.members].map(programId=>studentCount(programId,session.course,session.semester));
+      if (counts.some(count=>count==null) || session.rates.size!==1 || session.amounts.size!==1) {totals.incomplete=true;continue;}
+      if (!counts.some(count=>count>0)) continue;
+      totals[session.lesson]+=[...session.amounts][0]*[...session.rates][0];
+    }
+    totals.total=totals.lectures+totals.practical+totals.laboratory;
+    return totals;
+  }
+  const workloadLine = totals => totals.incomplete ? '<p>Для розрахунку потрібно уточнити кількість аспірантів або години спільної групи.</p>' :
+    `<p>Лекції: ${formatHours(totals.lectures)} · Практичні: ${formatHours(totals.practical)} · Лабораторні: ${formatHours(totals.laboratory)}<br><strong>Разом: ${formatHours(totals.total)} год</strong></p>`;
+  const disciplineWorkload = items => {
+    const total=workloadFor(items);
+    return `<div class="discipline-workload" data-workload-total="${total.incomplete?'':total.total}"><p><strong>Аудиторне навантаження кафедри</strong></p>${workloadLine(total)}</div>`;
+  };
+  const departmentWorkload = departmentId => {
+    const items=disciplines.filter(item=>item.departmentId===departmentId);
+    const year=workloadFor(items),first=workloadFor(items,1),second=workloadFor(items,2);
+    return `<div class="department-workload" data-department-total="${year.incomplete?'':year.total}" data-semester-one="${first.incomplete?'':first.total}" data-semester-two="${second.incomplete?'':second.total}">
+      <p><strong>Аудиторне навантаження · ${esc(data.academicYear || '')}</strong></p>
+      <p><strong>1 семестр</strong></p>${workloadLine(first)}<p><strong>2 семестр</strong></p>${workloadLine(second)}
+      <p><strong>За рік: ${year.incomplete?'потребує уточнення':formatHours(year.total)+' год'}</strong></p></div>`;
+  };
+  const workloadPanel=document.createElement('section');workloadPanel.className='panel';workloadPanel.id='department-workload-summary';workloadPanel.hidden=true;
+  $('discipline-filters').before(workloadPanel);
+
   const sharedDetails = item => {
     const memberships = sharedMemberships.filter(entry=>entry.disciplineId === item.id && entry.academicYear === data.academicYear);
     const details = memberships.map(entry=>{
@@ -198,7 +265,7 @@
     const share = shares.length === 1 ? `<p><strong>Частка цієї кафедри у навантаженні: ${esc(shares[0]*100)}%</strong></p>` : '';
     const types = [...new Set(items.map(item=>item.type))];
     const typeDetails = types.length>1 ? items.map(item=>`<p>${esc(programById.get(item.programId)?.name)}: ${esc(item.type)}</p>`).join('') : '';
-    return programmes+typeDetails+hours+`<div class="shared-groups">${teaching}${share}</div>`;
+    return programmes+typeDetails+hours+`<div class="shared-groups">${teaching}${share}</div>`+disciplineWorkload(items);
   }
   function renderDisciplines() {
     const selectedProgram = $('discipline-program').value;
@@ -219,6 +286,9 @@
       (!$('discipline-semester').value || String(item.semester) === $('discipline-semester').value) &&
       (!$('discipline-type').value || item.type === $('discipline-type').value)).sort(compareDisciplines);
     const grouped = !!$('discipline-department').value && !$('discipline-program').value;
+    workloadPanel.hidden = !grouped;
+    workloadPanel.innerHTML = grouped ? `<h3>${esc(departmentLabel({departmentId:$('discipline-department').value}))}</h3>`+departmentWorkload($('discipline-department').value) : '';
+
     const buckets = new Map();
     if (grouped) for (const item of entries) {
       const key = disciplineGroupKey(item);
@@ -240,7 +310,7 @@
   function renderDepartments() {
     const entries = departments.filter(item=>includes([item.name,item.code].join(' '),$('department-query').value) && (!$('department-faculty').value || item.facultyId === $('department-faculty').value));
     $('department-count').textContent = 'Кафедр: '+entries.length;
-    $('department-list').innerHTML = entries.length ? entries.map(item=>`<article class="card"><span class="pill">${esc(item.code || 'Кафедра')}</span><h3>${esc(item.name)}</h3><p>${esc(facultyName(item.facultyId))}</p><button type="button" class="open-records" data-department="${esc(item.id)}">Переглянути дисципліни →</button></article>`).join('') :
+    $('department-list').innerHTML = entries.length ? entries.map(item=>`<article class="card"><span class="pill">${esc(item.code || 'Кафедра')}</span><h3>${esc(item.name)}</h3><p>${esc(facultyName(item.facultyId))}</p>${departmentWorkload(item.id)}<button type="button" class="open-records" data-department="${esc(item.id)}">Переглянути дисципліни →</button></article>`).join('') :
       departments.length ? empty('Нічого не знайдено','Спробуйте змінити пошук або скинути фільтри.','layers') : empty('Кафедри ще не додано','Тут відображатиметься перелік кафедр та їхніх дисциплін.','layers');
   }
   function renderPrograms() {
@@ -299,6 +369,7 @@
   }
   setView('overview',false);
 })();
+
 
 
 
