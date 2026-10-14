@@ -23,3 +23,6 @@ dialog{max-width:480px;width:calc(100% - 32px);border:1px solid #d5ebe3;border-r
 
 
 .semester-heading{grid-column:1/-1;margin:22px 0 2px;color:#147d6b;font-size:23px;line-height:1.4}.type-heading{grid-column:1/-1;margin:10px 0 0;font-size:16px;color:#425f68;line-height:1.5}
+
+
+.discipline-details{margin-top:14px;border-top:1px solid #e3eee7;padding-top:12px}.discipline-details summary{cursor:pointer;min-height:44px;padding:12px 14px;border-radius:14px;background:#e8f5ee;color:#147d6b;font-size:14px;font-weight:700}.discipline-details-content{padding:6px 2px}.compact-workload-total{padding-top:7px;color:#147d6b!important}
