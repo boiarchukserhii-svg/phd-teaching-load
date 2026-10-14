@@ -510,7 +510,7 @@ window.TEACHING_DATA = {
     "departmentId": null,
     "departmentCode": null,
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Фахова"
   },
   {
     "id": "ONP-005:1:DISC-001",
@@ -550,7 +550,7 @@ window.TEACHING_DATA = {
     "departmentId": null,
     "departmentCode": null,
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Фахова"
   },
   {
     "id": "ONP-005:1:DISC-016",
@@ -1240,7 +1240,7 @@ window.TEACHING_DATA = {
     "departmentId": null,
     "departmentCode": null,
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Фахова"
   },
   {
     "id": "ONP-020:1:DISC-006",
@@ -1250,7 +1250,7 @@ window.TEACHING_DATA = {
     "departmentId": null,
     "departmentCode": null,
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Фахова"
   },
   {
     "id": "ONP-021:1:DISC-001",
@@ -1340,7 +1340,7 @@ window.TEACHING_DATA = {
     "departmentId": null,
     "departmentCode": null,
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Фахова"
   },
   {
     "id": "ONP-022:1:DISC-039",
@@ -1410,7 +1410,7 @@ window.TEACHING_DATA = {
     "departmentId": null,
     "departmentCode": null,
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Фахова"
   },
   {
     "id": "ONP-024:1:DISC-001",
@@ -1560,7 +1560,7 @@ window.TEACHING_DATA = {
     "departmentId": null,
     "departmentCode": null,
     "semester": 1,
-    "type": "Обов'язкова"
+    "type": "Фахова"
   },
   {
     "id": "ONP-026:1:DISC-005",
@@ -2001,9 +2001,1010 @@ window.TEACHING_DATA = {
     "departmentCode": null,
     "semester": 1,
     "type": "Обов'язкова"
+  },
+  {
+    "id": "ONP-001:2:DISC-047",
+    "recordCode": "DISC-047",
+    "programId": "ONP-001",
+    "name": "Культурологічний підхід в аграрній освіті",
+    "departmentId": null,
+    "departmentCode": null,
+    "semester": 2,
+    "type": "Фахова"
+  },
+  {
+    "id": "ONP-001:2:DISC-048",
+    "recordCode": "DISC-048",
+    "programId": "ONP-001",
+    "name": "Лідерство в освіті і АПК",
+    "departmentId": null,
+    "departmentCode": null,
+    "semester": 2,
+    "type": "Фахова"
+  },
+  {
+    "id": "ONP-001:2:DISC-049",
+    "recordCode": "DISC-049",
+    "programId": "ONP-001",
+    "name": "Актуальні питання сучасної освіти",
+    "departmentId": null,
+    "departmentCode": null,
+    "semester": 2,
+    "type": "Фахова"
+  },
+  {
+    "id": "ONP-002:2:DISC-050",
+    "recordCode": "DISC-050",
+    "programId": "ONP-002",
+    "name": "Академічне письмо (англійська мова)",
+    "departmentId": null,
+    "departmentCode": null,
+    "semester": 2,
+    "type": "Фахова"
+  },
+  {
+    "id": "ONP-002:2:DISC-051",
+    "recordCode": "DISC-051",
+    "programId": "ONP-002",
+    "name": "Педагогічний експеримент і методи математичної статистики",
+    "departmentId": null,
+    "departmentCode": null,
+    "semester": 2,
+    "type": "Фахова"
+  },
+  {
+    "id": "ONP-002:2:DISC-052",
+    "recordCode": "DISC-052",
+    "programId": "ONP-002",
+    "name": "Академічна доброчесність",
+    "departmentId": null,
+    "departmentCode": null,
+    "semester": 2,
+    "type": "Фахова"
+  },
+  {
+    "id": "ONP-003:2:DISC-053",
+    "recordCode": "DISC-053",
+    "programId": "ONP-003",
+    "name": "Вітчизняна та зарубіжна історіографія аграрної історії України",
+    "departmentId": null,
+    "departmentCode": null,
+    "semester": 2,
+    "type": "Фахова"
+  },
+  {
+    "id": "ONP-003:2:DISC-054",
+    "recordCode": "DISC-054",
+    "programId": "ONP-003",
+    "name": "Актуальні проблеми історичного дослідження",
+    "departmentId": null,
+    "departmentCode": null,
+    "semester": 2,
+    "type": "Фахова"
+  },
+  {
+    "id": "ONP-003:2:DISC-055",
+    "recordCode": "DISC-055",
+    "programId": "ONP-003",
+    "name": "Історія міжнародних зв'язків України",
+    "departmentId": null,
+    "departmentCode": null,
+    "semester": 2,
+    "type": "Фахова"
+  },
+  {
+    "id": "ONP-004:2:DISC-056",
+    "recordCode": "DISC-056",
+    "programId": "ONP-004",
+    "name": "Методологія філософських досліджень",
+    "departmentId": null,
+    "departmentCode": null,
+    "semester": 2,
+    "type": "Фахова"
+  },
+  {
+    "id": "ONP-004:2:DISC-057",
+    "recordCode": "DISC-057",
+    "programId": "ONP-004",
+    "name": "Критичне і креативне мислення",
+    "departmentId": null,
+    "departmentCode": null,
+    "semester": 2,
+    "type": "Фахова"
+  },
+  {
+    "id": "ONP-004:2:DISC-058",
+    "recordCode": "DISC-058",
+    "programId": "ONP-004",
+    "name": "Теорії цивілізацій і міжкультурна комунікація",
+    "departmentId": null,
+    "departmentCode": null,
+    "semester": 2,
+    "type": "Фахова"
+  },
+  {
+    "id": "ONP-004:2:DISC-059",
+    "recordCode": "DISC-059",
+    "programId": "ONP-004",
+    "name": "Актуальні проблеми сучасної соціальної філософії",
+    "departmentId": null,
+    "departmentCode": null,
+    "semester": 2,
+    "type": "Фахова"
+  },
+  {
+    "id": "ONP-004:2:DISC-060",
+    "recordCode": "DISC-060",
+    "programId": "ONP-004",
+    "name": "Філософські засади біоетики",
+    "departmentId": null,
+    "departmentCode": null,
+    "semester": 2,
+    "type": "Фахова"
+  },
+  {
+    "id": "ONP-005:2:DISC-061",
+    "recordCode": "DISC-061",
+    "programId": "ONP-005",
+    "name": "Бізнес-проєкти та грантова діяльність",
+    "departmentId": null,
+    "departmentCode": null,
+    "semester": 2,
+    "type": "Фахова"
+  },
+  {
+    "id": "ONP-005:2:DISC-062",
+    "recordCode": "DISC-062",
+    "programId": "ONP-005",
+    "name": "Аграрна політика в умовах глобалізації економіки",
+    "departmentId": null,
+    "departmentCode": null,
+    "semester": 2,
+    "type": "Фахова"
+  },
+  {
+    "id": "ONP-006:2:DISC-063",
+    "recordCode": "DISC-063",
+    "programId": "ONP-006",
+    "name": "Управління екологічною політикою в умовах постконфліктного відновлення",
+    "departmentId": null,
+    "departmentCode": null,
+    "semester": 2,
+    "type": "Фахова"
+  },
+  {
+    "id": "ONP-006:2:DISC-064",
+    "recordCode": "DISC-064",
+    "programId": "ONP-006",
+    "name": "Методи економетричного аналізу та ГІС у дослідженні проєктів сталого розвитку",
+    "departmentId": null,
+    "departmentCode": null,
+    "semester": 2,
+    "type": "Фахова"
+  },
+  {
+    "id": "ONP-007:2:DISC-065",
+    "recordCode": "DISC-065",
+    "programId": "ONP-007",
+    "name": "Методологічні проблеми психології",
+    "departmentId": null,
+    "departmentCode": null,
+    "semester": 2,
+    "type": "Фахова"
+  },
+  {
+    "id": "ONP-007:2:DISC-066",
+    "recordCode": "DISC-066",
+    "programId": "ONP-007",
+    "name": "Інноваційні методики викладання психологічних дисциплін",
+    "departmentId": null,
+    "departmentCode": null,
+    "semester": 2,
+    "type": "Фахова"
+  },
+  {
+    "id": "ONP-007:2:DISC-067",
+    "recordCode": "DISC-067",
+    "programId": "ONP-007",
+    "name": "Психологія свідомості",
+    "departmentId": null,
+    "departmentCode": null,
+    "semester": 2,
+    "type": "Фахова"
+  },
+  {
+    "id": "ONP-008:1:DISC-068",
+    "recordCode": "DISC-068",
+    "programId": "ONP-008",
+    "name": "Філософія науки",
+    "departmentId": null,
+    "departmentCode": null,
+    "semester": 1,
+    "type": "Обов'язкова"
+  },
+  {
+    "id": "ONP-008:1:DISC-069",
+    "recordCode": "DISC-069",
+    "programId": "ONP-008",
+    "name": "Іноземна мова за професійним спрямуванням",
+    "departmentId": null,
+    "departmentCode": null,
+    "semester": 1,
+    "type": "Обов'язкова"
+  },
+  {
+    "id": "ONP-008:1:DISC-070",
+    "recordCode": "DISC-070",
+    "programId": "ONP-008",
+    "name": "Педагогіка та управління закладами вищої освіти",
+    "departmentId": null,
+    "departmentCode": null,
+    "semester": 1,
+    "type": "Обов'язкова"
+  },
+  {
+    "id": "ONP-008:1:DISC-071",
+    "recordCode": "DISC-071",
+    "programId": "ONP-008",
+    "name": "Бізнес-проекти та грантова діяльність",
+    "departmentId": null,
+    "departmentCode": null,
+    "semester": 1,
+    "type": "Фахова"
+  },
+  {
+    "id": "ONP-008:1:DISC-072",
+    "recordCode": "DISC-072",
+    "programId": "ONP-008",
+    "name": "Теорії та концепції бухгалтерського обліку",
+    "departmentId": null,
+    "departmentCode": null,
+    "semester": 1,
+    "type": "Фахова"
+  },
+  {
+    "id": "ONP-008:1:DISC-073",
+    "recordCode": "DISC-073",
+    "programId": "ONP-008",
+    "name": "Методологія наукового дослідження та інтелектуальна власність",
+    "departmentId": null,
+    "departmentCode": null,
+    "semester": 1,
+    "type": "Фахова"
+  },
+  {
+    "id": "ONP-008:1:DISC-074",
+    "recordCode": "DISC-074",
+    "programId": "ONP-008",
+    "name": "Information Technologies in Agricultural Accounting",
+    "departmentId": null,
+    "departmentCode": null,
+    "semester": 1,
+    "type": "Фахова"
+  },
+  {
+    "id": "ONP-008:2:DISC-075",
+    "recordCode": "DISC-075",
+    "programId": "ONP-008",
+    "name": "Теорія та прагматика міжнародного корпоративного оподаткування",
+    "departmentId": null,
+    "departmentCode": null,
+    "semester": 2,
+    "type": "Фахова"
+  },
+  {
+    "id": "ONP-008:2:DISC-076",
+    "recordCode": "DISC-076",
+    "programId": "ONP-008",
+    "name": "Парадигми і концепції економічного контролю",
+    "departmentId": null,
+    "departmentCode": null,
+    "semester": 2,
+    "type": "Фахова"
+  },
+  {
+    "id": "ONP-008:2:DISC-077",
+    "recordCode": "DISC-077",
+    "programId": "ONP-008",
+    "name": "Теорія і методологія економічного аналізу",
+    "departmentId": null,
+    "departmentCode": null,
+    "semester": 2,
+    "type": "Фахова"
+  },
+  {
+    "id": "ONP-009:2:DISC-078",
+    "recordCode": "DISC-078",
+    "programId": "ONP-009",
+    "name": "Дослідження глобальних проблем управління фінансами",
+    "departmentId": null,
+    "departmentCode": null,
+    "semester": 2,
+    "type": "Фахова"
+  },
+  {
+    "id": "ONP-009:2:DISC-079",
+    "recordCode": "DISC-079",
+    "programId": "ONP-009",
+    "name": "Управління сталими фінансами",
+    "departmentId": null,
+    "departmentCode": null,
+    "semester": 2,
+    "type": "Фахова"
+  },
+  {
+    "id": "ONP-009:2:DISC-080",
+    "recordCode": "DISC-080",
+    "programId": "ONP-009",
+    "name": "Бізнес-проєкти та грантова діяльність",
+    "departmentId": null,
+    "departmentCode": null,
+    "semester": 2,
+    "type": "Фахова"
+  },
+  {
+    "id": "ONP-010:2:DISC-081",
+    "recordCode": "DISC-081",
+    "programId": "ONP-010",
+    "name": "Інновації в менеджменті та інтелектуальна власність",
+    "departmentId": null,
+    "departmentCode": null,
+    "semester": 2,
+    "type": "Фахова"
+  },
+  {
+    "id": "ONP-010:2:DISC-082",
+    "recordCode": "DISC-082",
+    "programId": "ONP-010",
+    "name": "Прийняття управлінських стратегічних рішень",
+    "departmentId": null,
+    "departmentCode": null,
+    "semester": 2,
+    "type": "Фахова"
+  },
+  {
+    "id": "ONP-011:2:DISC-083",
+    "recordCode": "DISC-083",
+    "programId": "ONP-011",
+    "name": "Стратегічні рішення в публічному секторі",
+    "departmentId": null,
+    "departmentCode": null,
+    "semester": 2,
+    "type": "Фахова"
+  },
+  {
+    "id": "ONP-011:2:DISC-084",
+    "recordCode": "DISC-084",
+    "programId": "ONP-011",
+    "name": "Цифрова трансформація та моделювання управлінських процесів у публічному секторі",
+    "departmentId": null,
+    "departmentCode": null,
+    "semester": 2,
+    "type": "Фахова"
+  },
+  {
+    "id": "ONP-011:2:DISC-085",
+    "recordCode": "DISC-085",
+    "programId": "ONP-011",
+    "name": "Проєктне управління в системі публічного адміністрування",
+    "departmentId": null,
+    "departmentCode": null,
+    "semester": 2,
+    "type": "Фахова"
+  },
+  {
+    "id": "ONP-012:2:DISC-086",
+    "recordCode": "DISC-086",
+    "programId": "ONP-012",
+    "name": "Управління інноваційними маркетинговими проектами в умовах сталого розвитку",
+    "departmentId": null,
+    "departmentCode": null,
+    "semester": 2,
+    "type": "Фахова"
+  },
+  {
+    "id": "ONP-012:2:DISC-087",
+    "recordCode": "DISC-087",
+    "programId": "ONP-012",
+    "name": "Математичне моделювання та планування експерименту",
+    "departmentId": null,
+    "departmentCode": null,
+    "semester": 2,
+    "type": "Фахова"
+  },
+  {
+    "id": "ONP-012:2:DISC-088",
+    "recordCode": "DISC-088",
+    "programId": "ONP-012",
+    "name": "Business Communication, Negotiation, Mediation In International Marketing Relationship",
+    "departmentId": null,
+    "departmentCode": null,
+    "semester": 2,
+    "type": "Фахова"
+  },
+  {
+    "id": "ONP-013:2:DISC-089",
+    "recordCode": "DISC-089",
+    "programId": "ONP-013",
+    "name": "Торговельне підприємництво",
+    "departmentId": null,
+    "departmentCode": null,
+    "semester": 2,
+    "type": "Фахова"
+  },
+  {
+    "id": "ONP-013:2:DISC-080",
+    "recordCode": "DISC-080",
+    "programId": "ONP-013",
+    "name": "Бізнес-проєкти та грантова діяльність",
+    "departmentId": null,
+    "departmentCode": null,
+    "semester": 2,
+    "type": "Фахова"
+  },
+  {
+    "id": "ONP-013:2:DISC-090",
+    "recordCode": "DISC-090",
+    "programId": "ONP-013",
+    "name": "Діджиталізація бізнес-процесів у торгівлі та підприємництві",
+    "departmentId": null,
+    "departmentCode": null,
+    "semester": 2,
+    "type": "Фахова"
+  },
+  {
+    "id": "ONP-014:2:DISC-091",
+    "recordCode": "DISC-091",
+    "programId": "ONP-014",
+    "name": "Методика юридичного дослідження та організація підготовки дисертаційної",
+    "departmentId": null,
+    "departmentCode": null,
+    "semester": 2,
+    "type": "Фахова"
+  },
+  {
+    "id": "ONP-014:2:DISC-092",
+    "recordCode": "DISC-092",
+    "programId": "ONP-014",
+    "name": "Методологія права",
+    "departmentId": null,
+    "departmentCode": null,
+    "semester": 2,
+    "type": "Фахова"
+  },
+  {
+    "id": "ONP-014:2:DISC-093",
+    "recordCode": "DISC-093",
+    "programId": "ONP-014",
+    "name": "Приватне та публічне в сучасному праві",
+    "departmentId": null,
+    "departmentCode": null,
+    "semester": 2,
+    "type": "Фахова"
+  },
+  {
+    "id": "ONP-015:2:DISC-094",
+    "recordCode": "DISC-094",
+    "programId": "ONP-015",
+    "name": "Методика дослідження та організація підготовки дисертаційної роботи",
+    "departmentId": null,
+    "departmentCode": null,
+    "semester": 2,
+    "type": "Фахова"
+  },
+  {
+    "id": "ONP-015:2:DISC-095",
+    "recordCode": "DISC-095",
+    "programId": "ONP-015",
+    "name": "Нові тенденції біологічних досліджень біоресурсів (наукові семінари)",
+    "departmentId": null,
+    "departmentCode": null,
+    "semester": 2,
+    "type": "Фахова"
+  },
+  {
+    "id": "ONP-016:2:DISC-096",
+    "recordCode": "DISC-096",
+    "programId": "ONP-016",
+    "name": "Методика дослідження та організація підготовки дисертаційної роботи",
+    "departmentId": null,
+    "departmentCode": null,
+    "semester": 2,
+    "type": "Фахова"
+  },
+  {
+    "id": "ONP-016:2:DISC-097",
+    "recordCode": "DISC-097",
+    "programId": "ONP-016",
+    "name": "Сучасні біотехнологічні методи досліджень",
+    "departmentId": null,
+    "departmentCode": null,
+    "semester": 2,
+    "type": "Фахова"
+  },
+  {
+    "id": "ONP-017:1:DISC-098",
+    "recordCode": "DISC-098",
+    "programId": "ONP-017",
+    "name": "Методологія  та організація екологічних досліджень (методика дослідження, управління проєктами, інтелектуальна власність, біометрія)",
+    "departmentId": null,
+    "departmentCode": null,
+    "semester": 1,
+    "type": "Фахова"
+  },
+  {
+    "id": "ONP-017:1:DISC-099",
+    "recordCode": "DISC-099",
+    "programId": "ONP-017",
+    "name": "Глобальні екологічні проблеми біосфери: теоретичні та практичні аспекти",
+    "departmentId": null,
+    "departmentCode": null,
+    "semester": 1,
+    "type": "Фахова"
+  },
+  {
+    "id": "ONP-017:2:DISC-100",
+    "recordCode": "DISC-100",
+    "programId": "ONP-017",
+    "name": "Зміна клімату та декарбонізація",
+    "departmentId": null,
+    "departmentCode": null,
+    "semester": 2,
+    "type": "Фахова"
+  },
+  {
+    "id": "ONP-017:2:DISC-101",
+    "recordCode": "DISC-101",
+    "programId": "ONP-017",
+    "name": "Сталий розвиток: теоретичні та практичні засади",
+    "departmentId": null,
+    "departmentCode": null,
+    "semester": 2,
+    "type": "Фахова"
+  },
+  {
+    "id": "ONP-017:2:DISC-102",
+    "recordCode": "DISC-102",
+    "programId": "ONP-017",
+    "name": "Європейські практики відновлення техногенно порушених екосистем",
+    "departmentId": null,
+    "departmentCode": null,
+    "semester": 2,
+    "type": "Фахова"
+  },
+  {
+    "id": "ONP-018:1:DISC-001",
+    "recordCode": "DISC-001",
+    "programId": "ONP-018",
+    "name": "Філософія науки",
+    "departmentId": null,
+    "departmentCode": null,
+    "semester": 1,
+    "type": "Обов'язкова"
+  },
+  {
+    "id": "ONP-018:1:DISC-002",
+    "recordCode": "DISC-002",
+    "programId": "ONP-018",
+    "name": "Іноземна мова за професійним спрямуванням",
+    "departmentId": null,
+    "departmentCode": null,
+    "semester": 1,
+    "type": "Обов'язкова"
+  },
+  {
+    "id": "ONP-018:1:DISC-003",
+    "recordCode": "DISC-003",
+    "programId": "ONP-018",
+    "name": "Педагогіка та управління закладами вищої освіти",
+    "departmentId": null,
+    "departmentCode": null,
+    "semester": 1,
+    "type": "Обов'язкова"
+  },
+  {
+    "id": "ONP-018:1:DISC-006",
+    "recordCode": "DISC-006",
+    "programId": "ONP-018",
+    "name": "Комп'ютерна обробка інформації і математичне моделювання",
+    "departmentId": null,
+    "departmentCode": null,
+    "semester": 1,
+    "type": "Фахова"
+  },
+  {
+    "id": "ONP-018:2:DISC-103",
+    "recordCode": "DISC-103",
+    "programId": "ONP-018",
+    "name": "Методика дослідження та організація підготовки дисертації",
+    "departmentId": null,
+    "departmentCode": null,
+    "semester": 2,
+    "type": "Фахова"
+  },
+  {
+    "id": "ONP-018:2:DISC-104",
+    "recordCode": "DISC-104",
+    "programId": "ONP-018",
+    "name": "Загальна, неорганічна і аналітична хімія: сучасний стан і проблемні питання",
+    "departmentId": null,
+    "departmentCode": null,
+    "semester": 2,
+    "type": "Фахова"
+  },
+  {
+    "id": "ONP-019:2:DISC-105",
+    "recordCode": "DISC-105",
+    "programId": "ONP-019",
+    "name": "Математичне моделювання та планування експерименту",
+    "departmentId": null,
+    "departmentCode": null,
+    "semester": 2,
+    "type": "Фахова"
+  },
+  {
+    "id": "ONP-019:2:DISC-106",
+    "recordCode": "DISC-106",
+    "programId": "ONP-019",
+    "name": "Моделі, методи і засоби проектування складних інформаційних систем",
+    "departmentId": null,
+    "departmentCode": null,
+    "semester": 2,
+    "type": "Фахова"
+  },
+  {
+    "id": "ONP-020:2:DISC-107",
+    "recordCode": "DISC-107",
+    "programId": "ONP-020",
+    "name": "Методика дослідження та організація підготовки дисертації",
+    "departmentId": null,
+    "departmentCode": null,
+    "semester": 2,
+    "type": "Фахова"
+  },
+  {
+    "id": "ONP-020:2:DISC-108",
+    "recordCode": "DISC-108",
+    "programId": "ONP-020",
+    "name": "Закономірності енергетичних перетворень",
+    "departmentId": null,
+    "departmentCode": null,
+    "semester": 2,
+    "type": "Фахова"
+  },
+  {
+    "id": "ONP-021:2:DISC-109",
+    "recordCode": "DISC-109",
+    "programId": "ONP-021",
+    "name": "Обробка інформації в комп'ютерно-інтегрованих та робототехнічних системах",
+    "departmentId": null,
+    "departmentCode": null,
+    "semester": 2,
+    "type": "Фахова"
+  },
+  {
+    "id": "ONP-021:2:DISC-110",
+    "recordCode": "DISC-110",
+    "programId": "ONP-021",
+    "name": "Світовий досвід автоматизації сучасних об'єктів аграрного спрямування",
+    "departmentId": null,
+    "departmentCode": null,
+    "semester": 2,
+    "type": "Фахова"
+  },
+  {
+    "id": "ONP-021:2:DISC-111",
+    "recordCode": "DISC-111",
+    "programId": "ONP-021",
+    "name": "Методика дослідження біотехнічних об'єктів та організація підготовки дисертації",
+    "departmentId": null,
+    "departmentCode": null,
+    "semester": 2,
+    "type": "Фахова"
+  },
+  {
+    "id": "ONP-022:2:DISC-112",
+    "recordCode": "DISC-112",
+    "programId": "ONP-022",
+    "name": "Галузеве машинобудування як система",
+    "departmentId": null,
+    "departmentCode": null,
+    "semester": 2,
+    "type": "Фахова"
+  },
+  {
+    "id": "ONP-022:2:DISC-113",
+    "recordCode": "DISC-113",
+    "programId": "ONP-022",
+    "name": "Методика дослідження галузевого машинобудування",
+    "departmentId": null,
+    "departmentCode": null,
+    "semester": 2,
+    "type": "Фахова"
+  },
+  {
+    "id": "ONP-022:2:DISC-114",
+    "recordCode": "DISC-114",
+    "programId": "ONP-022",
+    "name": "Глобальні проблеми дослідження галузевого машинобудування",
+    "departmentId": null,
+    "departmentCode": null,
+    "semester": 2,
+    "type": "Фахова"
+  },
+  {
+    "id": "ONP-023:2:DISC-115",
+    "recordCode": "DISC-115",
+    "programId": "ONP-023",
+    "name": "Інноваційні технології у харчовій промисловості",
+    "departmentId": null,
+    "departmentCode": null,
+    "semester": 2,
+    "type": "Фахова"
+  },
+  {
+    "id": "ONP-024:2:DISC-116",
+    "recordCode": "DISC-116",
+    "programId": "ONP-024",
+    "name": "Науково-технічні основи оброблення деревини та методика виконання дисертації",
+    "departmentId": null,
+    "departmentCode": null,
+    "semester": 2,
+    "type": "Фахова"
+  },
+  {
+    "id": "ONP-024:2:DISC-117",
+    "recordCode": "DISC-117",
+    "programId": "ONP-024",
+    "name": "Прогресивні технології оброблення деревини",
+    "departmentId": null,
+    "departmentCode": null,
+    "semester": 2,
+    "type": "Фахова"
+  },
+  {
+    "id": "ONP-024:2:DISC-118",
+    "recordCode": "DISC-118",
+    "programId": "ONP-024",
+    "name": "Структурно-технологічні властивості деревини та режими її обробки",
+    "departmentId": null,
+    "departmentCode": null,
+    "semester": 2,
+    "type": "Фахова"
+  },
+  {
+    "id": "ONP-025:2:DISC-119",
+    "recordCode": "DISC-119",
+    "programId": "ONP-025",
+    "name": "Методика дослідження та методологія підготовки дисертації",
+    "departmentId": null,
+    "departmentCode": null,
+    "semester": 2,
+    "type": "Фахова"
+  },
+  {
+    "id": "ONP-025:2:DISC-120",
+    "recordCode": "DISC-120",
+    "programId": "ONP-025",
+    "name": "Законодавча та нормативна база у будівництві та цивільній інженерії",
+    "departmentId": null,
+    "departmentCode": null,
+    "semester": 2,
+    "type": "Фахова"
+  },
+  {
+    "id": "ONP-026:2:DISC-121",
+    "recordCode": "DISC-121",
+    "programId": "ONP-026",
+    "name": "Агрономія у вирішені глобальних проблем людства",
+    "departmentId": null,
+    "departmentCode": null,
+    "semester": 2,
+    "type": "Фахова"
+  },
+  {
+    "id": "ONP-026:2:DISC-122",
+    "recordCode": "DISC-122",
+    "programId": "ONP-026",
+    "name": "Управління інноваційними проєктами в агрономії",
+    "departmentId": null,
+    "departmentCode": null,
+    "semester": 2,
+    "type": "Фахова"
+  },
+  {
+    "id": "ONP-026:2:DISC-123",
+    "recordCode": "DISC-123",
+    "programId": "ONP-026",
+    "name": "Цифровізація сучасної агрономії",
+    "departmentId": null,
+    "departmentCode": null,
+    "semester": 2,
+    "type": "Фахова"
+  },
+  {
+    "id": "ONP-027:2:DISC-124",
+    "recordCode": "DISC-124",
+    "programId": "ONP-027",
+    "name": "Глобальні проблеми захисту і карантину рослин від шкідливих організмів",
+    "departmentId": null,
+    "departmentCode": null,
+    "semester": 2,
+    "type": "Фахова"
+  },
+  {
+    "id": "ONP-027:2:DISC-125",
+    "recordCode": "DISC-125",
+    "programId": "ONP-027",
+    "name": "Персистентність пестицидів",
+    "departmentId": null,
+    "departmentCode": null,
+    "semester": 2,
+    "type": "Фахова"
+  },
+  {
+    "id": "ONP-028:2:DISC-126",
+    "recordCode": "DISC-126",
+    "programId": "ONP-028",
+    "name": "Стале виробництво плодів та винограду",
+    "departmentId": null,
+    "departmentCode": null,
+    "semester": 2,
+    "type": "Фахова"
+  },
+  {
+    "id": "ONP-028:2:DISC-127",
+    "recordCode": "DISC-127",
+    "programId": "ONP-028",
+    "name": "Управління післязбиральною плодової продукції",
+    "departmentId": null,
+    "departmentCode": null,
+    "semester": 2,
+    "type": "Фахова"
+  },
+  {
+    "id": "ONP-029:2:DISC-128",
+    "recordCode": "DISC-128",
+    "programId": "ONP-029",
+    "name": "Методика дослідження та організація підготовки дисертації",
+    "departmentId": null,
+    "departmentCode": null,
+    "semester": 2,
+    "type": "Фахова"
+  },
+  {
+    "id": "ONP-029:2:DISC-129",
+    "recordCode": "DISC-129",
+    "programId": "ONP-029",
+    "name": "Сучасні тенденції розвитку технологій у тваринництві",
+    "departmentId": null,
+    "departmentCode": null,
+    "semester": 2,
+    "type": "Фахова"
+  },
+  {
+    "id": "ONP-030:2:DISC-130",
+    "recordCode": "DISC-130",
+    "programId": "ONP-030",
+    "name": "Збереження вікових дерев методами сучасної арбористики",
+    "departmentId": null,
+    "departmentCode": null,
+    "semester": 2,
+    "type": "Фахова"
+  },
+  {
+    "id": "ONP-030:2:DISC-131",
+    "recordCode": "DISC-131",
+    "programId": "ONP-030",
+    "name": "Наукові основи досліджень садово-паркового господарства",
+    "departmentId": null,
+    "departmentCode": null,
+    "semester": 2,
+    "type": "Фахова"
+  },
+  {
+    "id": "ONP-031:2:DISC-132",
+    "recordCode": "DISC-132",
+    "programId": "ONP-031",
+    "name": "Глобальні проблеми дослідження лісового господарства",
+    "departmentId": null,
+    "departmentCode": null,
+    "semester": 2,
+    "type": "Фахова"
+  },
+  {
+    "id": "ONP-032:2:DISC-133",
+    "recordCode": "DISC-133",
+    "programId": "ONP-032",
+    "name": "Методика дослідження та організація підготовки дисертації",
+    "departmentId": null,
+    "departmentCode": null,
+    "semester": 2,
+    "type": "Фахова"
+  },
+  {
+    "id": "ONP-032:2:DISC-134",
+    "recordCode": "DISC-134",
+    "programId": "ONP-032",
+    "name": "Сучасні тенденції розвитку технологій аквакультури",
+    "departmentId": null,
+    "departmentCode": null,
+    "semester": 2,
+    "type": "Фахова"
+  },
+  {
+    "id": "ONP-034:2:DISC-135",
+    "recordCode": "DISC-135",
+    "programId": "ONP-034",
+    "name": "Методика і етика наукових досліджень у ветеринарній медицині",
+    "departmentId": null,
+    "departmentCode": null,
+    "semester": 2,
+    "type": "Фахова"
+  },
+  {
+    "id": "ONP-034:2:DISC-136",
+    "recordCode": "DISC-136",
+    "programId": "ONP-034",
+    "name": "Загальна ветеринарна патологія",
+    "departmentId": null,
+    "departmentCode": null,
+    "semester": 2,
+    "type": "Фахова"
+  },
+  {
+    "id": "ONP-034:2:DISC-137",
+    "recordCode": "DISC-137",
+    "programId": "ONP-034",
+    "name": "Ризик-орієнтований контроль безпечності харчових продуктів і кормів",
+    "departmentId": null,
+    "departmentCode": null,
+    "semester": 2,
+    "type": "Фахова"
+  },
+  {
+    "id": "ONP-033:2:DISC-135",
+    "recordCode": "DISC-135",
+    "programId": "ONP-033",
+    "name": "Методика і етика наукових досліджень у ветеринарній медицині",
+    "departmentId": null,
+    "departmentCode": null,
+    "semester": 2,
+    "type": "Фахова"
+  },
+  {
+    "id": "ONP-033:2:DISC-136",
+    "recordCode": "DISC-136",
+    "programId": "ONP-033",
+    "name": "Загальна ветеринарна патологія",
+    "departmentId": null,
+    "departmentCode": null,
+    "semester": 2,
+    "type": "Фахова"
+  },
+  {
+    "id": "ONP-033:2:DISC-137",
+    "recordCode": "DISC-137",
+    "programId": "ONP-033",
+    "name": "Ризик-орієнтований контроль безпечності харчових продуктів і кормів",
+    "departmentId": null,
+    "departmentCode": null,
+    "semester": 2,
+    "type": "Фахова"
+  },
+  {
+    "id": "ONP-033:2:DISC-138",
+    "recordCode": "DISC-138",
+    "programId": "ONP-033",
+    "name": "Методи серологічних та імунобіологічних досліджень у ветеринарній медицині",
+    "departmentId": null,
+    "departmentCode": null,
+    "semester": 2,
+    "type": "Фахова"
   }
 ]
 };
+
 
 
 
