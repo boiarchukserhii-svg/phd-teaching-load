@@ -115,7 +115,7 @@
     const hours = item.hours;
     if (!hours) return '';
     return `<div class="discipline-hours"><p><strong>Години за навчальним планом</strong></p>
-      <p>Усього: <strong>${formatHours(hours.total)}</strong> · Аудиторні: <strong>${formatHours(hours.classroom)}</strong></p>
+      <p>Усього: <strong>${formatHours(hours.total)}</strong> год</p><div class="classroom-accent"><span>Аудиторні години</span><strong>${formatHours(hours.classroom)} год</strong></div>
       <p>Лекції: ${formatHours(hours.lectures)} · Практичні: ${formatHours(hours.practical)} · Лабораторні: ${formatHours(hours.laboratory)}</p>
       <p>Самостійна робота: ${formatHours(hours.independent)}</p>
       ${hours.assessment ? `<p>Форма контролю: ${esc(hours.assessment)}</p>` : ''}</div>`;
@@ -269,7 +269,7 @@
   const programmeNames = items => [...new Set(items.map(item=>programById.get(item.programId)?.name || 'Не зазначено'))].sort(alphabet.compare);
   function groupedDisciplineDetails(items) {
     const names = programmeNames(items);
-    const programmes = `<p><strong>Освітньо-наукові програми (${names.length}):</strong><br>${names.map(esc).join('; ')}</p>`;
+    const programmes = `<div class="program-accent"><span class="program-accent-label">Освітньо-наукові програми (${names.length})</span>${names.map(name=>`<strong>${esc(name)}</strong>`).join('')}</div>`;
     const plans = new Map();
     for (const item of items) {
       const key = JSON.stringify(item.hours || null);
@@ -325,7 +325,7 @@
       const newType = newSemester || previous.type !== item.type;
       const heading = (newSemester ? `<h3 class="semester-heading">${item.semester?esc(item.semester)+' семестр':'Семестр не зазначено'}</h3>` : '') +
         (newType ? `<h4 class="type-heading">${esc(typeHeading(item.type))}</h4>` : '');
-      return heading+`<article class="card"><div class="discipline-tags"><span class="pill">${item.semester?esc(item.semester)+' семестр':'Семестр не зазначено'}</span>${grouped ? `<span class="pill discipline-type">${programmeNames(item.members).length} ОНП</span>` : item.type?`<span class="pill discipline-type">${esc(item.type)}</span>`:''}</div><h3>${esc(item.name)}</h3>${grouped ? '' : `<p>${esc(facultyName(disciplineFaculty(item)))}</p>`}${grouped ? groupedDisciplineDetails(item.members) : `<p>ОНП: ${esc(programById.get(item.programId)?.name || 'Не зазначено')}</p><p>${esc(departmentLabel(item))}</p>${hoursDetails(item)}${sharedDetails(item)}`}</article>`;}).join('') :
+      return heading+`<article class="card"><div class="discipline-tags"><span class="pill">${item.semester?esc(item.semester)+' семестр':'Семестр не зазначено'}</span>${grouped ? `<span class="pill discipline-type">${programmeNames(item.members).length} ОНП</span>` : item.type?`<span class="pill discipline-type">${esc(item.type)}</span>`:''}</div><h3>${esc(item.name)}</h3>${grouped ? '' : `<p>${esc(facultyName(disciplineFaculty(item)))}</p>`}${grouped ? groupedDisciplineDetails(item.members) : `<div class="program-accent"><span class="program-accent-label">Освітньо-наукова програма</span><strong>${esc(programById.get(item.programId)?.name || 'Не зазначено')}</strong></div><p>${esc(departmentLabel(item))}</p>${hoursDetails(item)}${sharedDetails(item)}`}</article>`;}).join('') :
       disciplines.length ? empty('Нічого не знайдено','Спробуйте змінити пошук або скинути фільтри.') :
         empty('Дисципліни ще не додано',$('discipline-faculty').value?facultyName($('discipline-faculty').value):'Тут відображатимуться дисципліни освітньо-наукових програм.');
   }
@@ -395,6 +395,7 @@
   }
   setView('overview',false);
 })();
+
 
 
 

@@ -26,3 +26,10 @@ dialog{max-width:480px;width:calc(100% - 32px);border:1px solid #d5ebe3;border-r
 
 
 .discipline-details{margin-top:14px;border-top:1px solid #e3eee7;padding-top:12px}.discipline-details summary{cursor:pointer;min-height:44px;padding:12px 14px;border-radius:14px;background:#e8f5ee;color:#147d6b;font-size:14px;font-weight:700}.discipline-details-content{padding:6px 2px}.compact-workload-total{padding-top:7px;color:#147d6b!important}
+
+
+.program-accent{margin:14px 0;padding:13px 15px;border-radius:15px;background:#e5f3ed;border:1px solid #cde6da;color:#12634f;overflow-wrap:anywhere}
+.program-accent-label{display:block;font-size:11px;font-weight:650;line-height:1.5;color:#406d60;margin-bottom:5px}
+.program-accent strong{display:block;font-size:14px;line-height:1.5;margin:4px 0;color:#12634f}
+.classroom-accent{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin:12px 0;padding:12px 14px;border-left:4px solid #128e78;border-radius:12px;background:#eef8f3;color:#12634f}
+.classroom-accent span{font-size:13px;font-weight:700;line-height:1.5}.classroom-accent strong{font-size:23px;line-height:1.3;color:#0c705c;white-space:nowrap}
