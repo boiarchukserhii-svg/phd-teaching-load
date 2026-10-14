@@ -2367,7 +2367,7 @@ window.TEACHING_DATA = {
     "id": "ONP-015:2:DISC-094:08.14",
     "recordCode": "DISC-094",
     "programId": "ONP-015",
-    "name": "Методика дослідження та організація підготовки дисертаційної роботи",
+    "name": "Методика дослідження та організація підготовки дисертації",
     "departmentId": "08.14",
     "departmentCode": "08.14",
     "semester": 2,
@@ -3865,6 +3865,7 @@ window.TEACHING_DATA = {
   }
 ]
 };
+
 
 
 
