@@ -104,6 +104,19 @@
     if (view === 'faculties') renderFaculties();
     if (view === 'programs') renderPrograms();
   }
+  const typeOrder = value => {
+    const normalized = normalize(value);
+    if (normalized.startsWith('обов')) return 0;
+    if (normalized.startsWith('фах')) return 1;
+    if (normalized.startsWith('вибір')) return 2;
+    return 3;
+  };
+  const typeHeading = value => ['Обов’язкові дисципліни','Фахові дисципліни','Вибіркові дисципліни'][typeOrder(value)] || value || 'Тип не зазначено';
+  const alphabet = new Intl.Collator('uk', {sensitivity:'base',numeric:true});
+  const compareDisciplines = (a,b) => (Number(a.semester) || Infinity)-(Number(b.semester) || Infinity) ||
+    typeOrder(a.type)-typeOrder(b.type) || alphabet.compare(a.type || '',b.type || '') ||
+    alphabet.compare(a.name,b.name) || alphabet.compare(programById.get(a.programId)?.name || '',programById.get(b.programId)?.name || '') ||
+    alphabet.compare(departmentLabel(a),departmentLabel(b));
   function renderDisciplines() {
     const selectedProgram = $('discipline-program').value;
     const availablePrograms = programs.filter(item=>!$('discipline-faculty').value || item.facultyId === $('discipline-faculty').value);
@@ -121,9 +134,15 @@
       (!$('discipline-program').value || item.programId === $('discipline-program').value) &&
       (!$('discipline-department').value || item.departmentId === $('discipline-department').value) &&
       (!$('discipline-semester').value || String(item.semester) === $('discipline-semester').value) &&
-      (!$('discipline-type').value || item.type === $('discipline-type').value));
+      (!$('discipline-type').value || item.type === $('discipline-type').value)).sort(compareDisciplines);
     $('discipline-count').textContent = 'Записів: '+entries.length;
-    $('discipline-list').innerHTML = entries.length ? entries.map(item=>`<article class="card"><div class="discipline-tags"><span class="pill">${item.semester?esc(item.semester)+' семестр':'Семестр не зазначено'}</span>${item.type?`<span class="pill discipline-type">${esc(item.type)}</span>`:''}</div><h3>${esc(item.name)}</h3><p>${esc(facultyName(disciplineFaculty(item)))}</p><p>ОНП: ${esc(programById.get(item.programId)?.name || 'Не зазначено')}</p><p>${esc(departmentLabel(item))}</p></article>`).join('') :
+    $('discipline-list').innerHTML = entries.length ? entries.map((item,index)=>{
+      const previous = entries[index-1];
+      const newSemester = !previous || previous.semester !== item.semester;
+      const newType = newSemester || previous.type !== item.type;
+      const heading = (newSemester ? `<h3 class="semester-heading">${item.semester?esc(item.semester)+' семестр':'Семестр не зазначено'}</h3>` : '') +
+        (newType ? `<h4 class="type-heading">${esc(typeHeading(item.type))}</h4>` : '');
+      return heading+`<article class="card"><div class="discipline-tags"><span class="pill">${item.semester?esc(item.semester)+' семестр':'Семестр не зазначено'}</span>${item.type?`<span class="pill discipline-type">${esc(item.type)}</span>`:''}</div><h3>${esc(item.name)}</h3><p>${esc(facultyName(disciplineFaculty(item)))}</p><p>ОНП: ${esc(programById.get(item.programId)?.name || 'Не зазначено')}</p><p>${esc(departmentLabel(item))}</p></article>`;}).join('') :
       disciplines.length ? empty('Нічого не знайдено','Спробуйте змінити пошук або скинути фільтри.') :
         empty('Дисципліни ще не додано',$('discipline-faculty').value?facultyName($('discipline-faculty').value):'Тут відображатимуться дисципліни освітньо-наукових програм.');
   }
@@ -189,6 +208,7 @@
   }
   setView('overview',false);
 })();
+
 
 
 

@@ -20,3 +20,6 @@ dialog{max-width:480px;width:calc(100% - 32px);border:1px solid #d5ebe3;border-r
 
 .discipline-tags{display:flex;gap:7px;flex-wrap:wrap;align-items:center}.discipline-tags .discipline-type{background:#e5f0ff;color:#4277a5}
 
+
+
+.semester-heading{grid-column:1/-1;margin:22px 0 2px;color:#147d6b;font-size:23px;line-height:1.4}.type-heading{grid-column:1/-1;margin:10px 0 0;font-size:16px;color:#425f68;line-height:1.5}
