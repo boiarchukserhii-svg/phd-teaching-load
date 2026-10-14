@@ -90,26 +90,6 @@
   $('department-total').textContent = departments.length;
   $('faculty-total').textContent = faculties.length;
   $('program-total').textContent = programs.length;
-  if (disciplines.length || departments.length) $('data-status').textContent = data.academicYear ? 'Навчальний рік: '+data.academicYear.replace(/[\u2013\u2014]/g,'-') : 'Навчальний рік не зазначено';
-  else if (programs.length) $('data-status').textContent = 'Довідник ОНП заповнено';
-  if (programs.length && !disciplines.length && !departments.length) {
-    document.querySelector('#view-overview .welcome p').textContent = 'Освітньо-наукові програми вже додано. Оберіть факультет або ННІ, щоб переглянути його програми. Кафедри та дисципліни ще не додано.';
-  }
-  if (disciplines.length) {
-    document.querySelector('#view-overview .welcome p').textContent = 'Освітньо-наукові програми та дисципліни вже додано. Оберіть факультет, програму або відкрийте всі дисципліни. Оберіть кафедру, щоб переглянути її дисципліни на всіх освітньо-наукових програмах.';
-    if (!data.academicYear) $('data-status').textContent = 'Дисципліни додано';
-  }
-  if (students.length) {
-    const cohorts = new Map();
-    for (const item of students) {
-      const key = JSON.stringify([item.programId,item.course]);
-      cohorts.set(key,Math.max(cohorts.get(key) || 0,item.count));
-    }
-    const total = [...cohorts.values()].reduce((sum,count)=>sum+count,0);
-    const paragraph = document.createElement('p');paragraph.className = 'data-status';paragraph.id = 'aspirant-summary';
-    paragraph.textContent = `Аспірантів: ${total} · 1 курс · Однакова кількість у 1 та 2 семестрах`;
-    $('data-status').after(paragraph);
-  }
   const formatHours = value => value == null ? '-' : esc(new Intl.NumberFormat('uk-UA').format(value));
   const hoursBreakdown = hours => [['lectures','Лекції'],['practical','Практичні'],['laboratory','Лабораторні']]
     .filter(([key])=>Number(hours[key])>0).map(([key,label])=>`${label}: ${formatHours(hours[key])}`).join(' · ');
@@ -425,6 +405,7 @@
   }
   setView('overview',false);
 })();
+
 
 
 
