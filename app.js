@@ -3,6 +3,7 @@
   const data = window.TEACHING_DATA || {faculties:[],departments:[],programs:[],disciplines:[]};
   const faculties = data.faculties || [], departments = data.departments || [], programs = data.programs || [], disciplines = data.disciplines || [];
   const $ = id => document.getElementById(id);
+  $('overview-academic-year').textContent = (data.academicYear || '2026-2027').replace(/[\u2013\u2014]/g,'-')+' навчальний рік';
   const esc = value => String(value ?? '').replace(/[\u2013\u2014]/g,'-').replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
   const normalize = value => String(value || '').normalize('NFC').toLocaleLowerCase('uk-UA').replace(/[’ʼ']/g,'').trim();
   const includes = (value, query) => normalize(query).split(/\s+/).filter(Boolean).every(word => normalize(value).includes(word));
@@ -179,7 +180,7 @@
   }
   const facultyWorkload = facultyId => scopeWorkload(disciplines.filter(item=>departmentById.get(item.departmentId)?.facultyId===facultyId),facultyId);
   const universityPanel=document.createElement('section');universityPanel.className='panel';universityPanel.id='university-workload-summary';
-  universityPanel.innerHTML='<h2>Загальне навантаження університету</h2>'+scopeWorkload(disciplines,'university');
+  universityPanel.innerHTML='<h2>Загальне навантаження Університету</h2>'+scopeWorkload(disciplines,'university');
   $('view-overview').prepend(universityPanel);
   const facultyPanel=document.createElement('section');facultyPanel.className='panel';facultyPanel.id='faculty-workload-summary';facultyPanel.hidden=true;
   $('program-filters').before(facultyPanel);
@@ -405,6 +406,7 @@
   }
   setView('overview',false);
 })();
+
 
 
 
