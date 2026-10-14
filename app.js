@@ -154,9 +154,34 @@
       }
     }
   }
+  // Exams use each existing shared group once; otherwise one group per ONP/course.
+  const examSessions = new Map(), recordExams = new Map();
+  const isExam = item => ['екзамен','іспит'].includes(normalize(item.hours?.assessment));
+  const ukrainianExam = item => /українськ.*мов|мов.*українськ/.test(normalize(item.name));
+  for (const item of disciplines.filter(isExam)) {
+    const lessons=['lectures','practical','laboratory'].filter(lesson=>Number(item.hours?.[lesson])>0);
+    const signatures=lessons.map(lesson=>currentGroups.filter(entry=>entry.disciplineId===item.id && entry.lessonType===lesson)
+      .map(entry=>JSON.stringify([entry.groupCode,entry.course])).sort().join('|'));
+    const ambiguous=new Set(signatures).size>1;
+    const memberships=currentGroups.filter(entry=>entry.disciplineId===item.id && entry.lessonType===lessons[0]);
+    const courses=[...new Set(students.filter(student=>student.programId===item.programId && student.semester===item.semester).map(student=>student.course))];
+    const entries=memberships.map(entry=>({key:JSON.stringify(['shared',entry.groupCode,entry.course,item.semester,item.departmentId]),course:entry.course,
+      members:currentGroups.filter(other=>other.groupCode===entry.groupCode && other.course===entry.course && other.semester===entry.semester && other.departmentId===entry.departmentId && other.lessonType===entry.lessonType).map(other=>other.programId)}));
+    for (const course of courses.length?courses:[null]) {
+      if (!memberships.some(entry=>entry.course===course)) entries.push({key:JSON.stringify(['separate',item.id,course]),course,members:[item.programId]});
+    }
+    for (const entry of entries) {
+      if (!examSessions.has(entry.key)) examSessions.set(entry.key,{semester:item.semester,course:entry.course,members:new Set(),rates:new Set(),exceptions:new Set(),ambiguous:false});
+      const session=examSessions.get(entry.key);
+      entry.members.forEach(id=>session.members.add(id));session.rates.add(item.departmentWorkloadShare ?? 1);
+      session.exceptions.add(ukrainianExam(item));session.ambiguous ||= ambiguous;
+      if (!recordExams.has(item.id)) recordExams.set(item.id,new Set());
+      recordExams.get(item.id).add(entry.key);
+    }
+  }
   function workloadFor(items,semester=null) {
     const keys=new Set(items.flatMap(item=>[...(recordSessions.get(item.id)||[])]));
-    const totals={lectures:0,practical:0,laboratory:0,total:0,incomplete:false};
+    const totals={lectures:0,practical:0,laboratory:0,classroom:0,exams:0,total:0,incomplete:false};
     for (const key of keys) {
       const session=teachingSessions.get(key);
       if (semester!=null && session.semester!==semester) continue;
@@ -165,27 +190,38 @@
       if (!counts.some(count=>count>0)) continue;
       totals[session.lesson]+=[...session.amounts][0]*[...session.rates][0];
     }
-    totals.total=totals.lectures+totals.practical+totals.laboratory;
+    totals.classroom=totals.lectures+totals.practical+totals.laboratory;
+    const examKeys=new Set(items.flatMap(item=>[...(recordExams.get(item.id)||[])]));
+    for (const key of examKeys) {
+      const session=examSessions.get(key);
+      if (semester!=null && session.semester!==semester) continue;
+      const counts=[...session.members].map(id=>studentCount(id,session.course,session.semester));
+      if (counts.some(count=>count==null) || session.rates.size!==1 || session.exceptions.size!==1 || session.ambiguous) {totals.incomplete=true;continue;}
+      const count=counts.reduce((sum,value)=>sum+value,0);
+      if (count<=0) continue;
+      totals.exams+=(([...session.exceptions][0]?0:2)+0.5*count)*[...session.rates][0];
+    }
+    totals.total=totals.classroom+totals.exams;
     return totals;
   }
-  const workloadLine = totals => totals.incomplete ? '<p>Для розрахунку потрібно уточнити кількість аспірантів або години спільної групи.</p>' :
-    `<p>${hoursBreakdown(totals) ? hoursBreakdown(totals)+'<br>' : ''}<strong>Разом: ${formatHours(totals.total)} год</strong></p>`;
+  const workloadLine = totals => totals.incomplete ? '<p>Для розрахунку потрібно уточнити кількість аспірантів, години або склад спільних груп.</p>' :
+    `<p>${hoursBreakdown(totals) ? hoursBreakdown(totals)+'<br>' : ''}Аудиторні: ${formatHours(totals.classroom)} год${totals.exams>0 ? '<br>Екзамени: '+formatHours(totals.exams)+' год' : ''}<br><strong>Разом: ${formatHours(totals.total)} год</strong></p>`;
   const disciplineWorkload = items => {
     const total=workloadFor(items);
-    return `<div class="discipline-workload" data-workload-total="${total.incomplete?'':total.total}"><p><strong>Аудиторне навантаження кафедри</strong></p>${workloadLine(total)}</div>`;
+    return `<div class="discipline-workload" data-workload-total="${total.incomplete?'':total.total}"><p><strong>Навантаження кафедри</strong></p>${workloadLine(total)}</div>`;
   };
   const departmentWorkload = departmentId => {
     const items=disciplines.filter(item=>item.departmentId===departmentId);
     const year=workloadFor(items),first=workloadFor(items,1),second=workloadFor(items,2);
     return `<div class="department-workload" data-department-total="${year.incomplete?'':year.total}" data-semester-one="${first.incomplete?'':first.total}" data-semester-two="${second.incomplete?'':second.total}">
-      <p><strong>Аудиторне навантаження · ${esc(data.academicYear || '')}</strong></p>
+      <p><strong>Навчальне навантаження · ${esc(data.academicYear || '')}</strong></p>
       <p><strong>1 семестр</strong></p>${workloadLine(first)}<p><strong>2 семестр</strong></p>${workloadLine(second)}
       <p><strong>За рік: ${year.incomplete?'потребує уточнення':formatHours(year.total)+' год'}</strong></p></div>`;
   };
   function scopeWorkload(items,scope) {
     const first=workloadFor(items,1),second=workloadFor(items,2),year=workloadFor(items);
     return `<div class="scope-workload" data-workload-scope="${esc(scope)}" data-year-total="${year.incomplete?'':year.total}" data-first-total="${first.incomplete?'':first.total}" data-second-total="${second.incomplete?'':second.total}">
-      <p><strong>Аудиторне навантаження · ${esc(data.academicYear || '')}</strong></p>
+      <p><strong>Навчальне навантаження · ${esc(data.academicYear || '')}</strong></p>
       <p><strong>1 семестр</strong></p>${workloadLine(first)}
       <p><strong>2 семестр</strong></p>${workloadLine(second)}
       <p><strong>За рік: ${year.incomplete?'потребує уточнення':formatHours(year.total)+' год'}</strong></p>
@@ -193,24 +229,24 @@
   }
   const facultyWorkload = facultyId => scopeWorkload(disciplines.filter(item=>departmentById.get(item.departmentId)?.facultyId===facultyId),facultyId);
   const universityPanel=document.createElement('section');universityPanel.className='panel';universityPanel.id='university-workload-summary';
-  universityPanel.innerHTML=compactScopeSummary(disciplines,'Загальне навантаження Університету','Аудиторне навантаження','university');
+  universityPanel.innerHTML=compactScopeSummary(disciplines,'Загальне навантаження Університету','Навчальне навантаження','university');
   $('view-faculties').prepend(universityPanel);
   const facultyPanel=document.createElement('section');facultyPanel.className='panel';facultyPanel.id='faculty-workload-summary';facultyPanel.hidden=true;
   $('program-filters').before(facultyPanel);
   function compactScopeSummary(items,title,label,scope) {
     const first=workloadFor(items,1),second=workloadFor(items,2),year=workloadFor(items);
     const amount = total => total.incomplete ? 'потребує уточнення' : formatHours(total.total)+' год';
-    return `<div class="filter-scope-summary" data-summary-scope="${esc(scope)}" data-summary-total="${year.incomplete?'':year.total}">
+    return `<div class="filter-scope-summary" data-summary-scope="${esc(scope)}" data-summary-total="${year.incomplete?'':year.total}" data-classroom-total="${year.classroom}" data-exam-total="${year.exams}">
       <h3>${esc(title)}</h3><p class="filter-summary-label">${esc(label)} · ${esc(data.academicYear || '')}</p>
       <p class="semester-summary"><span>1 семестр - <strong>${amount(first)}</strong></span><span>2 семестр - <strong>${amount(second)}</strong></span></p>
-      <p class="filter-summary-year"><strong>За рік - ${amount(year)}</strong></p></div>`;
+      <p>Аудиторні - ${formatHours(year.classroom)} год${year.exams>0 ? ' · Екзамени - '+formatHours(year.exams)+' год' : ''}</p><p class="filter-summary-year"><strong>За рік - ${amount(year)}</strong></p></div>`;
   }
   function renderFilterSummary() {
     const departmentId=$('discipline-department').value,facultyId=$('discipline-faculty').value,programId=$('discipline-program').value;
     workloadPanel.hidden=!departmentId && !facultyId;
     if (departmentId) {
       const items=disciplines.filter(item=>item.departmentId===departmentId);
-      workloadPanel.innerHTML=compactScopeSummary(items,departmentLabel({departmentId}),'Аудиторне навантаження кафедри','department:'+departmentId);
+      workloadPanel.innerHTML=compactScopeSummary(items,departmentLabel({departmentId}),'Навантаження кафедри','department:'+departmentId);
     } else if (facultyId) {
       const ownedDepartments=departments.filter(item=>item.facultyId===facultyId).sort((a,b)=>alphabet.compare(a.name,b.name));
       const items=disciplines.filter(item=>departmentById.get(item.departmentId)?.facultyId===facultyId);
@@ -256,11 +292,11 @@
     if (counts.incomplete || total.incomplete) return workloadLine({...total,incomplete:true});
     const lines=['lectures','practical','laboratory'].filter(lesson=>counts[lesson]>0 && items.some(item=>Number(item.hours?.[lesson])>0)).map(lesson=>
       `<p data-lesson="${lesson}" data-group-count="${counts[lesson]}">${esc(lessonLabels[lesson])} - <strong>${counts[lesson]} ${groupWord(counts[lesson])} · ${formatHours(total[lesson])} год</strong></p>`).join('');
-    return `<div class="compact-workload" data-workload-total="${total.total}">${lines}<p class="compact-workload-total"><strong>Навантаження кафедри - ${formatHours(total.total)} год</strong></p></div>`;
+    return `<div class="compact-workload" data-workload-total="${total.total}">${lines}${total.exams>0 ? `<p>Екзамени - <strong>${formatHours(total.exams)} год</strong></p>` : ''}<p class="compact-workload-total"><strong>Навантаження кафедри - ${formatHours(total.total)} год</strong></p></div>`;
   }
   const sharedDetails = item => {
     const share = item.departmentWorkloadShare == null ? '' : `<p><strong>Частка цієї кафедри у навантаженні: ${esc(item.departmentWorkloadShare*100)}%</strong></p>`;
-    return `<div class="shared-groups">${groupCountDetails([item])}${share}</div>`;
+    return `<div class="shared-groups">${groupCountDetails([item])}${workloadFor([item]).incomplete ? '<p>Екзаменаційне навантаження потребує уточнення.</p>' : workloadFor([item]).exams>0 ? `<p><strong>Екзамени - ${formatHours(workloadFor([item]).exams)} год</strong></p>` : ''}${share}</div>`;
   };
   const departmentLabel = item => departmentById.get(item.departmentId)?.name ||
     (item.departmentCode ? 'Код кафедри: '+item.departmentCode : 'Кафедру не зазначено');
@@ -419,6 +455,7 @@
   }
   setView('faculties',false);
 })();
+
 
 
 
