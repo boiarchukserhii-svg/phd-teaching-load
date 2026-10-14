@@ -40,3 +40,6 @@ dialog{max-width:480px;width:calc(100% - 32px);border:1px solid #d5ebe3;border-r
 .faculty-department-details{margin-top:14px;border-top:1px solid #e3eee7;padding-top:12px}.faculty-department-details summary{cursor:pointer;min-height:44px;padding:12px 14px;background:#e8f5ee;border-radius:14px;color:#147d6b;font-size:14px;font-weight:700;line-height:1.4}
 .faculty-department-details ul{list-style:none;padding:0;margin:10px 0 0}.faculty-department-details li{display:flex;align-items:baseline;justify-content:space-between;gap:12px;border-bottom:1px solid #edf1ef;padding:12px 2px;font-size:13px;line-height:1.5}.faculty-department-details li span{overflow-wrap:anywhere}.faculty-department-details li strong{color:#147d6b;white-space:nowrap}
 #discipline-scope-caption{font-size:20px;line-height:1.4;color:#263d49;margin:24px 0 10px}
+
+
+.classroom-accent strong{font-size:18px;font-weight:600}

@@ -3,7 +3,7 @@
   const data = window.TEACHING_DATA || {faculties:[],departments:[],programs:[],disciplines:[]};
   const faculties = data.faculties || [], departments = data.departments || [], programs = data.programs || [], disciplines = data.disciplines || [];
   const $ = id => document.getElementById(id);
-  const esc = value => String(value ?? '').replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
+  const esc = value => String(value ?? '').replace(/[\u2013\u2014]/g,'-').replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
   const normalize = value => String(value || '').normalize('NFC').toLocaleLowerCase('uk-UA').replace(/[’ʼ']/g,'').trim();
   const includes = (value, query) => normalize(query).split(/\s+/).filter(Boolean).every(word => normalize(value).includes(word));
   const facultyById = new Map(faculties.map(item => [item.id,item]));
@@ -90,7 +90,7 @@
   $('department-total').textContent = departments.length;
   $('faculty-total').textContent = faculties.length;
   $('program-total').textContent = programs.length;
-  if (disciplines.length || departments.length) $('data-status').textContent = data.academicYear ? 'Навчальний рік: '+data.academicYear : 'Навчальний рік не зазначено';
+  if (disciplines.length || departments.length) $('data-status').textContent = data.academicYear ? 'Навчальний рік: '+data.academicYear.replace(/[\u2013\u2014]/g,'-') : 'Навчальний рік не зазначено';
   else if (programs.length) $('data-status').textContent = 'Довідник ОНП заповнено';
   if (programs.length && !disciplines.length && !departments.length) {
     document.querySelector('#view-overview .welcome p').textContent = 'Освітньо-наукові програми вже додано. Оберіть факультет або ННІ, щоб переглянути його програми. Кафедри та дисципліни ще не додано.';
@@ -110,13 +110,15 @@
     paragraph.textContent = `Аспірантів: ${total} · 1 курс · Однакова кількість у 1 та 2 семестрах`;
     $('data-status').after(paragraph);
   }
-  const formatHours = value => value == null ? '—' : esc(new Intl.NumberFormat('uk-UA').format(value));
+  const formatHours = value => value == null ? '-' : esc(new Intl.NumberFormat('uk-UA').format(value));
+  const hoursBreakdown = hours => [['lectures','Лекції'],['practical','Практичні'],['laboratory','Лабораторні']]
+    .filter(([key])=>Number(hours[key])>0).map(([key,label])=>`${label}: ${formatHours(hours[key])}`).join(' · ');
   const hoursDetails = item => {
     const hours = item.hours;
     if (!hours) return '';
     return `<div class="discipline-hours"><p><strong>Години за навчальним планом</strong></p>
       <p>Усього: <strong>${formatHours(hours.total)}</strong> год</p><div class="classroom-accent"><span>Аудиторні години</span><strong>${formatHours(hours.classroom)} год</strong></div>
-      <p>Лекції: ${formatHours(hours.lectures)} · Практичні: ${formatHours(hours.practical)} · Лабораторні: ${formatHours(hours.laboratory)}</p>
+      ${hoursBreakdown(hours) ? `<p>${hoursBreakdown(hours)}</p>` : ''}
       <p>Самостійна робота: ${formatHours(hours.independent)}</p>
       ${hours.assessment ? `<p>Форма контролю: ${esc(hours.assessment)}</p>` : ''}</div>`;
   };
@@ -173,7 +175,7 @@
     return totals;
   }
   const workloadLine = totals => totals.incomplete ? '<p>Для розрахунку потрібно уточнити кількість аспірантів або години спільної групи.</p>' :
-    `<p>Лекції: ${formatHours(totals.lectures)} · Практичні: ${formatHours(totals.practical)} · Лабораторні: ${formatHours(totals.laboratory)}<br><strong>Разом: ${formatHours(totals.total)} год</strong></p>`;
+    `<p>${hoursBreakdown(totals) ? hoursBreakdown(totals)+'<br>' : ''}<strong>Разом: ${formatHours(totals.total)} год</strong></p>`;
   const disciplineWorkload = items => {
     const total=workloadFor(items);
     return `<div class="discipline-workload" data-workload-total="${total.incomplete?'':total.total}"><p><strong>Аудиторне навантаження кафедри</strong></p>${workloadLine(total)}</div>`;
@@ -193,7 +195,7 @@
       <p><strong>1 семестр</strong></p>${workloadLine(first)}
       <p><strong>2 семестр</strong></p>${workloadLine(second)}
       <p><strong>За рік: ${year.incomplete?'потребує уточнення':formatHours(year.total)+' год'}</strong></p>
-      <p>За рік — ${year.incomplete?'потребує уточнення':`лекції: ${formatHours(year.lectures)} · практичні: ${formatHours(year.practical)} · лабораторні: ${formatHours(year.laboratory)}`}.</p></div>`;
+      <p>За рік - ${year.incomplete?'потребує уточнення':hoursBreakdown(year) || 'немає аудиторного навантаження'}.</p></div>`;
   }
   const facultyWorkload = facultyId => scopeWorkload(disciplines.filter(item=>departmentById.get(item.departmentId)?.facultyId===facultyId),facultyId);
   const universityPanel=document.createElement('section');universityPanel.className='panel';universityPanel.id='university-workload-summary';
@@ -206,8 +208,8 @@
     const amount = total => total.incomplete ? 'потребує уточнення' : formatHours(total.total)+' год';
     return `<div class="filter-scope-summary" data-summary-scope="${esc(scope)}" data-summary-total="${year.incomplete?'':year.total}">
       <h3>${esc(title)}</h3><p class="filter-summary-label">${esc(label)} · ${esc(data.academicYear || '')}</p>
-      <p class="semester-summary"><span>1 семестр — <strong>${amount(first)}</strong></span><span>2 семестр — <strong>${amount(second)}</strong></span></p>
-      <p class="filter-summary-year"><strong>За рік — ${amount(year)}</strong></p></div>`;
+      <p class="semester-summary"><span>1 семестр - <strong>${amount(first)}</strong></span><span>2 семестр - <strong>${amount(second)}</strong></span></p>
+      <p class="filter-summary-year"><strong>За рік - ${amount(year)}</strong></p></div>`;
   }
   function renderFilterSummary() {
     const departmentId=$('discipline-department').value,facultyId=$('discipline-faculty').value,programId=$('discipline-program').value;
@@ -252,15 +254,15 @@
   function groupCountDetails(items) {
     const counts=groupCountsFor(items);
     if (counts.incomplete) return '<p>Для підрахунку груп потрібно уточнити кількість аспірантів.</p>';
-    return `<div class="lesson-group-counts">${['lectures','practical','laboratory'].filter(lesson=>items.some(item=>Number(item.hours?.[lesson])>0)).map(lesson=>
-      `<p data-lesson="${lesson}" data-group-count="${counts[lesson]}"><strong>${esc(lessonLabels[lesson])} — ${counts[lesson]} ${groupWord(counts[lesson])}</strong></p>`).join('')}</div>`;
+    return `<div class="lesson-group-counts">${['lectures','practical','laboratory'].filter(lesson=>counts[lesson]>0 && items.some(item=>Number(item.hours?.[lesson])>0)).map(lesson=>
+      `<p data-lesson="${lesson}" data-group-count="${counts[lesson]}"><strong>${esc(lessonLabels[lesson])} - ${counts[lesson]} ${groupWord(counts[lesson])}</strong></p>`).join('')}</div>`;
   }
   function compactWorkload(items) {
     const counts=groupCountsFor(items),total=workloadFor(items);
     if (counts.incomplete || total.incomplete) return workloadLine({...total,incomplete:true});
-    const lines=['lectures','practical','laboratory'].filter(lesson=>items.some(item=>Number(item.hours?.[lesson])>0)).map(lesson=>
-      `<p data-lesson="${lesson}" data-group-count="${counts[lesson]}">${esc(lessonLabels[lesson])} — <strong>${counts[lesson]} ${groupWord(counts[lesson])} · ${formatHours(total[lesson])} год</strong></p>`).join('');
-    return `<div class="compact-workload" data-workload-total="${total.total}">${lines}<p class="compact-workload-total"><strong>Навантаження кафедри — ${formatHours(total.total)} год</strong></p></div>`;
+    const lines=['lectures','practical','laboratory'].filter(lesson=>counts[lesson]>0 && items.some(item=>Number(item.hours?.[lesson])>0)).map(lesson=>
+      `<p data-lesson="${lesson}" data-group-count="${counts[lesson]}">${esc(lessonLabels[lesson])} - <strong>${counts[lesson]} ${groupWord(counts[lesson])} · ${formatHours(total[lesson])} год</strong></p>`).join('');
+    return `<div class="compact-workload" data-workload-total="${total.total}">${lines}<p class="compact-workload-total"><strong>Навантаження кафедри - ${formatHours(total.total)} год</strong></p></div>`;
   }
   const sharedDetails = item => {
     const share = item.departmentWorkloadShare == null ? '' : `<p><strong>Частка цієї кафедри у навантаженні: ${esc(item.departmentWorkloadShare*100)}%</strong></p>`;
@@ -423,6 +425,7 @@
   }
   setView('overview',false);
 })();
+
 
 
 
