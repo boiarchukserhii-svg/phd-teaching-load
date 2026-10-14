@@ -2,7 +2,499 @@
 window.TEACHING_DATA = {
   version: 1,
   updatedAt: null,
-  academicYear: null,
+  academicYear: '2026–2027',
+  students: [
+  {
+    "programId": "ONP-001",
+    "academicYear": "2026–2027",
+    "course": 1,
+    "semester": 1,
+    "count": 5
+  },
+  {
+    "programId": "ONP-001",
+    "academicYear": "2026–2027",
+    "course": 1,
+    "semester": 2,
+    "count": 5
+  },
+  {
+    "programId": "ONP-002",
+    "academicYear": "2026–2027",
+    "course": 1,
+    "semester": 1,
+    "count": 4
+  },
+  {
+    "programId": "ONP-002",
+    "academicYear": "2026–2027",
+    "course": 1,
+    "semester": 2,
+    "count": 4
+  },
+  {
+    "programId": "ONP-003",
+    "academicYear": "2026–2027",
+    "course": 1,
+    "semester": 1,
+    "count": 1
+  },
+  {
+    "programId": "ONP-003",
+    "academicYear": "2026–2027",
+    "course": 1,
+    "semester": 2,
+    "count": 1
+  },
+  {
+    "programId": "ONP-004",
+    "academicYear": "2026–2027",
+    "course": 1,
+    "semester": 1,
+    "count": 2
+  },
+  {
+    "programId": "ONP-004",
+    "academicYear": "2026–2027",
+    "course": 1,
+    "semester": 2,
+    "count": 2
+  },
+  {
+    "programId": "ONP-005",
+    "academicYear": "2026–2027",
+    "course": 1,
+    "semester": 1,
+    "count": 6
+  },
+  {
+    "programId": "ONP-005",
+    "academicYear": "2026–2027",
+    "course": 1,
+    "semester": 2,
+    "count": 6
+  },
+  {
+    "programId": "ONP-006",
+    "academicYear": "2026–2027",
+    "course": 1,
+    "semester": 1,
+    "count": 8
+  },
+  {
+    "programId": "ONP-006",
+    "academicYear": "2026–2027",
+    "course": 1,
+    "semester": 2,
+    "count": 8
+  },
+  {
+    "programId": "ONP-007",
+    "academicYear": "2026–2027",
+    "course": 1,
+    "semester": 1,
+    "count": 1
+  },
+  {
+    "programId": "ONP-007",
+    "academicYear": "2026–2027",
+    "course": 1,
+    "semester": 2,
+    "count": 1
+  },
+  {
+    "programId": "ONP-008",
+    "academicYear": "2026–2027",
+    "course": 1,
+    "semester": 1,
+    "count": 0
+  },
+  {
+    "programId": "ONP-008",
+    "academicYear": "2026–2027",
+    "course": 1,
+    "semester": 2,
+    "count": 0
+  },
+  {
+    "programId": "ONP-009",
+    "academicYear": "2026–2027",
+    "course": 1,
+    "semester": 1,
+    "count": 2
+  },
+  {
+    "programId": "ONP-009",
+    "academicYear": "2026–2027",
+    "course": 1,
+    "semester": 2,
+    "count": 2
+  },
+  {
+    "programId": "ONP-010",
+    "academicYear": "2026–2027",
+    "course": 1,
+    "semester": 1,
+    "count": 1
+  },
+  {
+    "programId": "ONP-010",
+    "academicYear": "2026–2027",
+    "course": 1,
+    "semester": 2,
+    "count": 1
+  },
+  {
+    "programId": "ONP-011",
+    "academicYear": "2026–2027",
+    "course": 1,
+    "semester": 1,
+    "count": 3
+  },
+  {
+    "programId": "ONP-011",
+    "academicYear": "2026–2027",
+    "course": 1,
+    "semester": 2,
+    "count": 3
+  },
+  {
+    "programId": "ONP-012",
+    "academicYear": "2026–2027",
+    "course": 1,
+    "semester": 1,
+    "count": 2
+  },
+  {
+    "programId": "ONP-012",
+    "academicYear": "2026–2027",
+    "course": 1,
+    "semester": 2,
+    "count": 2
+  },
+  {
+    "programId": "ONP-013",
+    "academicYear": "2026–2027",
+    "course": 1,
+    "semester": 1,
+    "count": 1
+  },
+  {
+    "programId": "ONP-013",
+    "academicYear": "2026–2027",
+    "course": 1,
+    "semester": 2,
+    "count": 1
+  },
+  {
+    "programId": "ONP-014",
+    "academicYear": "2026–2027",
+    "course": 1,
+    "semester": 1,
+    "count": 6
+  },
+  {
+    "programId": "ONP-014",
+    "academicYear": "2026–2027",
+    "course": 1,
+    "semester": 2,
+    "count": 6
+  },
+  {
+    "programId": "ONP-015",
+    "academicYear": "2026–2027",
+    "course": 1,
+    "semester": 1,
+    "count": 1
+  },
+  {
+    "programId": "ONP-015",
+    "academicYear": "2026–2027",
+    "course": 1,
+    "semester": 2,
+    "count": 1
+  },
+  {
+    "programId": "ONP-016",
+    "academicYear": "2026–2027",
+    "course": 1,
+    "semester": 1,
+    "count": 6
+  },
+  {
+    "programId": "ONP-016",
+    "academicYear": "2026–2027",
+    "course": 1,
+    "semester": 2,
+    "count": 6
+  },
+  {
+    "programId": "ONP-017",
+    "academicYear": "2026–2027",
+    "course": 1,
+    "semester": 1,
+    "count": 4
+  },
+  {
+    "programId": "ONP-017",
+    "academicYear": "2026–2027",
+    "course": 1,
+    "semester": 2,
+    "count": 4
+  },
+  {
+    "programId": "ONP-018",
+    "academicYear": "2026–2027",
+    "course": 1,
+    "semester": 1,
+    "count": 0
+  },
+  {
+    "programId": "ONP-018",
+    "academicYear": "2026–2027",
+    "course": 1,
+    "semester": 2,
+    "count": 0
+  },
+  {
+    "programId": "ONP-019",
+    "academicYear": "2026–2027",
+    "course": 1,
+    "semester": 1,
+    "count": 9
+  },
+  {
+    "programId": "ONP-019",
+    "academicYear": "2026–2027",
+    "course": 1,
+    "semester": 2,
+    "count": 9
+  },
+  {
+    "programId": "ONP-020",
+    "academicYear": "2026–2027",
+    "course": 1,
+    "semester": 1,
+    "count": 6
+  },
+  {
+    "programId": "ONP-020",
+    "academicYear": "2026–2027",
+    "course": 1,
+    "semester": 2,
+    "count": 6
+  },
+  {
+    "programId": "ONP-021",
+    "academicYear": "2026–2027",
+    "course": 1,
+    "semester": 1,
+    "count": 10
+  },
+  {
+    "programId": "ONP-021",
+    "academicYear": "2026–2027",
+    "course": 1,
+    "semester": 2,
+    "count": 10
+  },
+  {
+    "programId": "ONP-022",
+    "academicYear": "2026–2027",
+    "course": 1,
+    "semester": 1,
+    "count": 5
+  },
+  {
+    "programId": "ONP-022",
+    "academicYear": "2026–2027",
+    "course": 1,
+    "semester": 2,
+    "count": 5
+  },
+  {
+    "programId": "ONP-023",
+    "academicYear": "2026–2027",
+    "course": 1,
+    "semester": 1,
+    "count": 11
+  },
+  {
+    "programId": "ONP-023",
+    "academicYear": "2026–2027",
+    "course": 1,
+    "semester": 2,
+    "count": 11
+  },
+  {
+    "programId": "ONP-024",
+    "academicYear": "2026–2027",
+    "course": 1,
+    "semester": 1,
+    "count": 1
+  },
+  {
+    "programId": "ONP-024",
+    "academicYear": "2026–2027",
+    "course": 1,
+    "semester": 2,
+    "count": 1
+  },
+  {
+    "programId": "ONP-025",
+    "academicYear": "2026–2027",
+    "course": 1,
+    "semester": 1,
+    "count": 2
+  },
+  {
+    "programId": "ONP-025",
+    "academicYear": "2026–2027",
+    "course": 1,
+    "semester": 2,
+    "count": 2
+  },
+  {
+    "programId": "ONP-026",
+    "academicYear": "2026–2027",
+    "course": 1,
+    "semester": 1,
+    "count": 23
+  },
+  {
+    "programId": "ONP-026",
+    "academicYear": "2026–2027",
+    "course": 1,
+    "semester": 2,
+    "count": 23
+  },
+  {
+    "programId": "ONP-027",
+    "academicYear": "2026–2027",
+    "course": 1,
+    "semester": 1,
+    "count": 5
+  },
+  {
+    "programId": "ONP-027",
+    "academicYear": "2026–2027",
+    "course": 1,
+    "semester": 2,
+    "count": 5
+  },
+  {
+    "programId": "ONP-028",
+    "academicYear": "2026–2027",
+    "course": 1,
+    "semester": 1,
+    "count": 0
+  },
+  {
+    "programId": "ONP-028",
+    "academicYear": "2026–2027",
+    "course": 1,
+    "semester": 2,
+    "count": 0
+  },
+  {
+    "programId": "ONP-029",
+    "academicYear": "2026–2027",
+    "course": 1,
+    "semester": 1,
+    "count": 7
+  },
+  {
+    "programId": "ONP-029",
+    "academicYear": "2026–2027",
+    "course": 1,
+    "semester": 2,
+    "count": 7
+  },
+  {
+    "programId": "ONP-030",
+    "academicYear": "2026–2027",
+    "course": 1,
+    "semester": 1,
+    "count": 2
+  },
+  {
+    "programId": "ONP-030",
+    "academicYear": "2026–2027",
+    "course": 1,
+    "semester": 2,
+    "count": 2
+  },
+  {
+    "programId": "ONP-031",
+    "academicYear": "2026–2027",
+    "course": 1,
+    "semester": 1,
+    "count": 5
+  },
+  {
+    "programId": "ONP-031",
+    "academicYear": "2026–2027",
+    "course": 1,
+    "semester": 2,
+    "count": 5
+  },
+  {
+    "programId": "ONP-032",
+    "academicYear": "2026–2027",
+    "course": 1,
+    "semester": 1,
+    "count": 2
+  },
+  {
+    "programId": "ONP-032",
+    "academicYear": "2026–2027",
+    "course": 1,
+    "semester": 2,
+    "count": 2
+  },
+  {
+    "programId": "ONP-033",
+    "academicYear": "2026–2027",
+    "course": 1,
+    "semester": 1,
+    "count": 3
+  },
+  {
+    "programId": "ONP-033",
+    "academicYear": "2026–2027",
+    "course": 1,
+    "semester": 2,
+    "count": 3
+  },
+  {
+    "programId": "ONP-034",
+    "academicYear": "2026–2027",
+    "course": 1,
+    "semester": 1,
+    "count": 10
+  },
+  {
+    "programId": "ONP-034",
+    "academicYear": "2026–2027",
+    "course": 1,
+    "semester": 2,
+    "count": 10
+  },
+  {
+    "programId": "ONP-035",
+    "academicYear": "2026–2027",
+    "course": 1,
+    "semester": 1,
+    "count": 0
+  },
+  {
+    "programId": "ONP-035",
+    "academicYear": "2026–2027",
+    "course": 1,
+    "semester": 2,
+    "count": 0
+  }
+],
   source: 'https://nubip.edu.ua/university-departments',
   verifiedAt: '2026-10-13',
   faculties: [
@@ -3373,6 +3865,7 @@ window.TEACHING_DATA = {
   }
 ]
 };
+
 
 
 

@@ -9,6 +9,16 @@
   const facultyById = new Map(faculties.map(item => [item.id,item]));
   const departmentById = new Map(departments.map(item => [item.id,item]));
   const programById = new Map(programs.map(item => [item.id,item]));
+  const students = (data.students || []).filter(item=>item.academicYear === data.academicYear);
+  const studentSummary = programId => {
+    const records = students.filter(item=>item.programId === programId);
+    if (!records.length) return '';
+    const courses = [...new Set(records.map(item=>item.course))].sort((a,b)=>a-b);
+    return courses.map(course=>{
+      const cohort = records.filter(item=>item.course === course).sort((a,b)=>a.semester-b.semester);
+      return `<p><strong>Аспіранти · ${esc(course)} курс · ${esc(data.academicYear)}</strong><br>${cohort.map(item=>`${esc(item.semester)} семестр: ${esc(item.count)}`).join(' · ')}</p>`;
+    }).join('');
+  };
   const disciplineFaculty = item => item.facultyId || programById.get(item.programId)?.facultyId;
   const facultyName = id => facultyById.get(id)?.name || 'Підрозділ не зазначено';
   const icons = {
@@ -89,6 +99,17 @@
     document.querySelector('#view-overview .welcome p').textContent = 'Освітньо-наукові програми та дисципліни вже додано. Оберіть факультет, програму або відкрийте всі дисципліни. Оберіть кафедру, щоб переглянути її дисципліни на всіх освітньо-наукових програмах.';
     if (!data.academicYear) $('data-status').textContent = 'Дисципліни додано';
   }
+  if (students.length) {
+    const cohorts = new Map();
+    for (const item of students) {
+      const key = JSON.stringify([item.programId,item.course]);
+      cohorts.set(key,Math.max(cohorts.get(key) || 0,item.count));
+    }
+    const total = [...cohorts.values()].reduce((sum,count)=>sum+count,0);
+    const paragraph = document.createElement('p');paragraph.className = 'data-status';paragraph.id = 'aspirant-summary';
+    paragraph.textContent = `Аспірантів: ${total} · 1 курс · Однакова кількість у 1 та 2 семестрах`;
+    $('data-status').after(paragraph);
+  }
   const departmentLabel = item => departmentById.get(item.departmentId)?.name ||
     (item.departmentCode ? 'Код кафедри: '+item.departmentCode : 'Кафедру не зазначено');
   const semesters = [...new Set(disciplines.map(item=>item.semester).filter(value=>value != null))].sort((a,b)=>a-b);
@@ -156,7 +177,7 @@
     const entries = programs.filter(item=>includes([item.name,item.specialty,item.code].join(' '),$('program-query').value) &&
       (!$('program-faculty').value || item.facultyId === $('program-faculty').value));
     $('program-count').textContent = 'Програм: '+entries.length;
-    $('program-list').innerHTML = entries.length ? entries.map(item=>`<article class="card"><span class="pill">Освітньо-наукова програма</span><h3>${esc(item.name)}</h3><p>${esc(facultyName(item.facultyId))}</p>${item.specialty?`<p>Спеціальність: ${esc(item.specialty)}</p>`:''}<button type="button" class="open-records" data-program="${esc(item.id)}">Переглянути дисципліни →</button></article>`).join('') :
+    $('program-list').innerHTML = entries.length ? entries.map(item=>`<article class="card"><span class="pill">Освітньо-наукова програма</span><h3>${esc(item.name)}</h3><p>${esc(facultyName(item.facultyId))}</p>${item.specialty?`<p>Спеціальність: ${esc(item.specialty)}</p>`:''}${studentSummary(item.id)}<button type="button" class="open-records" data-program="${esc(item.id)}">Переглянути дисципліни →</button></article>`).join('') :
       programs.length ? empty('Нічого не знайдено','Спробуйте змінити пошук або скинути фільтри.','program') :
       empty('Освітньо-наукові програми ще не додано',$('program-faculty').value?facultyName($('program-faculty').value):'Тут відображатимуться програми факультетів та навчально-наукових інститутів.','program');
   }
@@ -208,6 +229,7 @@
   }
   setView('overview',false);
 })();
+
 
 
 

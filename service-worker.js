@@ -1,5 +1,5 @@
-const CACHE='phd-teaching-load-shell-v7-discipline-order-20261014';
-const SHELL=['./','./index.html','./styles.css?v=7','./data.js?v=7','./app.js?v=7','./manifest.webmanifest','./nubip-logo.png','./icon.svg','./icon-192.png','./icon-512.png'];
+const CACHE='phd-teaching-load-shell-v8-aspirants-20261014';
+const SHELL=['./','./index.html','./styles.css?v=8','./data.js?v=8','./app.js?v=8','./manifest.webmanifest','./nubip-logo.png','./icon.svg','./icon-192.png','./icon-512.png'];
 self.addEventListener('install',event=>event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(SHELL)).then(()=>self.skipWaiting())));
 self.addEventListener('activate',event=>event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(key=>key.startsWith('phd-teaching-load-shell-')&&key!==CACHE).map(key=>caches.delete(key)))).then(()=>self.clients.claim())));
 self.addEventListener('fetch',event=>{
@@ -15,6 +15,7 @@ self.addEventListener('fetch',event=>{
   }catch{return (await cache.match(key))||Response.error();}
  })());
 });
+
 
 
 
