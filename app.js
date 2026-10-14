@@ -201,8 +201,37 @@
   $('view-overview').prepend(universityPanel);
   const facultyPanel=document.createElement('section');facultyPanel.className='panel';facultyPanel.id='faculty-workload-summary';facultyPanel.hidden=true;
   $('program-filters').before(facultyPanel);
+  function compactScopeSummary(items,title,label,scope) {
+    const first=workloadFor(items,1),second=workloadFor(items,2),year=workloadFor(items);
+    const amount = total => total.incomplete ? 'потребує уточнення' : formatHours(total.total)+' год';
+    return `<div class="filter-scope-summary" data-summary-scope="${esc(scope)}" data-summary-total="${year.incomplete?'':year.total}">
+      <h3>${esc(title)}</h3><p class="filter-summary-label">${esc(label)} · ${esc(data.academicYear || '')}</p>
+      <p class="semester-summary"><span>1 семестр — <strong>${amount(first)}</strong></span><span>2 семестр — <strong>${amount(second)}</strong></span></p>
+      <p class="filter-summary-year"><strong>За рік — ${amount(year)}</strong></p></div>`;
+  }
+  function renderFilterSummary() {
+    const departmentId=$('discipline-department').value,facultyId=$('discipline-faculty').value,programId=$('discipline-program').value;
+    workloadPanel.hidden=!departmentId && !facultyId;
+    if (departmentId) {
+      const items=disciplines.filter(item=>item.departmentId===departmentId);
+      workloadPanel.innerHTML=compactScopeSummary(items,departmentLabel({departmentId}),'Аудиторне навантаження кафедри','department:'+departmentId);
+    } else if (facultyId) {
+      const ownedDepartments=departments.filter(item=>item.facultyId===facultyId).sort((a,b)=>alphabet.compare(a.name,b.name));
+      const items=disciplines.filter(item=>departmentById.get(item.departmentId)?.facultyId===facultyId);
+      const rows=ownedDepartments.map(department=>{
+        const total=workloadFor(disciplines.filter(item=>item.departmentId===department.id));
+        return `<li><span>${esc(department.name)}</span><strong>${total.incomplete?'потребує уточнення':formatHours(total.total)+' год'}</strong></li>`;
+      }).join('');
+      workloadPanel.innerHTML=compactScopeSummary(items,facultyName(facultyId),'Навантаження кафедр підрозділу','faculty:'+facultyId)+
+        `<details class="faculty-department-details"><summary>Кафедри та їхнє навантаження</summary>${rows?`<ul>${rows}</ul>`:'<p>Кафедри ще не додано.</p>'}</details>`;
+    } else workloadPanel.innerHTML='';
+    scopeCaption.hidden=!departmentId && !facultyId && !programId;
+    scopeCaption.textContent=programId ? 'Дисципліни ОНП «'+(programById.get(programId)?.name || '')+'»' :
+      departmentId ? 'Дисципліни кафедри' : facultyById.get(facultyId)?.type==='institute' ? 'Дисципліни ОНП інституту' : 'Дисципліни ОНП факультету';
+  }
   const workloadPanel=document.createElement('section');workloadPanel.className='panel';workloadPanel.id='department-workload-summary';workloadPanel.hidden=true;
-  $('discipline-filters').before(workloadPanel);
+  $('discipline-filters').after(workloadPanel);
+  const scopeCaption=document.createElement('h3');scopeCaption.id='discipline-scope-caption';scopeCaption.hidden=true;workloadPanel.after(scopeCaption);
 
   const groupWord = count => {
     const lastTwo=count%100,last=count%10;
@@ -308,8 +337,7 @@
       (!$('discipline-semester').value || String(item.semester) === $('discipline-semester').value) &&
       (!$('discipline-type').value || item.type === $('discipline-type').value)).sort(compareDisciplines);
     const grouped = !!$('discipline-department').value && !$('discipline-program').value;
-    workloadPanel.hidden = !grouped;
-    workloadPanel.innerHTML = grouped ? `<h3>${esc(departmentLabel({departmentId:$('discipline-department').value}))}</h3>`+departmentWorkload($('discipline-department').value) : '';
+    renderFilterSummary();
 
     const buckets = new Map();
     if (grouped) for (const item of entries) {
@@ -395,6 +423,7 @@
   }
   setView('overview',false);
 })();
+
 
 
 
