@@ -4,6 +4,10 @@
   const faculties = data.faculties || [], departments = data.departments || [], programs = data.programs || [], disciplines = data.disciplines || [];
   const $ = id => document.getElementById(id);
   $('academic-year').textContent = (data.academicYear || '2026-2027').replace(/[\u2013\u2014]/g,'-')+' навчальний рік';
+  if (data.updatedAt && !Number.isNaN(Date.parse(data.updatedAt))) {
+    $('data-updated').hidden=false;
+    $('data-updated').textContent='Дані оновлено: '+new Intl.DateTimeFormat('uk-UA',{dateStyle:'short',timeStyle:'short',timeZone:'Europe/Kyiv'}).format(new Date(data.updatedAt))+' (київський час)';
+  }
   const esc = value => String(value ?? '').replace(/[\u2013\u2014]/g,'-').replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
   const normalize = value => String(value || '').normalize('NFC').toLocaleLowerCase('uk-UA').replace(/[’ʼ']/g,'').trim();
   const includes = (value, query) => normalize(query).split(/\s+/).filter(Boolean).every(word => normalize(value).includes(word));
@@ -474,6 +478,7 @@
   }
   setView('faculties',false);
 })();
+
 
 
 
