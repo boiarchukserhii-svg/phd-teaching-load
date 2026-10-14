@@ -75,7 +75,7 @@
     document.querySelector('#view-overview .welcome p').textContent = 'Освітньо-наукові програми вже додано. Оберіть факультет або ННІ, щоб переглянути його програми. Кафедри та дисципліни ще не додано.';
   }
   if (disciplines.length) {
-    document.querySelector('#view-overview .welcome p').textContent = 'Освітньо-наукові програми та дисципліни вже додано. Оберіть факультет, програму або відкрийте всі дисципліни. Кафедри додамо після заповнення довідника.';
+    document.querySelector('#view-overview .welcome p').textContent = 'Освітньо-наукові програми та дисципліни вже додано. Оберіть факультет, програму або відкрийте всі дисципліни. Оберіть кафедру, щоб переглянути її дисципліни на всіх освітньо-наукових програмах.';
     if (!data.academicYear) $('data-status').textContent = 'Дисципліни додано';
   }
   const departmentLabel = item => departmentById.get(item.departmentId)?.name ||
@@ -99,10 +99,13 @@
     $('discipline-program').innerHTML = '<option value="">Усі програми</option>'+availablePrograms.map(item=>`<option value="${esc(item.id)}">${esc(item.name)}</option>`).join('');
     if (availablePrograms.some(item=>item.id === selectedProgram)) $('discipline-program').value = selectedProgram;
     const selected = $('discipline-department').value;
-    const available = departments.filter(item=>!$('discipline-faculty').value || item.facultyId === $('discipline-faculty').value);
+    const scopedDepartmentIds = new Set(disciplines.filter(item=>
+      (!$('discipline-faculty').value || disciplineFaculty(item) === $('discipline-faculty').value) &&
+      (!$('discipline-program').value || item.programId === $('discipline-program').value)).map(item=>item.departmentId));
+    const available = departments.filter(item=>(!$('discipline-faculty').value && !$('discipline-program').value) || scopedDepartmentIds.has(item.id));
     $('discipline-department').innerHTML = '<option value="">Усі кафедри</option>'+available.map(item=>`<option value="${esc(item.id)}">${esc(item.code?item.code+' · ':'')}${esc(item.name)}</option>`).join('');
     if (available.some(item=>item.id===selected)) $('discipline-department').value = selected;
-    const entries = disciplines.filter(item=>includes([item.name,item.departmentCode,departmentById.get(item.departmentId)?.code,facultyName(disciplineFaculty(item)),programById.get(item.programId)?.name].join(' '),$('discipline-query').value) &&
+    const entries = disciplines.filter(item=>includes([item.name,item.departmentCode,departmentById.get(item.departmentId)?.code,departmentById.get(item.departmentId)?.name,facultyName(disciplineFaculty(item)),programById.get(item.programId)?.name].join(' '),$('discipline-query').value) &&
       (!$('discipline-faculty').value || disciplineFaculty(item) === $('discipline-faculty').value) &&
       (!$('discipline-program').value || item.programId === $('discipline-program').value) &&
       (!$('discipline-department').value || item.departmentId === $('discipline-department').value) &&
@@ -146,7 +149,7 @@
     }
     if (department) {
       programReturn = null;
-      $('discipline-query').value='';$('discipline-program').value='';$('discipline-semester').value='';$('discipline-type').value='';$('discipline-faculty').value=departmentById.get(department.dataset.department)?.facultyId || '';setView('disciplines');$('discipline-department').value=department.dataset.department;renderDisciplines();
+      $('discipline-query').value='';$('discipline-program').value='';$('discipline-semester').value='';$('discipline-type').value='';$('discipline-faculty').value='';$('discipline-department').value='';setView('disciplines');$('discipline-department').value=department.dataset.department;renderDisciplines();
     }
   });
   document.querySelectorAll('.filters').forEach(form => {
@@ -175,6 +178,7 @@
   }
   setView('overview',false);
 })();
+
 
 
 
