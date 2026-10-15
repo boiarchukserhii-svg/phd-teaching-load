@@ -1,5 +1,5 @@
-const CACHE='phd-teaching-load-shell-v34-report-autoclose-20261015';
-const SHELL=['./','./index.html','./styles.css?v=34','./data.js?v=34','./app.js?v=34','./faculty-report.js?v=34','./manifest.webmanifest?v=26','./nubip-logo.png','./icon.svg?v=26','./icon-192.png?v=26','./icon-512.png?v=26','./icon-maskable-512.png?v=26','./apple-touch-icon.png?v=26'];
+const CACHE='phd-teaching-load-shell-v36-report-one-decimal-20261015';
+const SHELL=['./','./index.html','./styles.css?v=36','./data.js?v=36','./app.js?v=36','./faculty-report.js?v=36','./manifest.webmanifest?v=26','./nubip-logo.png','./icon.svg?v=26','./icon-192.png?v=26','./icon-512.png?v=26','./icon-maskable-512.png?v=26','./apple-touch-icon.png?v=26'];
 self.addEventListener('install',event=>event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(SHELL)).then(()=>self.skipWaiting())));
 self.addEventListener('activate',event=>event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(key=>key.startsWith('phd-teaching-load-shell-')&&key!==CACHE).map(key=>caches.delete(key)))).then(()=>self.clients.claim())));
 self.addEventListener('fetch',event=>{
@@ -15,6 +15,8 @@ self.addEventListener('fetch',event=>{
   }catch{return (await cache.match(key))||Response.error();}
  })());
 });
+
+
 
 
 
