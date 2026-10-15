@@ -433,8 +433,33 @@
   function renderFaculties() {
     const entries = faculties.filter(item=>includes(item.name,$('faculty-query').value) && (!$('faculty-type').value || item.type === $('faculty-type').value));
     $('faculty-count').textContent = 'Підрозділів: '+entries.length;
-    $('faculty-list').innerHTML = entries.length ? entries.map(item=>`<article class="card"><span class="pill ${item.type==='institute'?'institute':''}">${item.type==='institute'?'Навчально-науковий інститут':'Факультет'}</span><h3>${esc(item.name)}</h3><p>За кафедрами підрозділу</p>${facultyWorkload(item.id)}<button type="button" class="open-records" data-faculty="${esc(item.id)}">Переглянути ОНП →</button></article>`).join('') : empty('Нічого не знайдено','Спробуйте іншу назву або скиньте фільтри.','building');
+    $('faculty-list').innerHTML = entries.length ? entries.map(item=>`<article class="card"><span class="pill ${item.type==='institute'?'institute':''}">${item.type==='institute'?'Навчально-науковий інститут':'Факультет'}</span><h3>${esc(item.name)}</h3><p>За кафедрами підрозділу</p>${facultyWorkload(item.id)}<button type="button" class="open-records" data-faculty="${esc(item.id)}">Переглянути ОНП →</button> <button type="button" class="open-records" data-faculty-report="${esc(item.id)}">Завантажити звіт Excel</button></article>`).join('') : empty('Нічого не знайдено','Спробуйте іншу назву або скиньте фільтри.','building');
   }
+  const reportDialog=document.createElement('dialog');reportDialog.id='faculty-report-dialog';
+  reportDialog.style.width='min(540px, calc(100vw - 32px))';
+  reportDialog.innerHTML='<h2>Звіт про навантаження кафедр</h2><p id="report-faculty-name"></p><label for="report-period">Період</label><select id="report-period" style="display:block;width:100%;margin:8px 0 16px;padding:12px;font-size:16px"><option value="">Увесь навчальний рік</option><option value="1">1 семестр</option><option value="2">2 семестр</option></select><p class="muted">Один рядок - одна кафедра. Враховано її викладання на всіх ОНП, зокрема інших факультетів.</p><p id="report-status" role="status" aria-live="polite"></p><button type="button" class="primary" id="report-download">Завантажити Excel</button> <button type="button" class="reset" id="report-close">Закрити</button>';
+  document.body.append(reportDialog);
+  let reportFacultyId='';
+  $('report-close').onclick=()=>reportDialog.close();
+  $('report-download').onclick=async()=>{
+    const faculty=facultyById.get(reportFacultyId);if(!faculty)return;
+    const semester=$('report-period').value ? Number($('report-period').value) : null;
+    const rows=departments.filter(item=>item.facultyId===faculty.id).sort((a,b)=>a.name.localeCompare(b.name,'uk')).map(item=>({code:item.code||item.id,name:item.name,...workloadFor(disciplines.filter(d=>d.departmentId===item.id),semester)}));
+    if(rows.some(row=>row.incomplete)){$('report-status').textContent='Потрібно уточнити дані навантаження кафедр. Файл не сформовано.';return;}
+    if(!window.FACULTY_REPORT){$('report-status').textContent='Не вдалося завантажити модуль звіту. Оновіть сторінку з інтернетом.';return;}
+    $('report-download').disabled=true;
+    try{
+      const blob=window.FACULTY_REPORT.build({faculty,academicYear:data.academicYear||'',semester,rows,updatedAt:data.updatedAt});
+      const name='Навантаження_'+faculty.id+'_'+String(data.academicYear||'').replace(/[–—]/g,'-')+'_'+(semester?'семестр-'+semester:'за-рік')+'.xlsx';
+      await window.FACULTY_REPORT.save(blob,name);$('report-status').textContent='Звіт сформовано.';
+    }catch(error){$('report-status').textContent=error.name==='AbortError'?'Збереження скасовано.': 'Не вдалося зберегти звіт. Спробуйте ще раз.';}
+    finally{$('report-download').disabled=false;}
+  };
+  document.addEventListener('click',event=>{
+    const button=event.target.closest('[data-faculty-report]');if(!button)return;
+    reportFacultyId=button.dataset.facultyReport;$('report-faculty-name').textContent=facultyName(reportFacultyId);
+    $('report-period').value='';$('report-status').textContent='';reportDialog.showModal();
+  });
   document.addEventListener('click', event => {
     const faculty = event.target.closest('[data-faculty]'),department = event.target.closest('[data-department]'),program = event.target.closest('[data-program]');
     if (faculty) {
@@ -478,6 +503,7 @@
   }
   setView('faculties',false);
 })();
+
 
 
 
