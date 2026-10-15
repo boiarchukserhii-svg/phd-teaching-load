@@ -242,6 +242,7 @@
   const facultyWorkload = facultyId => scopeWorkload(disciplines.filter(item=>departmentById.get(item.departmentId)?.facultyId===facultyId),facultyId);
   const universityPanel=document.createElement('section');universityPanel.className='panel';universityPanel.id='university-workload-summary';
   universityPanel.innerHTML=compactScopeSummary(disciplines,'Загальне навантаження Університету','Навчальне навантаження','university');
+  universityPanel.insertAdjacentHTML('beforeend','<button type="button" class="open-records" data-faculty-report="university">Завантажити звіт Університету</button>');
   $('view-faculties').prepend(universityPanel);
   const facultyPanel=document.createElement('section');facultyPanel.className='panel';facultyPanel.id='faculty-workload-summary';facultyPanel.hidden=true;
   $('program-filters').before(facultyPanel);
@@ -437,19 +438,21 @@
   }
   const reportDialog=document.createElement('dialog');reportDialog.id='faculty-report-dialog';
   reportDialog.style.width='min(540px, calc(100vw - 32px))';
-  reportDialog.innerHTML='<h2>Звіт про навантаження кафедр</h2><p id="report-faculty-name"></p><label for="report-period">Період</label><select id="report-period" style="display:block;width:100%;margin:8px 0 16px;padding:12px;font-size:16px"><option value="">Увесь навчальний рік</option><option value="1">1 семестр</option><option value="2">2 семестр</option></select><p class="muted">Один рядок - одна кафедра. Враховано її викладання на всіх ОНП, зокрема інших факультетів.</p><p id="report-status" role="status" aria-live="polite"></p><button type="button" class="primary" id="report-download">Завантажити Excel</button> <button type="button" class="reset" id="report-close">Закрити</button>';
+  reportDialog.innerHTML='<h2>Звіт про навантаження кафедр</h2><p id="report-faculty-name"></p><label for="report-period">Період</label><select id="report-period" style="display:block;width:100%;margin:8px 0 16px;padding:12px;font-size:16px"><option value="">Увесь навчальний рік</option><option value="1">1 семестр</option><option value="2">2 семестр</option></select><p class="muted" id="report-description">Один рядок - одна кафедра. Враховано її викладання на всіх ОНП, зокрема інших факультетів.</p><p id="report-status" role="status" aria-live="polite"></p><button type="button" class="primary" id="report-download">Завантажити Excel</button> <button type="button" class="reset" id="report-close">Закрити</button>';
   document.body.append(reportDialog);
   let reportFacultyId='';
   $('report-close').onclick=()=>reportDialog.close();
   $('report-download').onclick=async()=>{
-    const faculty=facultyById.get(reportFacultyId);if(!faculty)return;
+    const isUniversity=reportFacultyId==='university';
+    const faculty=isUniversity?{id:'university',name:'Університет - усі факультети та ННІ'}:facultyById.get(reportFacultyId);if(!faculty)return;
     const semester=$('report-period').value ? Number($('report-period').value) : null;
-    const rows=departments.filter(item=>item.facultyId===faculty.id).sort((a,b)=>a.name.localeCompare(b.name,'uk')).map(item=>({code:item.code||item.id,name:item.name,...workloadFor(disciplines.filter(d=>d.departmentId===item.id),semester)}));
+    const rows=departments.filter(item=>isUniversity || item.facultyId===faculty.id).sort((a,b)=>a.name.localeCompare(b.name,'uk')).map(item=>({code:item.code||item.id,name:item.name,facultyId:item.facultyId,...workloadFor(disciplines.filter(d=>d.departmentId===item.id),semester)}));
     if(rows.some(row=>row.incomplete)){$('report-status').textContent='Потрібно уточнити дані навантаження кафедр. Файл не сформовано.';return;}
     if(!window.FACULTY_REPORT){$('report-status').textContent='Не вдалося завантажити модуль звіту. Оновіть сторінку з інтернетом.';return;}
     $('report-download').disabled=true;
     try{
-      const blob=window.FACULTY_REPORT.build({faculty,academicYear:data.academicYear||'',semester,rows,updatedAt:data.updatedAt});
+      const options={faculty,academicYear:data.academicYear||'',semester,rows,updatedAt:data.updatedAt};
+      const blob=isUniversity ? window.FACULTY_REPORT.buildUniversity({...options,groups:faculties.map(faculty=>({faculty,rows:rows.filter(row=>row.facultyId===faculty.id)}))}) : window.FACULTY_REPORT.build(options);
       const name='Навантаження_'+faculty.id+'_'+String(data.academicYear||'').replace(/[–—]/g,'-')+'_'+(semester?'семестр-'+semester:'за-рік')+'.xlsx';
       await window.FACULTY_REPORT.save(blob,name);$('report-status').textContent='Звіт сформовано.';
     }catch(error){$('report-status').textContent=error.name==='AbortError'?'Збереження скасовано.': 'Не вдалося зберегти звіт. Спробуйте ще раз.';}
@@ -457,7 +460,8 @@
   };
   document.addEventListener('click',event=>{
     const button=event.target.closest('[data-faculty-report]');if(!button)return;
-    reportFacultyId=button.dataset.facultyReport;$('report-faculty-name').textContent=facultyName(reportFacultyId);
+    reportFacultyId=button.dataset.facultyReport;$('report-faculty-name').textContent=reportFacultyId==='university'?'Університет - усі факультети та ННІ':facultyName(reportFacultyId);
+    $('report-description').textContent=reportFacultyId==='university'?'Підсумок Університету за факультетами та ННІ, а також окремий аркуш із кафедрами кожного підрозділу.':'Один рядок - одна кафедра. Враховано її викладання на всіх ОНП, зокрема інших факультетів.';
     $('report-period').value='';$('report-status').textContent='';reportDialog.showModal();
   });
   document.addEventListener('click', event => {
@@ -503,6 +507,7 @@
   }
   setView('faculties',false);
 })();
+
 
 
 
