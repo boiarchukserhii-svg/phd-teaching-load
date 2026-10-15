@@ -454,7 +454,7 @@
       const options={faculty,academicYear:data.academicYear||'',semester,rows,updatedAt:data.updatedAt};
       const blob=isUniversity ? window.FACULTY_REPORT.buildUniversity({...options,groups:faculties.map(faculty=>({faculty,rows:rows.filter(row=>row.facultyId===faculty.id)}))}) : window.FACULTY_REPORT.build(options);
       const name='Навантаження_'+faculty.id+'_'+String(data.academicYear||'').replace(/[–—]/g,'-')+'_'+(semester?'семестр-'+semester:'за-рік')+'.xlsx';
-      await window.FACULTY_REPORT.save(blob,name);$('report-status').textContent='Звіт сформовано.';
+      await window.FACULTY_REPORT.save(blob,name);reportDialog.close();
     }catch(error){$('report-status').textContent=error.name==='AbortError'?'Збереження скасовано.': 'Не вдалося зберегти звіт. Спробуйте ще раз.';}
     finally{$('report-download').disabled=false;}
   };
@@ -507,6 +507,7 @@
   }
   setView('faculties',false);
 })();
+
 
 
 
