@@ -21,7 +21,7 @@
     const courses = [...new Set(records.map(item=>item.course))].sort((a,b)=>a-b);
     return courses.map(course=>{
       const cohort = records.filter(item=>item.course === course).sort((a,b)=>a.semester-b.semester);
-      return `<p><strong>Аспіранти · ${esc(course)} курс · ${esc(data.academicYear)}</strong><br>${cohort.map(item=>`${esc(item.semester)} семестр: ${esc(item.count)}${item.groupCount>1 ? ' · '+esc(item.groupCount)+' групи' : ''}`).join(' · ')}</p>`;
+      return `<p><strong>Аспіранти · ${esc(course)} курс · ${esc(data.academicYear)}</strong><br>${cohort.map(item=>`${esc(item.semester)} семестр: ${esc(item.count)}`).join(' · ')}</p>`;
     }).join('');
   };
   const disciplineFaculty = item => item.facultyId || programById.get(item.programId)?.facultyId;
@@ -139,17 +139,14 @@
     return row ? row.count : null;
   };
   // Separate cohorts may contain several teaching groups; student totals remain unchanged.
-  const separateGroupCount = (programId,course,semester) => {
-    const row=students.find(item=>item.programId===programId && item.course===course && item.semester===semester);
-    return Number.isInteger(row?.groupCount) && row.groupCount>0 ? row.groupCount : 1;
-  };
+  const separateGroupCount = item => Number.isInteger(item.groupCount) && item.groupCount>0 ? item.groupCount : 1;
   function addTeachingSession(key,item,lesson,course,members) {
     if (!teachingSessions.has(key)) teachingSessions.set(key,{departmentId:item.departmentId,semester:item.semester,lesson,course,members:new Set(),rates:new Set(),amounts:new Set()});
     const session=teachingSessions.get(key);
     for (const programId of members) session.members.add(programId);
     session.rates.add(item.departmentWorkloadShare ?? 1);
     session.amounts.add(Number(item.hours[lesson]));
-    session.groupCount=JSON.parse(key)[0]==='separate' ? separateGroupCount(item.programId,course,item.semester) : 1;
+    session.groupCount=JSON.parse(key)[0]==='separate' ? separateGroupCount(item) : 1;
     if (!recordSessions.has(item.id)) recordSessions.set(item.id,new Set());
     recordSessions.get(item.id).add(key);
   }
@@ -186,7 +183,7 @@
     const entries=memberships.map(entry=>({key:JSON.stringify(['shared',entry.groupCode,entry.course,item.semester,item.departmentId]),course:entry.course,
       members:currentGroups.filter(other=>other.groupCode===entry.groupCode && other.course===entry.course && other.semester===entry.semester && other.departmentId===entry.departmentId && other.lessonType===entry.lessonType).map(other=>other.programId)}));
     for (const course of courses.length?courses:[null]) {
-      if (!memberships.some(entry=>entry.course===course)) entries.push({key:JSON.stringify(['separate',item.id,course]),course,members:[item.programId],groupCount:separateGroupCount(item.programId,course,item.semester)});
+      if (!memberships.some(entry=>entry.course===course)) entries.push({key:JSON.stringify(['separate',item.id,course]),course,members:[item.programId],groupCount:separateGroupCount(item)});
     }
     for (const entry of entries) {
       if (!examSessions.has(entry.key)) examSessions.set(entry.key,{semester:item.semester,course:entry.course,members:new Set(),rates:new Set(),exceptions:new Set(),ambiguous:false});

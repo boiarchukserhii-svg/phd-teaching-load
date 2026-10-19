@@ -1,7 +1,7 @@
 /* Data imported and validated locally from the owner’s workbook. */
 window.TEACHING_DATA = {
   "version": 1,
-  "updatedAt": "2026-10-19T09:32:57.407Z",
+  "updatedAt": "2026-10-19T09:49:44.285Z",
   "academicYear": "2026–2027",
   "students": [
     {
@@ -184,8 +184,7 @@ window.TEACHING_DATA = {
       "academicYear": "2026–2027",
       "course": 1,
       "semester": 1,
-      "count": 23,
-      "groupCount": 2
+      "count": 23
     },
     {
       "programId": "ONP-027",
@@ -430,8 +429,7 @@ window.TEACHING_DATA = {
       "academicYear": "2026–2027",
       "course": 1,
       "semester": 2,
-      "count": 23,
-      "groupCount": 2
+      "count": 23
     },
     {
       "programId": "ONP-027",
@@ -1684,10 +1682,30 @@ window.TEACHING_DATA = {
       "academicYear": "2026–2027",
       "course": 1,
       "semester": 1,
+      "disciplineId": "ONP-026:1:DISC-002:10.10",
+      "departmentId": "10.10",
+      "lessonType": "lectures",
+      "programId": "ONP-026"
+    },
+    {
+      "groupCode": "GR-006",
+      "academicYear": "2026–2027",
+      "course": 1,
+      "semester": 1,
       "disciplineId": "ONP-027:1:DISC-002:10.10",
       "departmentId": "10.10",
       "lessonType": "lectures",
       "programId": "ONP-027"
+    },
+    {
+      "groupCode": "GR-006",
+      "academicYear": "2026–2027",
+      "course": 1,
+      "semester": 1,
+      "disciplineId": "ONP-026:1:DISC-002:10.10",
+      "departmentId": "10.10",
+      "lessonType": "practical",
+      "programId": "ONP-026"
     },
     {
       "groupCode": "GR-006",
@@ -2424,6 +2442,16 @@ window.TEACHING_DATA = {
       "academicYear": "2026–2027",
       "course": 1,
       "semester": 1,
+      "disciplineId": "ONP-026:1:DISC-003:10.03",
+      "departmentId": "10.03",
+      "lessonType": "lectures",
+      "programId": "ONP-026"
+    },
+    {
+      "groupCode": "GR-015",
+      "academicYear": "2026–2027",
+      "course": 1,
+      "semester": 1,
       "disciplineId": "ONP-027:1:DISC-003:10.03",
       "departmentId": "10.03",
       "lessonType": "lectures",
@@ -2438,6 +2466,16 @@ window.TEACHING_DATA = {
       "departmentId": "10.03",
       "lessonType": "lectures",
       "programId": "ONP-028"
+    },
+    {
+      "groupCode": "GR-015",
+      "academicYear": "2026–2027",
+      "course": 1,
+      "semester": 1,
+      "disciplineId": "ONP-026:1:DISC-003:10.03",
+      "departmentId": "10.03",
+      "lessonType": "practical",
+      "programId": "ONP-026"
     },
     {
       "groupCode": "GR-015",
@@ -3078,6 +3116,16 @@ window.TEACHING_DATA = {
       "departmentId": "10.03",
       "lessonType": "practical",
       "programId": "ONP-014"
+    },
+    {
+      "groupCode": "GR-020",
+      "academicYear": "2026–2027",
+      "course": 1,
+      "semester": 1,
+      "disciplineId": "ONP-026:1:DISC-001:10.05",
+      "departmentId": "10.05",
+      "lessonType": "lectures",
+      "programId": "ONP-026"
     },
     {
       "groupCode": "GR-020",
@@ -3098,6 +3146,16 @@ window.TEACHING_DATA = {
       "departmentId": "10.05",
       "lessonType": "lectures",
       "programId": "ONP-028"
+    },
+    {
+      "groupCode": "GR-020",
+      "academicYear": "2026–2027",
+      "course": 1,
+      "semester": 1,
+      "disciplineId": "ONP-026:1:DISC-001:10.05",
+      "departmentId": "10.05",
+      "lessonType": "practical",
+      "programId": "ONP-026"
     },
     {
       "groupCode": "GR-020",
@@ -7994,7 +8052,8 @@ window.TEACHING_DATA = {
         "laboratory": null,
         "independent": 90,
         "assessment": "Екзамен"
-      }
+      },
+      "groupCount": 2
     },
     {
       "id": "ONP-026:1:DISC-002:10.10",
@@ -8032,7 +8091,8 @@ window.TEACHING_DATA = {
         "laboratory": null,
         "independent": 75,
         "assessment": "Екзамен"
-      }
+      },
+      "groupCount": 2
     },
     {
       "id": "ONP-026:1:DISC-005:15.01",
@@ -8051,7 +8111,8 @@ window.TEACHING_DATA = {
         "laboratory": null,
         "independent": 75,
         "assessment": "Екзамен"
-      }
+      },
+      "groupCount": 2
     },
     {
       "id": "ONP-026:1:DISC-004:07.04",
@@ -8070,7 +8131,8 @@ window.TEACHING_DATA = {
         "laboratory": null,
         "independent": 75,
         "assessment": "Екзамен"
-      }
+      },
+      "groupCount": 2
     },
     {
       "id": "ONP-026:1:DISC-003:10.03",
@@ -8108,7 +8170,8 @@ window.TEACHING_DATA = {
         "laboratory": null,
         "independent": 90,
         "assessment": "Екзамен"
-      }
+      },
+      "groupCount": 2
     },
     {
       "id": "ONP-026:1:DISC-001:10.05",
@@ -8146,7 +8209,8 @@ window.TEACHING_DATA = {
         "laboratory": null,
         "independent": 90,
         "assessment": "Екзамен"
-      }
+      },
+      "groupCount": 2
     },
     {
       "id": "ONP-027:2:DISC-124:06.02",
