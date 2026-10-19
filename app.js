@@ -21,7 +21,7 @@
     const courses = [...new Set(records.map(item=>item.course))].sort((a,b)=>a-b);
     return courses.map(course=>{
       const cohort = records.filter(item=>item.course === course).sort((a,b)=>a.semester-b.semester);
-      return `<p><strong>Аспіранти · ${esc(course)} курс · ${esc(data.academicYear)}</strong><br>${cohort.map(item=>`${esc(item.semester)} семестр: ${esc(item.count)}`).join(' · ')}</p>`;
+      return `<p><strong>Аспіранти · ${esc(course)} курс · ${esc(data.academicYear)}</strong><br>${cohort.map(item=>`${esc(item.semester)} семестр: ${esc(item.count)}${item.groupCount>1 ? ' · '+esc(item.groupCount)+' групи' : ''}`).join(' · ')}</p>`;
     }).join('');
   };
   const disciplineFaculty = item => item.facultyId || programById.get(item.programId)?.facultyId;
@@ -138,12 +138,18 @@
     const row = students.find(item=>item.programId===programId && item.course===course && item.semester===semester);
     return row ? row.count : null;
   };
+  // Separate cohorts may contain several teaching groups; student totals remain unchanged.
+  const separateGroupCount = (programId,course,semester) => {
+    const row=students.find(item=>item.programId===programId && item.course===course && item.semester===semester);
+    return Number.isInteger(row?.groupCount) && row.groupCount>0 ? row.groupCount : 1;
+  };
   function addTeachingSession(key,item,lesson,course,members) {
     if (!teachingSessions.has(key)) teachingSessions.set(key,{departmentId:item.departmentId,semester:item.semester,lesson,course,members:new Set(),rates:new Set(),amounts:new Set()});
     const session=teachingSessions.get(key);
     for (const programId of members) session.members.add(programId);
     session.rates.add(item.departmentWorkloadShare ?? 1);
     session.amounts.add(Number(item.hours[lesson]));
+    session.groupCount=JSON.parse(key)[0]==='separate' ? separateGroupCount(item.programId,course,item.semester) : 1;
     if (!recordSessions.has(item.id)) recordSessions.set(item.id,new Set());
     recordSessions.get(item.id).add(key);
   }
@@ -180,11 +186,12 @@
     const entries=memberships.map(entry=>({key:JSON.stringify(['shared',entry.groupCode,entry.course,item.semester,item.departmentId]),course:entry.course,
       members:currentGroups.filter(other=>other.groupCode===entry.groupCode && other.course===entry.course && other.semester===entry.semester && other.departmentId===entry.departmentId && other.lessonType===entry.lessonType).map(other=>other.programId)}));
     for (const course of courses.length?courses:[null]) {
-      if (!memberships.some(entry=>entry.course===course)) entries.push({key:JSON.stringify(['separate',item.id,course]),course,members:[item.programId]});
+      if (!memberships.some(entry=>entry.course===course)) entries.push({key:JSON.stringify(['separate',item.id,course]),course,members:[item.programId],groupCount:separateGroupCount(item.programId,course,item.semester)});
     }
     for (const entry of entries) {
       if (!examSessions.has(entry.key)) examSessions.set(entry.key,{semester:item.semester,course:entry.course,members:new Set(),rates:new Set(),exceptions:new Set(),ambiguous:false});
       const session=examSessions.get(entry.key);
+      session.groupCount=entry.groupCount || 1;
       entry.members.forEach(id=>session.members.add(id));session.rates.add(item.departmentWorkloadShare ?? 1);
       session.exceptions.add(ukrainianExam(item));session.ambiguous ||= ambiguous;
       if (!recordExams.has(item.id)) recordExams.set(item.id,new Set());
@@ -200,7 +207,7 @@
       const counts=[...session.members].map(programId=>studentCount(programId,session.course,session.semester));
       if (counts.some(count=>count==null) || session.rates.size!==1 || session.amounts.size!==1) {totals.incomplete=true;continue;}
       if (!counts.some(count=>count>0)) continue;
-      totals[session.lesson]+=[...session.amounts][0]*[...session.rates][0];
+      totals[session.lesson]+=[...session.amounts][0]*[...session.rates][0]*session.groupCount;
     }
     totals.classroom=totals.lectures+totals.practical+totals.laboratory;
     const examKeys=new Set(items.flatMap(item=>[...(recordExams.get(item.id)||[])]));
@@ -211,7 +218,7 @@
       if (counts.some(count=>count==null) || session.rates.size!==1 || session.exceptions.size!==1 || session.ambiguous) {totals.incomplete=true;continue;}
       const count=counts.reduce((sum,value)=>sum+value,0);
       if (count<=0) continue;
-      totals.exams+=(([...session.exceptions][0]?0:2)+0.5*count)*[...session.rates][0];
+      totals.exams+=(([...session.exceptions][0]?0:2*session.groupCount)+0.5*count)*[...session.rates][0];
     }
     totals.total=totals.classroom+totals.exams;
     return totals;
@@ -294,7 +301,7 @@
       const session=teachingSessions.get(key);
       const values=[...session.members].map(programId=>studentCount(programId,session.course,session.semester));
       if (values.some(count=>count==null)) {counts.incomplete=true;continue;}
-      if (values.some(count=>count>0)) counts[session.lesson]++;
+      if (values.some(count=>count>0)) counts[session.lesson]+=session.groupCount;
     }
     return counts;
   }
@@ -507,6 +514,7 @@
   }
   setView('faculties',false);
 })();
+
 
 
 
