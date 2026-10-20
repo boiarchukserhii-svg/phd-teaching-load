@@ -35,17 +35,31 @@
   }
   const build=options=>zip(makeFiles(options));
   function buildUniversity({academicYear,semester,groups,updatedAt}) {
-    const sheets=groups.map((group,i)=>({name:(String(i+1).padStart(2,'0')+' '+group.faculty.name.replace(/^Факультет /,'').replace(/^Навчально-науковий інститут /,'ННІ ')).replace(/[\\/*?:\[\]]/g,'-').slice(0,31),group}));
-    const summaryRows=sheets.map(({name,group},i)=>({code:String(i+1),name:group.faculty.name,sourceSheet:name,sourceRow:7+group.rows.length,
-      ...Object.fromEntries(['lectures','practical','laboratory','exams','total'].map(key=>[key,sum(group.rows,key)]))}));
-    const files=makeFiles({faculty:{name:'Університет - усі факультети та ННІ'},academicYear,semester,rows:summaryRows,updatedAt,isSummary:true});
-    for (let i=0;i<sheets.length;i++) files['xl/worksheets/sheet'+(i+2)+'.xml']=makeFiles({...sheets[i].group,academicYear,semester,updatedAt})['xl/worksheets/sheet1.xml'];
-    const names=['Університет',...sheets.map(s=>s.name)],ns='http://schemas.openxmlformats.org';
-    files['xl/workbook.xml']='<?xml version="1.0" encoding="UTF-8"?><workbook xmlns="'+ns+'/spreadsheetml/2006/main" xmlns:r="'+ns+'/officeDocument/2006/relationships"><bookViews><workbookView/></bookViews><sheets>'+names.map((name,i)=>'<sheet name="'+xml(name)+'" sheetId="'+(i+1)+'" r:id="rId'+(i+1)+'"/>').join('')+'</sheets><calcPr calcId="191029" fullCalcOnLoad="1"/></workbook>';
-    files['xl/_rels/workbook.xml.rels']='<?xml version="1.0" encoding="UTF-8"?><Relationships xmlns="'+ns+'/package/2006/relationships">'+names.map((name,i)=>'<Relationship Id="rId'+(i+1)+'" Type="'+ns+'/officeDocument/2006/relationships/worksheet" Target="worksheets/sheet'+(i+1)+'.xml"/>').join('')+'<Relationship Id="rId'+(names.length+1)+'" Type="'+ns+'/officeDocument/2006/relationships/styles" Target="styles.xml"/></Relationships>';
-    files['[Content_Types].xml']=files['[Content_Types].xml'].replace('</Types>',names.slice(1).map((name,i)=>'<Override PartName="/xl/worksheets/sheet'+(i+2)+'.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.worksheet+xml"/>').join('')+'</Types>');
+    const keys=['lectures','practical','laboratory','exams','total'];
+    const files=makeFiles({faculty:{name:'За факультетами, ННІ та кафедрами'},academicYear,semester,rows:[],updatedAt,isSummary:true});
+    const cell=(ref,value,style=0)=>`<c r="${ref}" s="${style}" t="inlineStr"><is><t xml:space="preserve">${xml(value)}</t></is></c>`;
+    const number=(ref,value,style=2,formula='')=>`<c r="${ref}" s="${style}">${formula?'<f>'+xml(formula)+'</f>':''}<v>${value}</v></c>`;
+    const generated=new Intl.DateTimeFormat('uk-UA',{dateStyle:'short',timeStyle:'short',timeZone:'Europe/Kyiv'}).format(new Date());
+    const period=semester?semester+' семестр':'Увесь навчальний рік';
+    let body='';const merges=[],subtotalRows=[];
+    const heading=(n,text,style=0,height=25)=>{body+=`<row r="${n}" ht="${height}" customHeight="1">${cell('A'+n,text,style)}</row>`;merges.push(`A${n}:G${n}`);};
+    heading(1,'Навчальне навантаження Університету',4,28);heading(2,'За факультетами, ННІ та кафедрами');heading(3,academicYear.replace(/[–—]/g,'-')+' навчальний рік · '+period);heading(4,'Сформовано: '+generated+' (київський час)');
+    body+='<row r="6" ht="34" customHeight="1">'+['Код кафедри','Кафедра','Лекції','Практичні','Лабораторні','Екзамени','Разом'].map((text,i)=>cell(String.fromCharCode(65+i)+'6',text,1)).join('')+'</row>';
+    let row=7;
+    for(const group of groups){
+      heading(row++,group.faculty.name,1,Math.max(30,Math.ceil(group.faculty.name.length/85)*20));const first=row;
+      for(const department of group.rows){const n=row++,height=Math.max(32,Math.ceil(department.name.length/57)*19);body+=`<row r="${n}" ht="${height}" customHeight="1" outlineLevel="1">`+cell('A'+n,department.code)+cell('B'+n,department.name)+keys.map((key,i)=>number(String.fromCharCode(67+i)+n,department[key],2,key==='total'?`SUM(C${n}:F${n})`:'')).join('')+'</row>';}
+      const last=row-1,n=row++;subtotalRows.push(n);body+=`<row r="${n}" ht="30" customHeight="1">`+cell('A'+n,'Разом по підрозділу',3)+keys.map((key,i)=>{const col=String.fromCharCode(67+i);return number(col+n,sum(group.rows,key),3,group.rows.length?`SUM(${col}${first}:${col}${last})`:'0');}).join('')+'</row>';merges.push(`A${n}:B${n}`);row++;
+    }
+    const total=row++,allRows=groups.flatMap(group=>group.rows);body+=`<row r="${total}" ht="34" customHeight="1">`+cell('A'+total,'Усього по Університету',3)+keys.map((key,i)=>{const col=String.fromCharCode(67+i);return number(col+total,sum(allRows,key),3,subtotalRows.length?'SUM('+subtotalRows.map(n=>col+n).join(',')+')':'0');}).join('')+'</row>';merges.push(`A${total}:B${total}`);
+    row++;heading(row++,'Враховано навантаження кафедр на всіх ОНП, зокрема інших факультетів.');heading(row++,'Спільні групи враховано один раз; застосовано частки кафедр. Самостійна робота та заліки не включені.',0,32);
+    if(updatedAt&&!Number.isNaN(Date.parse(updatedAt)))heading(row++,'Дані оновлено: '+new Intl.DateTimeFormat('uk-UA',{dateStyle:'short',timeStyle:'short',timeZone:'Europe/Kyiv'}).format(new Date(updatedAt))+' (київський час).');
+    const ns='http://schemas.openxmlformats.org/spreadsheetml/2006/main';
+    files['xl/worksheets/sheet1.xml']=`<?xml version="1.0" encoding="UTF-8"?><worksheet xmlns="${ns}"><sheetPr><outlinePr summaryBelow="1"/><pageSetUpPr fitToPage="1"/></sheetPr><dimension ref="A1:G${row-1}"/><sheetViews><sheetView workbookViewId="0"><pane ySplit="6" topLeftCell="A7" activePane="bottomLeft" state="frozen"/></sheetView></sheetViews><sheetFormatPr defaultRowHeight="18" outlineLevelRow="1"/><cols><col min="1" max="1" width="14" customWidth="1"/><col min="2" max="2" width="75" customWidth="1"/><col min="3" max="7" width="16" customWidth="1"/></cols><sheetData>${body}</sheetData><mergeCells count="${merges.length}">${merges.map(ref=>`<mergeCell ref="${ref}"/>`).join('')}</mergeCells><pageMargins left="0.3" right="0.3" top="0.5" bottom="0.5" header="0.2" footer="0.2"/><pageSetup paperSize="9" orientation="landscape" fitToWidth="1" fitToHeight="0"/></worksheet>`;
+    files['xl/workbook.xml']=files['xl/workbook.xml'].replace('name="Навантаження кафедр"','name="Навантаження Університету"').replace('</sheets>',"</sheets><definedNames><definedName name=\"_xlnm.Print_Titles\" localSheetId=\"0\">'Навантаження Університету'!$1:$6</definedName></definedNames>");
     return zip(files);
   }
+
   function zip(files){
     const encoder=new TextEncoder(),chunks=[],central=[];let offset=0;
     const crc=bytes=>{let c=0xffffffff;for(const b of bytes){c^=b;for(let i=0;i<8;i++)c=(c>>>1)^((c&1)?0xedb88320:0);}return (c^0xffffffff)>>>0;};
@@ -66,6 +80,7 @@
   }
   window.FACULTY_REPORT={build,buildUniversity,save};
 })();
+
 
 
 

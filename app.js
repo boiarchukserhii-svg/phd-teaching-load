@@ -465,7 +465,7 @@
   document.addEventListener('click',event=>{
     const button=event.target.closest('[data-faculty-report]');if(!button)return;
     reportFacultyId=button.dataset.facultyReport;$('report-faculty-name').textContent=reportFacultyId==='university'?'Університет - усі факультети та ННІ':facultyName(reportFacultyId);
-    $('report-description').textContent=reportFacultyId==='university'?'Підсумок Університету за факультетами та ННІ, а також окремий аркуш із кафедрами кожного підрозділу.':'Один рядок - одна кафедра. Враховано її викладання на всіх ОНП, зокрема інших факультетів.';
+    $('report-description').textContent=reportFacultyId==='university'?'Усе навантаження на одному аркуші: факультети та ННІ, кафедри й підсумки.':'Один рядок - одна кафедра. Враховано її викладання на всіх ОНП, зокрема інших факультетів.';
     $('report-period').value='';$('report-status').textContent='';reportDialog.showModal();
   });
   document.addEventListener('click', event => {
@@ -511,6 +511,7 @@
   }
   setView('faculties',false);
 })();
+
 
 
 
